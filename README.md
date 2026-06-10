@@ -1,5 +1,5 @@
 # SSCS Chipathon 
-This repository is the Synchronos team project for the SSCS Chipathon 2026 track-A. We propose a topic on a Low-Jitter Integer-N PLL for Clock Generator with 2 MHz to 350 MHz of Lock Range.
+This repository is the Synchronos team project for the SSCS Chipathon 2026 track-A. We propose a topic on a Low-Jitter Integer-N PLL for Clock Generator with 0.01 MHz to 350 MHz of Lock Range.
 ## Team
 Yohanes Stefanus (John), Nahwan Faza Assaify, Binh Q Pham, Joseph P George
 ## Project Overview
@@ -16,7 +16,7 @@ The overall deisng in shown on the block diagram below:
 | **Supply Voltage** | 2.97 | 3.3 | 3.63 | V |
 | **Reference Frequency** | - | 10 | - | MHz |
 | **Output Frequency** | - | 240 | - | MHz |
-| **VCO Tuning Range** | 2 | 240 | 350 | MHz |
+| **VCO Tuning Range** | 0.01 | 240 | 350 | MHz |
 | **Settling Time** | - | 5 | 10 | µs |
 | **$\omega_n / \omega_{out}$** | - | 0.1 | - |  |
 | **Peak-to-Peak Jitter** | 30 | 50 | 80 | ps |
