@@ -15,9 +15,7 @@ The overall deisng in shown on the block diagram below:
 | :--- | :--- | :--- | :--- | :--- |
 | **Supply Voltage** | 2.97 | 3.3 | 3.63 | V |
 | **Reference Frequency** | - | 10 | - | MHz |
-| **Output Frequency** | - | 240 | - | MHz |
-| **VCO Tuning Range** | 2 | 240 | 350 | MHz |
-| **Settling Time** | - | 5 | 10 | µs |
+| **Output Frequency** | 0.01 | 240 | 350 | MHz |
 | **$\omega_n / \omega_{out}$** | - | 0.1 | - |  |
 | **Peak-to-Peak Jitter** | 30 | 50 | 80 | ps |
 | **RMS Jitter (@240MHz)** | - | 10 | 15 | ps |

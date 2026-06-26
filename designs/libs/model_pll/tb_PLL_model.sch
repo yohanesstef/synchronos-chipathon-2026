@@ -12,8 +12,8 @@ ypos2=3.3
 divy=5
 subdivy=1
 unity=1
-x1=-2.5e-05
-x2=0.000475
+x1=9.9364749e-07
+x2=1.9231582e-06
 divx=5
 subdivx=1
 xlabmag=0.5
@@ -35,7 +35,7 @@ blank
 space
 tune"
 rawfile=$netlist_dir/tb_PLL_model.raw
-hilight_wave=1999258128
+hilight_wave=-1
 digital=1
 y2=3}
 B 2 2030 -1040 2830 -640 {flags=graph
@@ -46,8 +46,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-2.5e-05
-x2=0.000475
+x1=9.9364749e-07
+x2=1.9231582e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -67,8 +67,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-2.5e-05
-x2=0.000475
+x1=9.9364749e-07
+x2=1.9231582e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -89,7 +89,7 @@ T {Testbench to try out the various Xspice 'behavioral' models of PLL components
   * The PFD reset_delay and the CP current are defined with local parameters inside the models. 
 
   * The divide_factor of the divider is a parameter you can set for the symbol instance. 
-} -460 -2170 0 0 0.4 0.4 {}
+} -1030 -1440 0 0 0.4 0.4 {}
 N 280 -1410 280 -1380 {lab=GND}
 N 280 -1490 280 -1470 {lab=reference}
 N 680 -1440 710 -1440 {lab=div_out}
