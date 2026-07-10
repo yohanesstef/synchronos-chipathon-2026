@@ -1,0 +1,15 @@
+{
+    "DESIGN_NAME": "pulse_swallow_div",
+    "VERILOG_FILES": [
+        "dir::pulse_swallow_div_v2.v"
+    ],
+    "CLOCK_PORT": "clk_in",
+    "CLOCK_PERIOD":  2.857,
+    "PDK": "gf180mcuD",
+    "STD_CELL_LIBRARY": "gf180mcu_fd_sc_mcu7t5v0",
+    "FP_CORE_UTIL": 35,
+    "PL_TARGET_DENSITY": 0.40,
+    "VDD_NETS": ["VDD"],
+    "GND_NETS": ["VSS"],
+    "DIODE_INSERTION_STRATEGY": 3
+}
