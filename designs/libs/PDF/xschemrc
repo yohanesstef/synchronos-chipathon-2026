@@ -1,0 +1,15 @@
+#### xschemrc for PFD project — GF180MCU on IIC-OSIC-TOOLS Docker
+#### Copy this file to your xschem working directory inside the Docker container
+
+# PDK paths (IIC-OSIC-TOOLS Docker defaults)
+set PDK_ROOT $env(PDK_ROOT)
+set PDK gf180mcuD
+set 180MCU_MODELS ${PDK_ROOT}/${PDK}/libs.tech/ngspice
+
+# Library paths
+append XSCHEM_LIBRARY_PATH :${PDK_ROOT}/${PDK}/libs.tech/xschem
+append XSCHEM_LIBRARY_PATH :[pwd]
+
+# Netlist directory
+set netlist_dir [pwd]/simulation
+file mkdir $netlist_dir
