@@ -68,7 +68,6 @@ N 410 -650 450 -650 {lab=UP}
 N 410 -490 440 -490 {lab=DN}
 N 440 -490 440 -430 {lab=DN}
 N 440 -430 450 -430 {lab=DN}
-C {delay_chain.sym} 850 -540 0 0 {name=x_delay}
 C {ipin.sym} 160 -670 0 0 {name=p1 lab=REF}
 C {ipin.sym} 160 -450 0 0 {name=p2 lab=FB}
 C {opin.sym} 1060 -650 0 0 {name=p3 lab=UP}
@@ -100,10 +99,11 @@ C {lab_pin.sym} 850 -330 0 1 {name=p20 sig_type=std_logic lab=VSS
 }
 C {lab_pin.sym} 600 -480 0 1 {name=p16 sig_type=std_logic lab=VSS
 }
-C {nand_pf.sym} 680 -530 0 0 {name=x1}
-C {gf180mcu_fd_sc_mcu7t5v0__dffrnq_1.sym} 330 -670 0 0 {name=x2}
-C {gf180mcu_fd_sc_mcu7t5v0__dffrnq_1.sym} 330 -450 0 0 {name=x3}
 C {lab_pin.sym} 250 -490 0 0 {name=p21 sig_type=std_logic lab=VDD
 }
 C {lab_pin.sym} 250 -710 0 0 {name=p22 sig_type=std_logic lab=VDD
 }
+C {libs/core_analog/pfd/gf180mcu_fd_sc_mcu7t5v0__dffrnq_1.sym} 330 -670 0 0 {name=x2}
+C {libs/core_analog/pfd/gf180mcu_fd_sc_mcu7t5v0__dffrnq_1.sym} 330 -450 0 0 {name=x3}
+C {libs/core_analog/pfd/nand_pf.sym} 680 -530 0 0 {name=x1}
+C {libs/core_analog/pfd/delay_chain.sym} 850 -540 0 0 {name=x4}

@@ -8,40 +8,40 @@ E {}
 N 310 -320 310 -300 {lab=#net1}
 N 310 -300 490 -300 {lab=#net1}
 N 490 -320 490 -300 {lab=#net1}
-N 400 -300 400 -280 {lab=#net1}
-N 310 -450 310 -380 {lab=#net2}
+N 400 -240 400 -220 {lab=#net2}
+N 310 -450 310 -380 {lab=#net3}
 N 490 -450 490 -380 {lab=VOP}
-N 310 -440 360 -440 {lab=#net2}
-N 350 -480 450 -480 {lab=#net2}
-N 360 -480 360 -440 {lab=#net2}
+N 310 -440 360 -440 {lab=#net3}
+N 350 -480 450 -480 {lab=#net3}
+N 360 -480 360 -440 {lab=#net3}
 N 310 -530 310 -510 {lab=VDD}
 N 490 -530 490 -510 {lab=VDD}
-N 400 -220 400 -200 {lab=VSS}
-N 710 -320 710 -300 {lab=#net3}
-N 710 -300 890 -300 {lab=#net3}
-N 890 -320 890 -300 {lab=#net3}
-N 800 -300 800 -280 {lab=#net3}
-N 710 -450 710 -380 {lab=#net4}
+N 400 -160 400 -140 {lab=VSS}
+N 710 -320 710 -300 {lab=#net4}
+N 710 -300 890 -300 {lab=#net4}
+N 890 -320 890 -300 {lab=#net4}
+N 800 -240 800 -220 {lab=#net5}
+N 710 -450 710 -380 {lab=#net6}
 N 890 -450 890 -380 {lab=VON}
-N 710 -440 760 -440 {lab=#net4}
-N 750 -480 850 -480 {lab=#net4}
-N 760 -480 760 -440 {lab=#net4}
+N 710 -440 760 -440 {lab=#net6}
+N 750 -480 850 -480 {lab=#net6}
+N 760 -480 760 -440 {lab=#net6}
 N 710 -530 710 -510 {lab=VDD}
 N 890 -530 890 -510 {lab=VDD}
-N 800 -220 800 -200 {lab=VSS}
-N 1110 -450 1110 -280 {lab=#net5}
+N 800 -160 800 -140 {lab=VSS}
+N 1110 -450 1110 -280 {lab=#net7}
 N 1290 -450 1290 -280 {lab=VO}
-N 1150 -250 1250 -250 {lab=#net5}
-N 1110 -290 1160 -290 {lab=#net5}
-N 1160 -290 1160 -250 {lab=#net5}
+N 1150 -250 1250 -250 {lab=#net7}
+N 1110 -290 1160 -290 {lab=#net7}
+N 1160 -290 1160 -250 {lab=#net7}
 N 1110 -530 1110 -510 {lab=VDD}
 N 1290 -530 1290 -510 {lab=VDD}
 N 1110 -220 1110 -200 {lab=VSS}
 N 1290 -220 1290 -200 {lab=VSS}
 N 1110 -250 1110 -220 {lab=VSS}
 N 1290 -250 1290 -220 {lab=VSS}
-N 800 -250 800 -220 {lab=VSS}
-N 400 -250 400 -220 {lab=VSS}
+N 800 -190 800 -160 {lab=VSS}
+N 400 -190 400 -160 {lab=VSS}
 N 310 -510 310 -480 {lab=VDD}
 N 490 -510 490 -480 {lab=VDD}
 N 710 -510 710 -480 {lab=VDD}
@@ -50,11 +50,11 @@ N 1110 -510 1110 -480 {lab=VDD}
 N 1290 -510 1290 -480 {lab=VDD}
 N 1290 -360 1380 -360 {lab=VO}
 C {devices/title.sym} 160 -30 0 0 {name=l5 author="Nahwan Assaify"}
-C {symbols/nfet_03v3.sym} 380 -250 0 0 {name=M1
-L=0.6u
-W=17u
+C {symbols/nfet_03v3.sym} 380 -190 0 0 {name=M1
+L=1u
+W=37.7u
 nf=1
-m=1
+m=10
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -120,26 +120,12 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {lab_pin.sym} 360 -250 0 0 {name=p1 sig_type=std_logic lab=VBN}
+C {lab_pin.sym} 360 -190 0 0 {name=p1 sig_type=std_logic lab=VBN}
 C {lab_pin.sym} 450 -350 0 0 {name=p2 sig_type=std_logic lab=VIP}
 C {lab_pin.sym} 270 -350 0 0 {name=p3 sig_type=std_logic lab=VIN}
-C {lab_pin.sym} 400 -200 0 0 {name=p4 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 400 -140 0 0 {name=p4 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 310 -530 0 0 {name=p5 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 490 -530 0 0 {name=p6 sig_type=std_logic lab=VDD}
-C {symbols/nfet_03v3.sym} 780 -250 0 0 {name=M6
-L=0.6u
-W=17u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
 C {symbols/nfet_03v3.sym} 690 -350 0 0 {name=M7
 L=0.3u
 W=15u
@@ -196,10 +182,10 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {lab_pin.sym} 760 -250 0 0 {name=p7 sig_type=std_logic lab=VBN}
+C {lab_pin.sym} 760 -190 0 0 {name=p7 sig_type=std_logic lab=VBN}
 C {lab_pin.sym} 850 -350 0 0 {name=p8 sig_type=std_logic lab=VIN}
 C {lab_pin.sym} 670 -350 0 0 {name=p9 sig_type=std_logic lab=VIP}
-C {lab_pin.sym} 800 -200 0 0 {name=p10 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 800 -140 0 0 {name=p10 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 710 -530 0 0 {name=p11 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 890 -530 0 0 {name=p12 sig_type=std_logic lab=VDD}
 C {symbols/nfet_03v3.sym} 1130 -250 0 1 {name=M11
@@ -277,3 +263,19 @@ C {ipin.sym} 70 -430 0 0 {name=p28 lab=VIN}
 C {ipin.sym} 70 -410 0 0 {name=p29 lab=VIP}
 C {opin.sym} 70 -360 0 0 {name=p30 lab=VO}
 C {ipin.sym} 70 -390 0 0 {name=p31 lab=VBN}
+C {ammeter.sym} 400 -270 0 0 {name=Vmeas savecurrent=true spice_ignore=0}
+C {ammeter.sym} 800 -270 0 0 {name=Vmeas1 savecurrent=true spice_ignore=0}
+C {symbols/nfet_03v3.sym} 780 -190 0 0 {name=M6
+L=1u
+W=37.7u
+nf=1
+m=10
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=nfet_03v3
+spiceprefix=X
+}

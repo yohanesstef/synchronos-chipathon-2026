@@ -39,7 +39,6 @@ N 880 -320 950 -320 {lab=VO}
 N 920 -240 920 -220 {lab=VSS}
 N 920 -320 920 -300 {lab=VO}
 C {devices/title.sym} 160 -30 0 0 {name=l5 author="Nahwan Assaify"}
-C {d2s_converter.sym} 730 -340 0 0 {name=x1}
 C {symbols/nfet_03v3.sym} 440 -320 0 1 {name=M1
 L=0.6u
 W=17u
@@ -95,3 +94,4 @@ value=50f
 footprint=1206
 device="ceramic capacitor"}
 C {lab_pin.sym} 920 -220 0 1 {name=p7 sig_type=std_logic lab=VSS}
+C {libs/core_analog/d2s_converter/d2s_converter.sym} 730 -340 0 0 {name=x1}

@@ -41,7 +41,6 @@ N 500 -560 520 -560 {lab=REF}
 N 500 -520 520 -520 {lab=FB}
 N 760 -560 780 -560 {lab=UP}
 N 760 -520 780 -520 {lab=DN}
-C {pfd.sym} 640 -540 0 0 {name=x_pfd}
 C {vsource.sym} 200 -580 0 0 {name=V_REF value="PULSE(0 3.3 0 100p 100p 50n 100n)"
 savecurrent=false}
 C {vsource.sym} 350 -580 0 0 {name=V_FB value="PULSE(0 3.3 10n 100p 100p 50n 100n)"
@@ -78,7 +77,7 @@ echo 'DN pulse width (should be ~1-2ns, just reset pulse):'
 echo $&dn_width
 .endc
 "}
-C {code_shown.sym} 550 -400 0 0 {name=MODELS only_toplevel=true
+C {code_shown.sym} 750 -400 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include /foss/pdks/ciel/gf180mcu/versions/7b70722e33c03fcb5dabcf4d479fb0822d9251c9/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/spice/gf180mcu_fd_sc_mcu7t5v0.spice
@@ -92,3 +91,4 @@ tclcommand="xschem save; xschem netlist; xschem simulate"}
 C {launcher.sym} 850 -860 0 0 {name=h2
 descr="Load Waveforms"
 tclcommand="xschem raw_read $netlist_dir/pfd_tb.raw tran"}
+C {libs/core_analog/pfd/pfd.sym} 640 -540 0 0 {name=x1}

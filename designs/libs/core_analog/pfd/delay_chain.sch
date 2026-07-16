@@ -32,11 +32,11 @@ N 330 -370 340 -370 {lab=#net1}
 N 550 -370 610 -370 {lab=#net3}
 N 760 -370 770 -370 {lab=#net2}
 N 900 -320 910 -320 {lab=VSS}
-C {inv.sym} 260 -370 0 0 {name=x1}
-C {inv.sym} 480 -370 0 0 {name=x2}
-C {inv.sym} 690 -370 0 0 {name=x3}
-C {inv.sym} 900 -370 0 0 {name=x4}
 C {ipin.sym} 100 -370 0 0 {name=p1 lab=A}
 C {opin.sym} 1010 -370 0 0 {name=p2 lab=Y}
 C {iopin.sym} 260 -440 3 0 {name=p3 lab=VDD}
 C {iopin.sym} 260 -310 1 0 {name=p4 lab=VSS}
+C {libs/core_analog/pfd/inv.sym} 260 -370 0 0 {name=x1}
+C {libs/core_analog/pfd/inv.sym} 480 -370 0 0 {name=x2}
+C {libs/core_analog/pfd/inv.sym} 690 -370 0 0 {name=x3}
+C {libs/core_analog/pfd/inv.sym} 900 -370 0 0 {name=x4}

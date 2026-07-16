@@ -35,7 +35,6 @@ N 70 -220 90 -220 {lab=#net1}
 N 70 -330 70 -220 {lab=#net1}
 N 80 -160 90 -160 {lab=0}
 N 80 -180 80 -160 {lab=0}
-C {pulse_swallow_div.sym} 250 -180 0 0 {name=x1}
 C {vsource.sym} 20 -50 0 0 {name=V1 value=3.3 savecurrent=false}
 C {gnd.sym} 20 -20 0 0 {name=l1 lab=0}
 C {vsource.sym} 20 -360 0 0 {name=V2 value="PULSE(0 3.3 0 50p 50p 2.03n 4.16n)" savecurrent=false}
@@ -62,3 +61,4 @@ C {gnd.sym} 80 -80 0 0 {name=l3 lab=0}
 C {gnd.sym} -10 -200 0 0 {name=l4 lab=0}
 C {lab_pin.sym} 40 -240 0 1 {name=p3 sig_type=std_logic lab=rst_n}
 C {gnd.sym} 250 -40 0 0 {name=l5 lab=0}
+C {libs/core_analog/pulse_swallow_div/src/pulse_swallow_div.sym} 250 -180 0 0 {name=x1}
