@@ -90,3 +90,4 @@ C {ipin.sym} 660 -420 0 0 {name=p15 lab=VBP}
 C {ipin.sym} 660 -400 0 0 {name=p16 lab=VBN}
 C {iopin.sym} 700 -440 0 0 {name=p17 lab=AVDD}
 C {iopin.sym} 700 -380 0 0 {name=p18 lab=AVSS}
+C {devices/title.sym} 160 -30 0 0 {name=l5 author="Yohanes Stefanus"}

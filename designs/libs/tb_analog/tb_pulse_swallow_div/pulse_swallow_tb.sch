@@ -5,6 +5,28 @@ V {}
 S {}
 F {}
 E {}
+B 2 140 -790 1510 -390 {flags=graph
+y1=-0.037
+y2=3.4
+ypos1=0.15705615
+ypos2=1.2442699
+divy=5
+subdivy=1
+unity=1
+x1=3.3841691e-09
+x2=1.2921329e-07
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+node="clk_out
+clk_in"
+color="4 18"
+dataset=-1
+unitx=1
+logx=0
+logy=0
+digital=1}
 N 70 -200 90 -200 {lab=#net1}
 N 20 -200 30 -200 {lab=0}
 N 20 -140 40 -140 {lab=rst_n}
@@ -41,7 +63,7 @@ C {vsource.sym} 20 -360 0 0 {name=V2 value="PULSE(0 3.3 0 50p 50p 2.03n 4.16n)" 
 C {gnd.sym} 20 -240 0 0 {name=l2 lab=0}
 C {vsource.sym} 20 -170 2 0 {name=V3 value="PWL(0 0 10n 0 10.1n 3.3)" savecurrent=false}
 C {code_shown.sym} 470 -350 0 0 {name=s1 only_toplevel=false value="* 1. Extracted Netlist and GF180 Standard Cells
-.include /workspace/designs/libs/pulse_swallow_div/src/pulse_swallow_div_clean.spice
+.include /foss/designs/synchronos-chipathon-2026/designs/libs/core_analog/pulse_swallow_div/src/pulse_swallow_div_clean.spice
 .include /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/spice/gf180mcu_fd_sc_mcu7t5v0.spice
 
 * 2. GF180 Base Transistor Models (TT Corner)
@@ -62,3 +84,7 @@ C {gnd.sym} -10 -200 0 0 {name=l4 lab=0}
 C {lab_pin.sym} 40 -240 0 1 {name=p3 sig_type=std_logic lab=rst_n}
 C {gnd.sym} 250 -40 0 0 {name=l5 lab=0}
 C {libs/core_analog/pulse_swallow_div/src/pulse_swallow_div.sym} 250 -180 0 0 {name=x1}
+C {launcher.sym} 200 -380 0 0 {name=h5
+descr="load waves"
+tclcommand="xschem raw_read $netlist_dir/pulse_swallow_div.raw tran"
+}

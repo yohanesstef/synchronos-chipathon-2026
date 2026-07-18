@@ -135,7 +135,7 @@ C {libs/core_analog/delay_stage/delay_stage.sym} 985 -430 0 0 {name=x1}
 C {devices/code_shown.sym} -335 -650 0 0 {name=Simulation only_toplevel=false value="
 .param vbp=2.1 vbn=1.2 Vin=0 Vcm=1.8
 * --- AC Impedance Extraction ---
-.ac dec 10 1Meg 10G
+.ac dec 10 1 10G
 
 .control
   run
@@ -158,10 +158,10 @@ C {devices/code_shown.sym} -335 -650 0 0 {name=Simulation only_toplevel=false va
   let C_eff = Y_imag / omega
   
   * Plot capacitance over frequency to verify stability
-  plot C_eff ylimit 0 300f
+  plot C_eff ylimit 0 150f
   
   * Print value at target operating frequency (e.g., 350 MHz)
-  meas ac C_target FIND C_eff AT=350Meg
+  meas ac C_target FIND C_eff AT=400e6
 
 write tb_delay_stage_ac.raw
 .endc
@@ -202,10 +202,10 @@ C {lab_pin.sym} 1200 -330 0 1 {name=p22 sig_type=std_logic lab=AVSS}
 C {lab_pin.sym} 1160 -330 0 0 {name=p23 sig_type=std_logic lab=VBN}
 C {lab_pin.sym} 1480 -430 0 1 {name=p24 sig_type=std_logic lab=VBN}
 C {symbols/nfet_03v3.sym} 1440 -380 0 1 {name=M7
-L=1u
-W=37.7u
+L=0.5u
+W=11.25u
 nf=1
-m=10
+m=8
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -216,7 +216,7 @@ model=nfet_03v3
 spiceprefix=X
 }
 C {lab_pin.sym} 1420 -310 0 0 {name=p25 sig_type=std_logic lab=AVSS}
-C {isource.sym} 1420 -490 0 0 {name=I0 value=819u}
+C {isource.sym} 1420 -490 0 0 {name=I0 value=630u}
 C {lab_pin.sym} 1420 -540 0 0 {name=p26 sig_type=std_logic lab=AVDD}
 C {lab_pin.sym} 1260 -400 1 1 {name=p27 sig_type=std_logic lab=VOP2}
 C {lab_pin.sym} 1260 -460 3 1 {name=p28 sig_type=std_logic lab=VON2}
@@ -226,10 +226,10 @@ descr="load ac"
 tclcommand="xschem raw_read $netlist_dir/tb_delay_stage_ac.raw ac"
 }
 C {symbols/pfet_03v3.sym} 1620 -480 0 0 {name=M2
-L=1u
-W=0.74u
+L=1.5u
+W=1.1u
 nf=1
-m=10
+m=8
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -240,6 +240,6 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {lab_pin.sym} 1640 -530 0 0 {name=p12 sig_type=std_logic lab=AVDD}
-C {isource.sym} 1640 -390 0 0 {name=I1 value=204.75u}
+C {isource.sym} 1640 -390 0 0 {name=I1 value=157.5u}
 C {lab_pin.sym} 1640 -330 0 0 {name=p13 sig_type=std_logic lab=AVSS}
 C {lab_pin.sym} 1600 -450 0 0 {name=p14 sig_type=std_logic lab=VBP}

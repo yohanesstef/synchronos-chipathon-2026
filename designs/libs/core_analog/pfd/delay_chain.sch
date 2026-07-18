@@ -22,21 +22,23 @@ N 260 -320 260 -310 {lab=VSS}
 N 260 -440 260 -420 {lab=VDD}
 N 260 -420 300 -420 {lab=VDD}
 N 340 -370 400 -370 {lab=#net1}
-N 770 -370 820 -370 {lab=#net2}
+N 770 -370 820 -370 {lab=Y}
 N 970 -370 1010 -370 {lab=Y}
 N 720 -420 900 -420 {lab=VDD}
 N 720 -320 900 -320 {lab=VSS}
 N 100 -370 170 -370 {lab=A}
 N 170 -370 180 -370 {lab=A}
 N 330 -370 340 -370 {lab=#net1}
-N 550 -370 610 -370 {lab=#net3}
-N 760 -370 770 -370 {lab=#net2}
+N 550 -370 610 -370 {lab=Y}
+N 760 -370 770 -370 {lab=Y}
 N 900 -320 910 -320 {lab=VSS}
+N 820 -370 970 -370 {lab=Y}
+N 610 -370 760 -370 {lab=Y}
 C {ipin.sym} 100 -370 0 0 {name=p1 lab=A}
 C {opin.sym} 1010 -370 0 0 {name=p2 lab=Y}
 C {iopin.sym} 260 -440 3 0 {name=p3 lab=VDD}
 C {iopin.sym} 260 -310 1 0 {name=p4 lab=VSS}
 C {libs/core_analog/pfd/inv.sym} 260 -370 0 0 {name=x1}
 C {libs/core_analog/pfd/inv.sym} 480 -370 0 0 {name=x2}
-C {libs/core_analog/pfd/inv.sym} 690 -370 0 0 {name=x3}
-C {libs/core_analog/pfd/inv.sym} 900 -370 0 0 {name=x4}
+C {libs/core_analog/pfd/inv.sym} 730 -530 0 0 {name=x3}
+C {libs/core_analog/pfd/inv.sym} 910 -570 0 0 {name=x4}
