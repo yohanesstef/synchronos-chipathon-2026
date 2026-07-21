@@ -8,3 +8,13 @@ img/
 *.lyrdb
 .ipynb_checkpoints/
 .venv
+# Ignore simulation runs and setups
+runs/
+simulations/
+
+# Clean simulation wildcard entries
+**/*.vvp
+**/*.vpp
+**/*.vcd
+**/runs/
+**/simulations/
