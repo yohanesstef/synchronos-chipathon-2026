@@ -7,7 +7,7 @@ module tb_i2c;
     wire sda;
     reg sda_master_out;
     wire sda_oe;
-    wire [7:0] div_ctrl;
+    wire [15:0] div_ctrl; // Upgraded to 16-bit bus
 
     // Simulate the external Pull-up Resistor required for I2C
     pullup(sda);
@@ -55,16 +55,23 @@ module tb_i2c;
         clk = 0; rstn = 0; scl = 1; sda_master_out = 0;
         #200 rstn = 1; #500;
         
-        // Transaction: Address 0x50 + Write(0) -> 0xA0. Then Data -> 0xCC
+        // Transaction: Address 0x50(W) -> Byte 1 (0xAA) -> Byte 2 (0x33)
         i2c_start();
         $display("Sending Address 0x50 (Write)...");
         send_byte(8'hA0); 
-        $display("Sending Data 0xCC...");
-        send_byte(8'hCC);
+        
+        $display("Sending Byte 1 (Upper 8 bits / N-Divider): 0xAA...");
+        send_byte(8'hAA);
+        
+        $display("Sending Byte 2 (Lower 8 bits / R-Divider): 0x33...");
+        send_byte(8'h33);
+        
         i2c_stop();
 
         #5000;
-        $display("Final Latched Divider Control: 0x%h", div_ctrl);
+        $display("Final Latched 16-bit Divider Control: 0x%h", div_ctrl);
+        $display("  -> N-Divider (Upper Byte): 0x%h", div_ctrl[15:8]);
+        $display("  -> R-Divider (Lower Byte): 0x%h", div_ctrl[7:0]);
         $finish;
     end
 endmodule

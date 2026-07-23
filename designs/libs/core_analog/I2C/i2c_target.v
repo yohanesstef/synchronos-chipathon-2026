@@ -8,7 +8,7 @@ module i2c_target #(
     input  wire scl,       // I2C Serial Clock
     input  wire sda_in,    // I2C Serial Data Input (from external bus/pad)
     output reg  sda_oe,    // I2C Serial Data Output Enable (1 = pull bus low for ACK, 0 = release bus)
-    output reg  [7:0] div_ctrl // Parallel bus to the clock divider
+    output reg  [15:0] div_ctrl // 16-bit parallel bus: [15:8] for N-divider, [7:0] for R-divider
 );
 
     // Stage 1: Oversampling logic for glitch-free edge detection
@@ -38,17 +38,20 @@ module i2c_target #(
     reg [3:0] state;
     reg [7:0] shift_reg;
     reg [2:0] bit_cnt;
+    reg       byte_sel; // 0 = Receiving Byte 1 (Upper 8 bits), 1 = Receiving Byte 2 (Lower 8 bits)
 
     always @(posedge clk or negedge rstn) begin
         if (!rstn) begin
             state <= IDLE;
-            div_ctrl <= 8'b0;
+            div_ctrl <= 16'b0;
             sda_oe <= 1'b0;
             bit_cnt <= 0;
+            byte_sel <= 1'b0;
         end else if (start_cond) begin
             state <= ADDR;
             bit_cnt <= 7;
             sda_oe <= 1'b0;
+            byte_sel <= 1'b0; // Reset byte selector on every new START
         end else if (stop_cond) begin
             state <= IDLE;
             sda_oe <= 1'b0;
@@ -85,10 +88,19 @@ module i2c_target #(
                     end
                 end
                 ACK2: begin
-                    if (scl_fall) sda_oe <= 1'b1; // ACK the data byte
+                    if (scl_fall) sda_oe <= 1'b1; // ACK the received byte
                     if (scl_rise) begin
-                        div_ctrl <= shift_reg; // Safely latch the entire byte to the divider
-                        state <= IDLE;
+                        if (byte_sel == 1'b0) begin
+                            // First byte received: Latch to Upper 8 bits (e.g., N-Divider)
+                            div_ctrl[15:8] <= shift_reg;
+                            byte_sel       <= 1'b1;
+                            bit_cnt        <= 7;
+                            state          <= DATA; // Loop back to DATA for Byte 2!
+                        end else begin
+                            // Second byte received: Latch to Lower 8 bits (e.g., R-Divider)
+                            div_ctrl[7:0]  <= shift_reg;
+                            state          <= IDLE; // 16-bit transaction complete
+                        end
                     end
                 end
                 default: state <= IDLE;
