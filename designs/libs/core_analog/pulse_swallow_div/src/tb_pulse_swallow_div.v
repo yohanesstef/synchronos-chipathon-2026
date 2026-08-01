@@ -37,8 +37,12 @@ module tb_pulse_swallow_div;
 
         // Initialize Inputs
         rst_n = 0;
-        // B = 12 (4'b1100), A = 0 (4'b0000) -> N = 24
-        div_ctrl = 8'hC0; 
+        
+        // NEW CONFIGURATION:
+        // P = 4. Target N = 24.
+        // N = (P * B) + A --> 24 = (4 * 6) + 0
+        // B = 6 (6'b000110), A = 0 (2'b00) -> {6'b000110, 2'b00} = 8'h18
+        div_ctrl = 8'h18; 
 
         // Wait 10 ns, then release reset
         #10;
