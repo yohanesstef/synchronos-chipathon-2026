@@ -4,11 +4,11 @@
         "dir::pulse_swallow_div.v"
     ],
     "CLOCK_PORT": "clk_in",
-    "CLOCK_PERIOD":  4.167,
+    "SDC_FILE": "dir::pulse_swallow.sdc",
     "PDK": "gf180mcuD",
     "STD_CELL_LIBRARY": "gf180mcu_fd_sc_mcu7t5v0",
-    "FP_CORE_UTIL": 45,
-    "PL_TARGET_DENSITY": 0.50,
+    "FP_CORE_UTIL": 30,
+    "PL_TARGET_DENSITY": 0.35,
     "VDD_NETS": ["VDD"],
     "GND_NETS": ["VSS"],
     "DIODE_INSERTION_STRATEGY": 3
