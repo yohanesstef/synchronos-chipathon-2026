@@ -74,7 +74,7 @@ C {opin.sym} 100 -440 0 0 {name=p12 lab=VO}
 C {lab_pin.sym} 340 -260 2 0 {name=p14 sig_type=std_logic lab=AVDD}
 C {symbols/pfet_03v3.sym} 320 -360 0 0 {name=M3
 L=0.5u
-W=8.3u
+W=16.8u
 nf=1
 m=16
 ad="'int((nf+1)/2) * W/nf * 0.18u'"

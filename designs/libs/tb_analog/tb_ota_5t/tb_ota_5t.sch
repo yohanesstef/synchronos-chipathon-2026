@@ -95,20 +95,6 @@ m=1
 value=10p
 footprint=1206
 device="ceramic capacitor"}
-C {symbols/pfet_03v3.sym} 1040 -460 0 1 {name=M3
-L=0.5u
-W=8.3u
-nf=1
-m=16
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=pfet_03v3
-spiceprefix=X
-}
 C {lab_pin.sym} 1020 -510 0 0 {name=p8 sig_type=std_logic lab=AVDD}
 C {isource.sym} 1020 -370 0 0 {name=I0 value=104u}
 C {lab_pin.sym} 1020 -300 0 0 {name=p9 sig_type=std_logic lab=AVSS}
@@ -158,3 +144,17 @@ descr="load ac"
 tclcommand="xschem raw_read $netlist_dir/tb_ota_5t.raw ac"
 }
 C {lab_pin.sym} 1070 -240 0 0 {name=p4 sig_type=std_logic lab=Vi+}
+C {symbols/pfet_03v3.sym} 1040 -460 0 1 {name=M1
+L=0.5u
+W=16.8u
+nf=1
+m=16
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=pfet_03v3
+spiceprefix=X
+}
