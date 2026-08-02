@@ -1,53 +1,52 @@
 // -----------------------------------------------------------------------------
-// Module 1: Divide-by-2/3 Static Prescaler
+// Module 1: Divide-by-4/5 Static Prescaler (High-Speed Shift Register)
 // -----------------------------------------------------------------------------
-// -----------------------------------------------------------------------------
-// Module 1: Divide-by-2/3 Static Prescaler (With Forced Isolation)
-// -----------------------------------------------------------------------------
-module prescaler_2_3 (
+module prescaler_4_5 (
     input  wire clk_in,   
     input  wire rst_n,    
     input  wire mc,       
     output wire clk_out   
 );
-    reg q1, q2;
+    // A 5-bit shift register eliminates the binary adder.
+    // Combinational logic depth is reduced to exactly one 2:1 MUX.
+    reg q0, q1, q2, q3, q4;
 
     always @(posedge clk_in or negedge rst_n) begin
         if (!rst_n) begin
+            q0 <= 1'b1; // Initialize the walking '1'
             q1 <= 1'b0;
             q2 <= 1'b0;
+            q3 <= 1'b0;
+            q4 <= 1'b0;
         end else begin
-            q1 <= ~(q1 | q2);
-            q2 <= q1 & mc;
+            // If mc=0, feed back after 4 cycles. If mc=1, feed back after 5.
+            q0 <= mc ? q4 : q3; 
+            q1 <= q0;
+            q2 <= q1;
+            q3 <= q2;
+            q4 <= q3;
         end
     end
 
-    // The Structural Isolation Barrier
-    // By forcing a double inversion, Yosys cannot electrically tie the 
-    // downstream clock tree directly to the fragile q1 register.
-    (* keep = "true" *) wire clk_inv = ~q1;
-    (* keep = "true" *) wire clk_buf = ~clk_inv;
-    
-    assign clk_out = clk_buf;
-
+    assign clk_out = q0;
 endmodule
 
 // -----------------------------------------------------------------------------
 // Module 2: Program Counter (Divide by B)
 // -----------------------------------------------------------------------------
 module program_counter (
-    input  wire clk,      // Prescaler output clock (~120 MHz)
+    input  wire clk,      
     input  wire rst_n,
-    input  wire [3:0] b_val, 
-    output reg  done      // Reload pulse (1 prescaler clock cycle wide)
+    input  wire [5:0] b_val, 
+    output reg  done      
 );
-    reg [3:0] cnt;
+    reg [5:0] cnt;
 
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
-            cnt  <= 4'd0;
+            cnt  <= 6'd0;
             done <= 1'b0;
-        end else if (cnt == 4'd0) begin
+        end else if (cnt == 6'd0) begin
             cnt  <= b_val;
             done <= 1'b1;
         end else begin
@@ -61,27 +60,27 @@ endmodule
 // Module 3: Swallow Counter (Divide by A)
 // -----------------------------------------------------------------------------
 module swallow_counter (
-    input  wire clk,      // Prescaler output clock (~120 MHz)
+    input  wire clk,      
     input  wire rst_n,
-    input  wire load,     // Driven by program_counter 'done'
-    input  wire [3:0] a_val,
-    output reg  mc        // Modulus control to prescaler
+    input  wire load,     
+    input  wire [1:0] a_val,
+    output reg  mc        
 );
-    reg [3:0] cnt;
+    reg [1:0] cnt;
 
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
-            cnt <= 4'd0;
+            cnt <= 2'd0;
             mc  <= 1'b0;
         end else if (load) begin
-            if (a_val > 4'd0) begin
+            if (a_val > 2'd0) begin
                 cnt <= a_val - 1'b1;
                 mc  <= 1'b1;
             end else begin
-                cnt <= 4'd0;
+                cnt <= 2'd0;
                 mc  <= 1'b0;
             end
-        end else if (cnt > 4'd0) begin
+        end else if (cnt > 2'd0) begin
             cnt <= cnt - 1'b1;
             mc  <= 1'b1;
         end else begin
@@ -94,21 +93,22 @@ endmodule
 // Module 4: Top-Level Pulse-Swallow Divider
 // -----------------------------------------------------------------------------
 module pulse_swallow_div (
-    input  wire clk_in,         // 240 MHz from VCO
-    input  wire rst_n,          // Async Reset
-    input  wire [7:0] div_ctrl, // [7:4] = B, [3:0] = A
-    output wire clk_out         // 24 MHz output to PFD
+    input  wire clk_in,         
+    input  wire rst_n,          
+    input  wire [7:0] div_ctrl, 
+    output wire clk_out         
 );
-    wire presc_clk;
+    // The keep attribute prevents Yosys from absorbing this net, 
+    // ensuring our SDC file can always find it for the generated clock.
+    (* keep = "true" *) wire presc_clk;
+    
     wire mc;
     wire pc_done;
 
-    // Mathematical correction applied directly in RTL: 
-    // We pass B-1 to the program counter. We pass A directly to the swallow counter.
-    wire [3:0] b_val = div_ctrl[7:4] - 4'd1;
-    wire [3:0] a_val = div_ctrl[3:0];
+    wire [5:0] b_val = div_ctrl[7:2] - 6'd1;
+    wire [1:0] a_val = div_ctrl[1:0];
 
-    prescaler_2_3 u_presc (
+    prescaler_4_5 u_presc (
         .clk_in  (clk_in),
         .rst_n   (rst_n),
         .mc      (mc),
