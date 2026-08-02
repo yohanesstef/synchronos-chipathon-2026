@@ -6,15 +6,15 @@ S {}
 F {}
 E {}
 B 2 820 -1035 1620 -635 {flags=graph
-y1=-0.0027
-y2=2.8
+y1=0
+y2=1
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.9161839e-06
-x2=2.4659363e-05
+x1=0
+x2=1e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -36,8 +36,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.9161839e-06
-x2=2.4659363e-05
+x1=0
+x2=1e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -62,8 +62,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.9161839e-06
-x2=2.4659363e-05
+x1=0
+x2=1e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -87,8 +87,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.9161839e-06
-x2=2.4659363e-05
+x1=0
+x2=1e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -108,8 +108,8 @@ ypos2=2.0119956
 divy=5
 subdivy=1
 unity=1
-x1=1.9161839e-06
-x2=2.4659363e-05
+x1=0
+x2=1e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -133,8 +133,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.9161839e-06
-x2=2.4659363e-05
+x1=0
+x2=1e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -156,8 +156,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.9161839e-06
-x2=2.4659363e-05
+x1=0
+x2=1e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -177,14 +177,11 @@ von1"}
 N 860 -410 860 -400 {lab=AVSS}
 N 860 -340 860 -330 {lab=0}
 N 860 -510 860 -470 {lab=AVDD}
-N 1020 -510 1020 -470 {lab=Vin}
-N 1100 -510 1100 -470 {lab=Vcm}
 N 1990 -510 2010 -510 {lab=VOP[4..1]}
 N 1920 -580 1920 -560 {lab=AVDD_VCO}
 N 1920 -400 1920 -380 {lab=AVSS}
 N 1800 -510 1820 -510 {lab=VBP}
 N 1800 -450 1820 -450 {lab=VBN}
-N 980 -410 1100 -410 {lab=AVSS}
 N 1730 -510 1800 -510 {lab=VBP}
 N 1730 -450 1800 -450 {lab=VBN}
 N 1660 -570 1660 -560 {lab=AVDD}
@@ -231,8 +228,8 @@ N 1780 -310 1810 -310 {lab=AVSS}
 N 1770 -530 1770 -510 {lab=VBP}
 N 1770 -610 1770 -590 {lab=AVSS}
 C {libs/core_analog/vco/vco.sym} 1920 -480 0 0 {name=x1}
-C {devices/code_shown.sym} 5 -760 0 0 {name=Simulation only_toplevel=false value="
-.param vbp=2.1 vbn=1.2 Vin=0 Vcm=2.5
+C {devices/code_shown.sym} 5 -750 0 0 {name=Simulation only_toplevel=false value="
+.param Vin=0 Vcm=2.5
 .ic v(vop1)=3.3 v(von1)=0 v(startup)=0 v(vbp)=0
 .param t1=1u t2=2u t3=3u t4=4u t5=5u t6=6u t7=10u t8=100u t9=1m tr=10n
 
@@ -251,53 +248,54 @@ vctrl vctrl 0 pwl(0 d0
 +t8 d7 't8+tr' d8
 +t9 d8 't9+tr' d0 R 0)
 
-*vctrl vctrl 0 2.6
+*vctrl vctrl 0 1
 
 .control
 set wr_singlescale
 set wr_vecnames
 
-save all
+save v(phase1) v(phase2) v(phase3) v(phase4) v(vctrl) v(vbp)
++v(vbn)
 
 OP
 show all
 
-tran 10000p 1.01m
+tran 1n 1.5m
+*tran 10p 10u 0 1p
 *DC V5 -1 1 0.01
-*TRAN 10u
 
-let sum = v(VOP1) + v(VON1)
-let diff = v(VOP1) - v(VON1)
+*let sum = v(VOP1) + v(VON1)
+*let diff = v(VOP1) - v(VON1)
 *let gain = deriv(diff)
-let vcm = AVG(sum/2)
+*let vcm = AVG(sum/2)
 
 
-meas tran vmax MAX v(VOP1) FROM=10n TO=20n
-meas tran vmin MIN v(VOP1) FROM=10n TO=20n
-let vswing = vmax-vmin
+*meas tran vmax MAX v(VOP1) FROM=10n TO=20n
+*meas tran vmin MIN v(VOP1) FROM=10n TO=20n
+*let vswing = vmax-vmin
 
-meas tran I_tail_avg1 AVG i(v.x1.x1.vmeas) FROM=1.01u TO=2u
-meas tran I_tail_avg2 AVG i(v.x1.x1.vmeas) FROM=2.01u TO=3u
-meas tran I_tail_avg3 AVG i(v.x1.x1.vmeas) FROM=3.01u TO=4u
-meas tran I_tail_avg4 AVG i(v.x1.x1.vmeas) FROM=4.01u TO=5u
-meas tran I_tail_avg5 AVG i(v.x1.x1.vmeas) FROM=5.01u TO=6u
-meas tran I_tail_avg6 AVG i(v.x1.x1.vmeas) FROM=6.01u TO=10u
-meas tran I_tail_avg7 AVG i(v.x1.x1.vmeas) FROM=10.01u TO=100u
-meas tran I_tail_avg8 AVG i(v.x1.x1.vmeas) FROM=100.01u TO=1m
+*meas tran I_tail_avg1 AVG i(v.x1.x1.vmeas) FROM=1.01u TO=2u
+*meas tran I_tail_avg2 AVG i(v.x1.x1.vmeas) FROM=2.01u TO=3u
+*meas tran I_tail_avg3 AVG i(v.x1.x1.vmeas) FROM=3.01u TO=4u
+*meas tran I_tail_avg4 AVG i(v.x1.x1.vmeas) FROM=4.01u TO=5u
+*meas tran I_tail_avg5 AVG i(v.x1.x1.vmeas) FROM=5.01u TO=6u
+*meas tran I_tail_avg6 AVG i(v.x1.x1.vmeas) FROM=6.01u TO=10u
+*meas tran I_tail_avg7 AVG i(v.x1.x1.vmeas) FROM=10.01u TO=100u
+*meas tran I_tail_avg8 AVG i(v.x1.x1.vmeas) FROM=100.01u TO=1m
 
-meas tran I_VCO1 AVG i(V2) FROM=1.01u TO=2u
-meas tran I_VCO2 AVG i(V2) FROM=2.01u TO=3u
-meas tran I_VCO3 AVG i(V2) FROM=3.01u TO=4u
-meas tran I_VCO4 AVG i(V2) FROM=4.01u TO=5u
-meas tran I_VCO5 AVG i(V2) FROM=5.01u TO=6u
-meas tran I_VCO6 AVG i(V2) FROM=6.01u TO=10u
-meas tran I_VCO7 AVG i(V2) FROM=10.01u TO=100u
-meas tran I_VCO8 AVG i(V2) FROM=100.01u TO=1m
+*meas tran I_VCO1 AVG i(V2) FROM=1.01u TO=2u
+*meas tran I_VCO2 AVG i(V2) FROM=2.01u TO=3u
+*meas tran I_VCO3 AVG i(V2) FROM=3.01u TO=4u
+*meas tran I_VCO4 AVG i(V2) FROM=4.01u TO=5u
+*meas tran I_VCO5 AVG i(V2) FROM=5.01u TO=6u
+*meas tran I_VCO6 AVG i(V2) FROM=6.01u TO=10u
+*meas tran I_VCO7 AVG i(V2) FROM=10.01u TO=100u
+*meas tran I_VCO8 AVG i(V2) FROM=100.01u TO=1m
 
 remzerovec
 
 write tb_quadrature_vco.raw
-*wrdata /foss/designs/synchronos-chipathon-2026/designs/libs/tb_analog/tb_quadrature_vco/tb_quadrature_vco.csv tran.all
+*wrdata /foss/designs/synchronos-chipathon-2026/designs/libs/scripts/sim_data/tb_quadrature_vco.txt tran.all
 .endc
 "}
 C {devices/code_shown.sym} 0 -940 0 0 {name=Models only_toplevel=false
@@ -315,10 +313,6 @@ C {gnd.sym} 860 -330 0 0 {name=l1 lab=0}
 C {vsource.sym} 860 -370 0 0 {name=V4 value=0 savecurrent=false}
 C {lab_pin.sym} 860 -510 0 0 {name=p2 sig_type=std_logic lab=AVDD}
 C {lab_pin.sym} 860 -410 0 0 {name=p5 sig_type=std_logic lab=AVSS}
-C {vsource.sym} 1020 -440 0 0 {name=V5 value=Vin savecurrent=false}
-C {vsource.sym} 1100 -440 0 0 {name=V6 value=Vcm savecurrent=false}
-C {lab_pin.sym} 1020 -510 0 0 {name=p10 sig_type=std_logic lab=Vin}
-C {lab_pin.sym} 1100 -510 0 0 {name=p11 sig_type=std_logic lab=Vcm}
 C {capa.sym} 2060 -210 0 0 {name=CN[4..1]
 m=1
 value=10f
@@ -343,7 +337,7 @@ C {lab_pin.sym} 1550 -510 0 0 {name=p4 sig_type=std_logic lab=VCTRL}
 C {lab_pin.sym} 1550 -450 0 0 {name=p14 sig_type=std_logic lab=STARTUP}
 C {capa.sym} 1810 -340 0 0 {name=Cbn
 m=1
-value=10p
+value=20p
 footprint=1206
 device="ceramic capacitor"}
 C {lab_pin.sym} 1780 -310 0 0 {name=p3 sig_type=std_logic lab=AVSS}
@@ -404,7 +398,20 @@ C {lab_pin.sym} 950 -510 0 0 {name=p35 sig_type=std_logic lab=AVDD_VCO}
 C {lab_pin.sym} 1660 -570 0 0 {name=p36 sig_type=std_logic lab=AVDD}
 C {capa.sym} 1770 -560 2 0 {name=Cbn1
 m=1
-value=1p
+value=20p
 footprint=1206
 device="ceramic capacitor"}
 C {lab_pin.sym} 1770 -610 0 0 {name=p32 sig_type=std_logic lab=AVSS}
+C {libs/core_analog/programmable_ffz/programmable_ffz.sym} 2450 -470 0 0 {name=x7}
+C {lab_pin.sym} 2280 -470 0 0 {name=p37 sig_type=std_logic lab=VBN}
+C {lab_pin.sym} 2450 -580 0 0 {name=p38 sig_type=std_logic lab=AVDD}
+C {lab_pin.sym} 2540 -350 3 0 {name=p39 sig_type=std_logic lab=AVSS}
+C {lab_pin.sym} 2610 -460 2 0 {name=p40 sig_type=std_logic lab=VBP}
+C {lab_pin.sym} 2350 -350 3 0 {name=p41 sig_type=std_logic lab=AVSS}
+C {lab_pin.sym} 2370 -350 3 0 {name=p42 sig_type=std_logic lab=AVSS}
+C {lab_pin.sym} 2410 -350 3 0 {name=p43 sig_type=std_logic lab=AVDD}
+C {lab_pin.sym} 2390 -350 3 0 {name=p44 sig_type=std_logic lab=AVDD}
+C {lab_pin.sym} 2500 -350 1 1 {name=p45 sig_type=std_logic lab=AVSS}
+C {lab_pin.sym} 2480 -350 1 1 {name=p46 sig_type=std_logic lab=AVSS}
+C {lab_pin.sym} 2440 -350 1 1 {name=p47 sig_type=std_logic lab=AVDD}
+C {lab_pin.sym} 2460 -350 1 1 {name=p48 sig_type=std_logic lab=AVDD}

@@ -19,10 +19,10 @@ N 330 -570 450 -570 {lab=out_u7}
 N 330 -570 330 -400 {lab=out_u7}
 N 330 -400 330 -390 {lab=out_u7}
 N 330 -390 450 -390 {lab=out_u7}
-C {ipin.sym} 160 -810 0 0 {name=p1 lab=R_bar}
-C {ipin.sym} 150 -140 0 0 {name=p2 lab=V_bar}
-C {opin.sym} 1190 -760 0 0 {name=p3 lab=UP_bar}
-C {opin.sym} 1210 -480 0 0 {name=p4 lab=DN_bar}
+C {ipin.sym} 160 -810 0 0 {name=p1 lab=REF_B}
+C {ipin.sym} 150 -140 0 0 {name=p2 lab=FB_B}
+C {opin.sym} 1190 -760 0 0 {name=p3 lab=UPB}
+C {opin.sym} 1210 -480 0 0 {name=p4 lab=DNB}
 C {iopin.sym} 100 -600 0 0 {name=p5 lab=VDD}
 C {iopin.sym} 100 -550 0 1 {name=p6 lab=VSS}
 C {libs/core_analog/pfd/nand_pf.sym} 300 -800 0 0 {name=XU1}

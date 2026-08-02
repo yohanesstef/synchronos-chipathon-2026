@@ -109,11 +109,9 @@ value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {title.sym} 160 -40 0 0 {name=l2 author="PFD TB — Maneatis/GF180MCU"}
 C {launcher.sym} 850 -900 0 0 {name=h1
 descr="Netlist & Simulate"
 tclcommand="xschem save; xschem netlist; xschem simulate"}
 C {launcher.sym} 850 -860 0 0 {name=h2
 descr="Load Waveforms"
 tclcommand="xschem raw_read $netlist_dir/tb_pfd.raw tran"}
-C {libs/core_analog/pfd/pfd.sym} 740 -630 0 0 {name=x1}

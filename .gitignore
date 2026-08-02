@@ -18,3 +18,4 @@ simulations/
 **/*.vcd
 **/runs/
 **/simulations/
+**/sim_data/
