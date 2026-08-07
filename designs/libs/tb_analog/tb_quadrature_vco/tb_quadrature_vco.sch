@@ -6,15 +6,15 @@ S {}
 F {}
 E {}
 B 2 820 -1035 1620 -635 {flags=graph
-y1=0
-y2=1
+y1=-0.0011
+y2=2.8
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1e-05
+x1=-8.3622532e-06
+x2=5.4728039e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -36,8 +36,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1e-05
+x1=-8.3622532e-06
+x2=5.4728039e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -62,8 +62,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1e-05
+x1=-8.3622532e-06
+x2=5.4728039e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -87,8 +87,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1e-05
+x1=-8.3622532e-06
+x2=5.4728039e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -103,13 +103,13 @@ node=startup}
 B 2 820 -1835 1620 -1435 {flags=graph
 y1=-0.0072
 y2=3.4
-ypos1=0.088478685
-ypos2=2.0119956
+ypos1=-0.0072
+ypos2=3.4
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1e-05
+x1=-8.3622532e-06
+x2=5.4728039e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -133,8 +133,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1e-05
+x1=-8.3622532e-06
+x2=5.4728039e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -156,8 +156,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1e-05
+x1=-8.3622532e-06
+x2=5.4728039e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -182,7 +182,6 @@ N 1920 -580 1920 -560 {lab=AVDD_VCO}
 N 1920 -400 1920 -380 {lab=AVSS}
 N 1800 -510 1820 -510 {lab=VBP}
 N 1800 -450 1820 -450 {lab=VBN}
-N 1730 -510 1800 -510 {lab=VBP}
 N 1730 -450 1800 -450 {lab=VBN}
 N 1660 -570 1660 -560 {lab=AVDD}
 N 1660 -400 1660 -390 {lab=AVSS}
@@ -191,42 +190,24 @@ N 1550 -510 1590 -510 {lab=VCTRL}
 N 1550 -450 1590 -450 {lab=STARTUP}
 N 860 -410 980 -410 {lab=AVSS}
 N 1810 -450 1810 -370 {lab=VBN}
-N 1950 -270 1950 -220 {lab=phase[1..4]}
-N 1950 -330 1950 -300 {lab=AVDD}
-N 1950 -190 1950 -160 {lab=AVSS}
-N 1890 -190 1910 -190 {lab=s[1..4]}
-N 1890 -300 1890 -190 {lab=s[1..4]}
-N 1890 -300 1910 -300 {lab=s[1..4]}
-N 1770 -270 1780 -270 {lab=AVDD}
-N 1780 -270 1780 -60 {lab=AVDD}
-N 1770 -60 1780 -60 {lab=AVDD}
-N 1770 -130 1780 -130 {lab=AVDD}
-N 1770 -200 1780 -200 {lab=AVDD}
-N 1770 -180 1790 -180 {lab=AVSS}
-N 1790 -250 1790 -180 {lab=AVSS}
-N 1770 -250 1790 -250 {lab=AVSS}
-N 1790 -180 1790 -40 {lab=AVSS}
-N 1770 -40 1790 -40 {lab=AVSS}
-N 1770 -110 1790 -110 {lab=AVSS}
-N 1950 -350 1950 -330 {lab=AVDD}
-N 1950 -160 1950 -140 {lab=AVSS}
-N 1770 -230 1820 -230 {lab=s1}
-N 1770 -160 1820 -160 {lab=s2}
-N 1770 -90 1820 -90 {lab=s3}
-N 1770 -20 1820 -20 {lab=s4}
-N 1450 -230 1470 -230 {lab=VBN}
-N 1450 -230 1450 -20 {lab=VBN}
-N 1450 -20 1470 -20 {lab=VBN}
-N 1450 -90 1470 -90 {lab=VBN}
-N 1450 -160 1470 -160 {lab=VBN}
 N 950 -510 950 -470 {lab=AVDD_VCO}
 N 1990 -450 2010 -450 {lab=VON[4..1]}
-N 2060 -180 2060 -160 {lab=AVSS}
-N 2060 -250 2060 -240 {lab=phase[1..4]}
-N 1950 -250 2080 -250 {lab=phase[1..4]}
+N 2240 -250 2240 -230 {lab=AVSS}
+N 2240 -320 2240 -310 {lab=DUMMY[1..4]}
 N 1780 -310 1810 -310 {lab=AVSS}
 N 1770 -530 1770 -510 {lab=VBP}
 N 1770 -610 1770 -590 {lab=AVSS}
+N 2010 -450 2050 -450 {lab=VON[4..1]}
+N 2010 -510 2050 -510 {lab=VOP[4..1]}
+N 1930 -250 1930 -230 {lab=AVSS}
+N 1930 -320 1930 -310 {lab=CK0}
+N 2010 -250 2010 -230 {lab=AVSS}
+N 2010 -320 2010 -310 {lab=CK90}
+N 2080 -250 2080 -230 {lab=AVSS}
+N 2080 -320 2080 -310 {lab=CK180}
+N 2150 -250 2150 -230 {lab=AVSS}
+N 2150 -320 2150 -310 {lab=CK270}
+N 1770 -510 1800 -510 {lab=VBP}
 C {libs/core_analog/vco/vco.sym} 1920 -480 0 0 {name=x1}
 C {devices/code_shown.sym} 5 -750 0 0 {name=Simulation only_toplevel=false value="
 .param Vin=0 Vcm=2.5
@@ -254,8 +235,10 @@ vctrl vctrl 0 pwl(0 d0
 set wr_singlescale
 set wr_vecnames
 
-save v(phase1) v(phase2) v(phase3) v(phase4) v(vctrl) v(vbp)
-+v(vbn)
+save v(CK0) v(CK90) v(CK180) v(CK270) v(vctrl) v(vbp)
++v(vbn) v(dummy1) v(dummy2) v(dummy3) v(dummy4)
++v(VOP1) v(VOP2) v(VOP3) v(VOP4)
++v(VON1) v(VON2) v(VON3) v(VON4)
 
 OP
 show all
@@ -313,13 +296,13 @@ C {gnd.sym} 860 -330 0 0 {name=l1 lab=0}
 C {vsource.sym} 860 -370 0 0 {name=V4 value=0 savecurrent=false}
 C {lab_pin.sym} 860 -510 0 0 {name=p2 sig_type=std_logic lab=AVDD}
 C {lab_pin.sym} 860 -410 0 0 {name=p5 sig_type=std_logic lab=AVSS}
-C {capa.sym} 2060 -210 0 0 {name=CN[4..1]
+C {capa.sym} 2240 -280 0 0 {name=CN[1..4]
 m=1
 value=10f
 footprint=1206
 device="ceramic capacitor"}
-C {lab_pin.sym} 2010 -510 2 0 {name=p6 sig_type=std_logic lab=VOP[4..1]}
-C {lab_pin.sym} 2010 -450 2 0 {name=p7 sig_type=std_logic lab=VON[4..1]}
+C {lab_pin.sym} 2020 -510 1 0 {name=p6 sig_type=std_logic lab=VOP[4..1]}
+C {lab_pin.sym} 2020 -450 3 0 {name=p7 sig_type=std_logic lab=VON[4..1]}
 C {lab_pin.sym} 1920 -380 0 0 {name=p8 sig_type=std_logic lab=AVSS}
 C {lab_pin.sym} 1920 -580 0 0 {name=p9 sig_type=std_logic lab=AVDD_VCO}
 C {lab_pin.sym} 1810 -510 1 0 {name=p12 sig_type=std_logic lab=VBP}
@@ -337,81 +320,68 @@ C {lab_pin.sym} 1550 -510 0 0 {name=p4 sig_type=std_logic lab=VCTRL}
 C {lab_pin.sym} 1550 -450 0 0 {name=p14 sig_type=std_logic lab=STARTUP}
 C {capa.sym} 1810 -340 0 0 {name=Cbn
 m=1
-value=20p
+value=10p
 footprint=1206
 device="ceramic capacitor"}
 C {lab_pin.sym} 1780 -310 0 0 {name=p3 sig_type=std_logic lab=AVSS}
-C {libs/core_analog/d2s_converter/d2s_converter.sym} 1620 -250 0 0 {name=x3}
-C {symbols/pfet_03v3.sym} 1930 -300 0 0 {name=M1[1..4]
-L=0.28u
-W=0.9u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=pfet_03v3
-spiceprefix=X
-}
-C {symbols/nfet_03v3.sym} 1930 -190 0 0 {name=M2[1..4]
-L=0.28u
-W=0.3u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
-C {libs/core_analog/d2s_converter/d2s_converter.sym} 1620 -180 0 0 {name=x4}
-C {libs/core_analog/d2s_converter/d2s_converter.sym} 1620 -110 0 0 {name=x5}
-C {libs/core_analog/d2s_converter/d2s_converter.sym} 1620 -40 0 0 {name=x6}
-C {lab_pin.sym} 1790 -40 0 1 {name=p15 sig_type=std_logic lab=AVSS}
-C {lab_pin.sym} 1780 -270 0 1 {name=p16 sig_type=std_logic lab=AVDD}
-C {lab_pin.sym} 1950 -350 0 1 {name=p17 sig_type=std_logic lab=AVDD}
-C {lab_pin.sym} 1950 -140 0 1 {name=p18 sig_type=std_logic lab=AVSS}
-C {lab_pin.sym} 2060 -160 0 1 {name=p19 sig_type=std_logic lab=AVSS}
-C {lab_pin.sym} 1450 -230 0 0 {name=p1 sig_type=std_logic lab=VBN}
-C {lab_pin.sym} 1470 -250 2 1 {name=p20 sig_type=std_logic lab=VOP1}
-C {lab_pin.sym} 1470 -270 2 1 {name=p21 sig_type=std_logic lab=VON1}
-C {lab_pin.sym} 1470 -130 2 1 {name=p22 sig_type=std_logic lab=VOP1}
-C {lab_pin.sym} 1470 -110 2 1 {name=p23 sig_type=std_logic lab=VON1}
-C {lab_pin.sym} 1470 -180 2 1 {name=p24 sig_type=std_logic lab=VOP3}
-C {lab_pin.sym} 1470 -200 2 1 {name=p25 sig_type=std_logic lab=VON3}
-C {lab_pin.sym} 1470 -60 2 1 {name=p26 sig_type=std_logic lab=VOP3}
-C {lab_pin.sym} 1470 -40 2 1 {name=p27 sig_type=std_logic lab=VON3}
-C {lab_pin.sym} 1820 -230 0 1 {name=p28 sig_type=std_logic lab=s1}
-C {lab_pin.sym} 1820 -160 0 1 {name=p29 sig_type=std_logic lab=s2}
-C {lab_pin.sym} 1820 -90 0 1 {name=p30 sig_type=std_logic lab=s3}
-C {lab_pin.sym} 1820 -20 0 1 {name=p31 sig_type=std_logic lab=s4}
-C {lab_pin.sym} 2080 -250 0 1 {name=p33 sig_type=std_logic lab=phase[1..4]}
-C {lab_pin.sym} 1890 -250 0 0 {name=p34 sig_type=std_logic lab=s[1..4]}
+C {lab_pin.sym} 2240 -230 0 1 {name=p19 sig_type=std_logic lab=AVSS}
+C {lab_pin.sym} 2240 -320 0 1 {name=p33 sig_type=std_logic lab=DUMMY[1..4]}
 C {vsource.sym} 950 -440 0 0 {name=V2 value=3.3 savecurrent=false}
 C {lab_pin.sym} 950 -510 0 0 {name=p35 sig_type=std_logic lab=AVDD_VCO}
 C {lab_pin.sym} 1660 -570 0 0 {name=p36 sig_type=std_logic lab=AVDD}
 C {capa.sym} 1770 -560 2 0 {name=Cbn1
 m=1
-value=20p
+value=10p
 footprint=1206
 device="ceramic capacitor"}
 C {lab_pin.sym} 1770 -610 0 0 {name=p32 sig_type=std_logic lab=AVSS}
-C {libs/core_analog/programmable_ffz/programmable_ffz.sym} 2450 -470 0 0 {name=x7}
-C {lab_pin.sym} 2280 -470 0 0 {name=p37 sig_type=std_logic lab=VBN}
-C {lab_pin.sym} 2450 -580 0 0 {name=p38 sig_type=std_logic lab=AVDD}
-C {lab_pin.sym} 2540 -350 3 0 {name=p39 sig_type=std_logic lab=AVSS}
-C {lab_pin.sym} 2610 -460 2 0 {name=p40 sig_type=std_logic lab=VBP}
-C {lab_pin.sym} 2350 -350 3 0 {name=p41 sig_type=std_logic lab=AVSS}
-C {lab_pin.sym} 2370 -350 3 0 {name=p42 sig_type=std_logic lab=AVSS}
-C {lab_pin.sym} 2410 -350 3 0 {name=p43 sig_type=std_logic lab=AVDD}
-C {lab_pin.sym} 2390 -350 3 0 {name=p44 sig_type=std_logic lab=AVDD}
-C {lab_pin.sym} 2500 -350 1 1 {name=p45 sig_type=std_logic lab=AVSS}
-C {lab_pin.sym} 2480 -350 1 1 {name=p46 sig_type=std_logic lab=AVSS}
-C {lab_pin.sym} 2440 -350 1 1 {name=p47 sig_type=std_logic lab=AVDD}
-C {lab_pin.sym} 2460 -350 1 1 {name=p48 sig_type=std_logic lab=AVDD}
+C {libs/core_analog/programmable_ffz/programmable_ffz.sym} 2570 -470 0 0 {name=x7}
+C {lab_pin.sym} 2400 -470 0 0 {name=p37 sig_type=std_logic lab=VBN}
+C {lab_pin.sym} 2570 -580 0 0 {name=p38 sig_type=std_logic lab=AVDD}
+C {lab_pin.sym} 2660 -350 3 0 {name=p39 sig_type=std_logic lab=AVSS}
+C {lab_pin.sym} 2730 -460 2 0 {name=p40 sig_type=std_logic lab=VBP}
+C {lab_pin.sym} 2470 -350 3 0 {name=p41 sig_type=std_logic lab=AVSS}
+C {lab_pin.sym} 2490 -350 3 0 {name=p42 sig_type=std_logic lab=AVSS}
+C {lab_pin.sym} 2530 -350 3 0 {name=p43 sig_type=std_logic lab=AVDD}
+C {lab_pin.sym} 2510 -350 3 0 {name=p44 sig_type=std_logic lab=AVDD}
+C {lab_pin.sym} 2620 -350 1 1 {name=p45 sig_type=std_logic lab=AVSS}
+C {lab_pin.sym} 2600 -350 1 1 {name=p46 sig_type=std_logic lab=AVSS}
+C {lab_pin.sym} 2560 -350 1 1 {name=p47 sig_type=std_logic lab=AVDD}
+C {lab_pin.sym} 2580 -350 1 1 {name=p48 sig_type=std_logic lab=AVDD}
+C {libs/core_analog/d2s_top/d2s_top.sym} 2140 -480 0 0 {name=x3}
+C {lab_pin.sym} 2100 -380 3 0 {name=p1 sig_type=std_logic lab=VBN}
+C {lab_pin.sym} 2140 -380 3 0 {name=p10 sig_type=std_logic lab=AVSS}
+C {lab_pin.sym} 2140 -560 0 1 {name=p11 sig_type=std_logic lab=AVDD}
+C {capa.sym} 1930 -280 0 0 {name=C1
+m=1
+value=10f
+footprint=1206
+device="ceramic capacitor"}
+C {lab_pin.sym} 1930 -230 0 1 {name=p15 sig_type=std_logic lab=AVSS}
+C {lab_pin.sym} 1930 -320 0 1 {name=p16 sig_type=std_logic lab=CK0}
+C {capa.sym} 2010 -280 0 0 {name=C2
+m=1
+value=10f
+footprint=1206
+device="ceramic capacitor"}
+C {lab_pin.sym} 2010 -230 0 1 {name=p17 sig_type=std_logic lab=AVSS}
+C {lab_pin.sym} 2010 -320 0 1 {name=p18 sig_type=std_logic lab=CK90}
+C {capa.sym} 2080 -280 0 0 {name=C3
+m=1
+value=10f
+footprint=1206
+device="ceramic capacitor"}
+C {lab_pin.sym} 2080 -230 0 1 {name=p20 sig_type=std_logic lab=AVSS}
+C {lab_pin.sym} 2080 -320 0 1 {name=p21 sig_type=std_logic lab=CK180}
+C {capa.sym} 2150 -280 0 0 {name=C4
+m=1
+value=10f
+footprint=1206
+device="ceramic capacitor"}
+C {lab_pin.sym} 2150 -230 0 1 {name=p22 sig_type=std_logic lab=AVSS}
+C {lab_pin.sym} 2150 -320 0 1 {name=p23 sig_type=std_logic lab=CK270}
+C {lab_pin.sym} 2220 -510 0 1 {name=p24 sig_type=std_logic lab=CK0}
+C {lab_pin.sym} 2220 -490 0 1 {name=p25 sig_type=std_logic lab=CK90}
+C {lab_pin.sym} 2220 -470 0 1 {name=p26 sig_type=std_logic lab=CK180}
+C {lab_pin.sym} 2220 -450 0 1 {name=p27 sig_type=std_logic lab=CK270}
+C {lab_pin.sym} 2220 -430 0 1 {name=p28 sig_type=std_logic lab=DUMMY[1..4]}

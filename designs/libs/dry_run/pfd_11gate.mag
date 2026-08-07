@@ -1,0 +1,71 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 1786092635
+<< checkpaint >>
+rect -2000 -4000 2011 1
+<< metal1 >>
+rect 0 0 200 200
+rect 0 -400 200 -200
+rect 0 -800 200 -600
+rect 0 -1200 200 -1000
+rect 0 -1600 200 -1400
+rect 0 -2000 200 -1800
+use nand_pf  XU1
+timestamp 0
+transform 1 0 0 0 1 -2000
+box 0 0 1 1
+use nand_pf  XU2
+timestamp 0
+transform 1 0 1 0 1 -2000
+box 0 0 1 1
+use nand_pf  XU3
+timestamp 0
+transform 1 0 2 0 1 -2000
+box 0 0 1 1
+use nand_pf  XU4
+timestamp 0
+transform 1 0 3 0 1 -2000
+box 0 0 1 1
+use nand_pf  XU5
+timestamp 0
+transform 1 0 4 0 1 -2000
+box 0 0 1 1
+use nand_pf  XU6
+timestamp 0
+transform 1 0 5 0 1 -2000
+box 0 0 1 1
+use nand4_pf  XU7
+timestamp 0
+transform 1 0 6 0 1 -2000
+box 0 0 1 1
+use nand3_pf  XU8
+timestamp 0
+transform 1 0 7 0 1 -2000
+box 0 0 1 1
+use nand_pf  XU9
+timestamp 0
+transform 1 0 8 0 1 -2000
+box 0 0 1 1
+use nand_pf  XU10
+timestamp 0
+transform 1 0 9 0 1 -2000
+box 0 0 1 1
+use nand3_pf  XU11
+timestamp 0
+transform 1 0 10 0 1 -2000
+box 0 0 1 1
+<< labels >>
+flabel metal1 0 0 200 200 0 FreeSans 1600 0 0 0 REF_B
+port 0 nsew
+flabel metal1 0 -400 200 -200 0 FreeSans 1600 0 0 0 UPB
+port 1 nsew
+flabel metal1 0 -800 200 -600 0 FreeSans 1600 0 0 0 DNB
+port 2 nsew
+flabel metal1 0 -1200 200 -1000 0 FreeSans 1600 0 0 0 FB_B
+port 3 nsew
+flabel metal1 0 -1600 200 -1400 0 FreeSans 1600 0 0 0 VDD
+port 4 nsew
+flabel metal1 0 -2000 200 -1800 0 FreeSans 1600 0 0 0 VSS
+port 5 nsew
+<< end >>

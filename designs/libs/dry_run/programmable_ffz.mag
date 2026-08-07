@@ -1,0 +1,141 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 1786092635
+<< checkpaint >>
+rect -2000 -6400 2024 -2399
+<< metal1 >>
+rect 0 0 200 200
+rect 0 -400 200 -200
+rect 0 -800 200 -600
+rect 0 -1200 200 -1000
+rect 0 -1600 200 -1400
+rect 0 -2000 200 -1800
+rect 0 -2400 200 -2200
+rect 0 -2800 200 -2600
+rect 0 -3200 200 -3000
+rect 0 -3600 200 -3400
+rect 0 -4000 200 -3800
+rect 0 -4400 200 -4200
+use feed_forward_zero  x1
+timestamp 0
+transform 1 0 4 0 1 -4400
+box 0 0 1 1
+use transmission_gate  x2
+timestamp 0
+transform 1 0 0 0 1 -4400
+box 0 0 1 1
+use transmission_gate  x3
+timestamp 0
+transform 1 0 1 0 1 -4400
+box 0 0 1 1
+use transmission_gate  x4
+timestamp 0
+transform 1 0 2 0 1 -4400
+box 0 0 1 1
+use transmission_gate  x5
+timestamp 0
+transform 1 0 3 0 1 -4400
+box 0 0 1 1
+use feed_forward_zero  x6
+timestamp 0
+transform 1 0 5 0 1 -4400
+box 0 0 1 1
+use transmission_gate  x7
+timestamp 0
+transform 1 0 20 0 1 -4400
+box 0 0 1 1
+use transmission_gate  x8
+timestamp 0
+transform 1 0 21 0 1 -4400
+box 0 0 1 1
+use transmission_gate  x9
+timestamp 0
+transform 1 0 22 0 1 -4400
+box 0 0 1 1
+use transmission_gate  x10
+timestamp 0
+transform 1 0 23 0 1 -4400
+box 0 0 1 1
+use feed_forward_zero  x11
+timestamp 0
+transform 1 0 8 0 1 -4400
+box 0 0 1 1
+use feed_forward_zero  x12
+timestamp 0
+transform 1 0 9 0 1 -4400
+box 0 0 1 1
+use feed_forward_zero  x13
+timestamp 0
+transform 1 0 10 0 1 -4400
+box 0 0 1 1
+use feed_forward_zero  x14
+timestamp 0
+transform 1 0 11 0 1 -4400
+box 0 0 1 1
+use feed_forward_zero  x21
+timestamp 0
+transform 1 0 12 0 1 -4400
+box 0 0 1 1
+use feed_forward_zero  x22
+timestamp 0
+transform 1 0 13 0 1 -4400
+box 0 0 1 1
+use feed_forward_zero  x23
+timestamp 0
+transform 1 0 14 0 1 -4400
+box 0 0 1 1
+use feed_forward_zero  x24
+timestamp 0
+transform 1 0 15 0 1 -4400
+box 0 0 1 1
+use feed_forward_zero  x25
+timestamp 0
+transform 1 0 16 0 1 -4400
+box 0 0 1 1
+use feed_forward_zero  x26
+timestamp 0
+transform 1 0 17 0 1 -4400
+box 0 0 1 1
+use feed_forward_zero  x27
+timestamp 0
+transform 1 0 18 0 1 -4400
+box 0 0 1 1
+use feed_forward_zero  x28
+timestamp 0
+transform 1 0 19 0 1 -4400
+box 0 0 1 1
+use feed_forward_zero  x71
+timestamp 0
+transform 1 0 6 0 1 -4400
+box 0 0 1 1
+use feed_forward_zero  x72
+timestamp 0
+transform 1 0 7 0 1 -4400
+box 0 0 1 1
+<< labels >>
+flabel metal1 0 0 200 200 0 FreeSans 1600 0 0 0 VBP
+port 0 nsew
+flabel metal1 0 -400 200 -200 0 FreeSans 1600 0 0 0 AVSS
+port 1 nsew
+flabel metal1 0 -800 200 -600 0 FreeSans 1600 0 0 0 AVDD
+port 2 nsew
+flabel metal1 0 -1200 200 -1000 0 FreeSans 1600 0 0 0 VBN
+port 3 nsew
+flabel metal1 0 -1600 200 -1400 0 FreeSans 1600 0 0 0 S1b
+port 4 nsew
+flabel metal1 0 -2000 200 -1800 0 FreeSans 1600 0 0 0 S1
+port 5 nsew
+flabel metal1 0 -2400 200 -2200 0 FreeSans 1600 0 0 0 S2b
+port 6 nsew
+flabel metal1 0 -2800 200 -2600 0 FreeSans 1600 0 0 0 S2
+port 7 nsew
+flabel metal1 0 -3200 200 -3000 0 FreeSans 1600 0 0 0 S3b
+port 8 nsew
+flabel metal1 0 -3600 200 -3400 0 FreeSans 1600 0 0 0 S3
+port 9 nsew
+flabel metal1 0 -4000 200 -3800 0 FreeSans 1600 0 0 0 S4b
+port 10 nsew
+flabel metal1 0 -4400 200 -4200 0 FreeSans 1600 0 0 0 S4
+port 11 nsew
+<< end >>

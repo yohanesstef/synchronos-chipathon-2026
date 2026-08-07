@@ -1,0 +1,94 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 1786092636
+<< checkpaint >>
+rect -2056 1110 2544 1410
+rect -2056 -1000 5244 1110
+rect -2056 -1060 5784 -1000
+rect -2056 -5260 6324 -1060
+rect -1516 -5320 6324 -5260
+rect -976 -5380 6324 -5320
+rect -436 -5440 6324 -5380
+rect 104 -5500 6324 -5440
+rect 644 -5560 6324 -5500
+rect 1184 -5620 6324 -5560
+rect 1724 -5680 6324 -5620
+<< metal1 >>
+rect 0 0 200 200
+rect 0 -400 200 -200
+rect 0 -800 200 -600
+rect 0 -1200 200 -1000
+rect 0 -1600 200 -1400
+rect 0 -2000 200 -1800
+rect 0 -2400 200 -2200
+rect 0 -2800 200 -2600
+rect 0 -3200 200 -3000
+use cp_sym_load  x1
+timestamp 0
+transform 1 0 0 0 1 -3200
+box 0 0 1 1
+use cp_sym_load  x2
+timestamp 0
+transform 1 0 1 0 1 -3200
+box 0 0 1 1
+use cp_sym_load  x3
+timestamp 0
+transform 1 0 2 0 1 -3200
+box 0 0 1 1
+use cp_sym_load  x4
+timestamp 0
+transform 1 0 3 0 1 -3200
+box 0 0 1 1
+use nfet_03v3_XQ82TH  XM1
+timestamp 0
+transform 1 0 244 0 1 -1925
+box -300 -1335 300 1335
+use nfet_03v3_XQ82TH  XM2
+timestamp 0
+transform 1 0 2944 0 1 -2225
+box -300 -1335 300 1335
+use nfet_03v3_L9349K  XM3
+timestamp 0
+transform 1 0 784 0 1 -2902
+box -300 -418 300 418
+use nfet_03v3_L9349K  XM4
+timestamp 0
+transform 1 0 1324 0 1 -2962
+box -300 -418 300 418
+use nfet_03v3_L9349K  XM5
+timestamp 0
+transform 1 0 1864 0 1 -3022
+box -300 -418 300 418
+use nfet_03v3_L9349K  XM6
+timestamp 0
+transform 1 0 2404 0 1 -3082
+box -300 -418 300 418
+use nfet_03v3_VY3TMP  XM7
+timestamp 0
+transform 1 0 3484 0 1 -3310
+box -300 -310 300 310
+use nfet_03v3_VY3TMP  XM8
+timestamp 0
+transform 1 0 4024 0 1 -3370
+box -300 -310 300 310
+<< labels >>
+flabel metal1 0 0 200 200 0 FreeSans 1600 0 0 0 VDD
+port 0 nsew
+flabel metal1 0 -400 200 -200 0 FreeSans 1600 0 0 0 VSS
+port 1 nsew
+flabel metal1 0 -800 200 -600 0 FreeSans 1600 0 0 0 UP
+port 2 nsew
+flabel metal1 0 -1200 200 -1000 0 FreeSans 1600 0 0 0 UP_B
+port 3 nsew
+flabel metal1 0 -1600 200 -1400 0 FreeSans 1600 0 0 0 DN
+port 4 nsew
+flabel metal1 0 -2000 200 -1800 0 FreeSans 1600 0 0 0 DN_B
+port 5 nsew
+flabel metal1 0 -2400 200 -2200 0 FreeSans 1600 0 0 0 VBN
+port 6 nsew
+flabel metal1 0 -2800 200 -2600 0 FreeSans 1600 0 0 0 IP
+port 7 nsew
+flabel metal1 0 -3200 200 -3000 0 FreeSans 1600 0 0 0 S
+port 8 nsew
+<< end >>

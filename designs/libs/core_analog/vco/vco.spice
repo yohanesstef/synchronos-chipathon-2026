@@ -1,0 +1,43 @@
+** sch_path: /foss/designs/synchronos-chipathon-2026/designs/libs/core_analog/vco/vco.sch
+**.subckt vco VOP1,VOP2,VOP3,VOP4 VON1,VON2,VON3,VON4 AVDD AVSS VBP VBN
+*.opin VOP1,VOP2,VOP3,VOP4
+*.opin VON1,VON2,VON3,VON4
+*.ipin VBP
+*.ipin VBN
+*.iopin AVDD
+*.iopin AVSS
+x1 VOP1 AVDD VOP4 VON4 VON1 AVSS VBP VBN delay_stage
+x2 VOP2 AVDD VON1 VOP1 VON2 AVSS VBP VBN delay_stage
+x3 VOP3 AVDD VON2 VOP2 VON3 AVSS VBP VBN delay_stage
+x4 VOP4 AVDD VON3 VOP3 VON4 AVSS VBP VBN delay_stage
+**.ends
+
+* expanding   symbol:  libs/core_analog/delay_stage/delay_stage.sym # of pins=8
+** sym_path: /foss/designs/synchronos-chipathon-2026/designs/libs/core_analog/delay_stage/delay_stage.sym
+** sch_path: /foss/designs/synchronos-chipathon-2026/designs/libs/core_analog/delay_stage/delay_stage.sch
+.subckt delay_stage Vo+ AVDD Vi+ Vi- Vo- AVSS VBP VBN
+*.ipin Vi+
+*.ipin Vi-
+*.opin Vo+
+*.opin Vo-
+*.iopin AVDD
+*.iopin AVSS
+*.ipin VBP
+*.ipin VBN
+XM7 net1 VBN AVSS AVSS nfet_03v3 L=0.5u W=11.25u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=8
+XM5 Vo- Vi+ net1 AVSS nfet_03v3 L=0.5u W=2.08u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=8
+XM2 Vo- Vo- AVDD AVDD pfet_03v3 L=1.5u W=1.1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=8
+XM6 Vo+ Vi- net1 AVSS nfet_03v3 L=0.5u W=2.08u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=8
+XM1 Vo- VBP AVDD AVDD pfet_03v3 L=1.5u W=1.1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=8
+XM3 Vo+ VBP AVDD AVDD pfet_03v3 L=1.5u W=1.1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=8
+XM4 Vo+ Vo+ AVDD AVDD pfet_03v3 L=1.5u W=1.1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=8
+.ends
+
+.end

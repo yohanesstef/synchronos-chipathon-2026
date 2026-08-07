@@ -1,0 +1,72 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 1786092635
+<< checkpaint >>
+rect -2059 20204 2541 58000
+rect -2059 20144 4161 20204
+rect -2059 20084 4701 20144
+rect -2059 3784 5241 20084
+rect -2059 3724 5981 3784
+rect -2059 -3660 6721 3724
+rect -1519 -3720 6721 -3660
+rect -979 -3780 6721 -3720
+rect -439 -3840 6721 -3780
+rect 101 -3900 6721 -3840
+rect 641 -3960 6721 -3900
+rect 1181 -4020 6721 -3960
+rect 1921 -4080 6721 -4020
+<< metal1 >>
+rect 0 0 200 200
+rect 0 -400 200 -200
+rect 0 -800 200 -600
+rect 0 -1200 200 -1000
+rect 0 -1600 200 -1400
+use ota_5t  x1
+timestamp 0
+transform 1 0 0 0 1 -1600
+box 0 0 1 1
+use pfet_03v3_Z8YCP4  XM1
+timestamp 0
+transform 1 0 241 0 1 27170
+box -300 -28830 300 28830
+use pfet_03v3_LD2Y2U  XM2
+timestamp 0
+transform 1 0 3581 0 1 -118
+box -400 -1902 400 1902
+use nfet_03v3_BAGR8L  XM3
+timestamp 0
+transform 1 0 1861 0 1 8182
+box -300 -10022 300 10022
+use nfet_03v3_BAGR8L  XM4
+timestamp 0
+transform 1 0 2401 0 1 8122
+box -300 -10022 300 10022
+use pfet_03v3_LD2Y2U  XM5
+timestamp 0
+transform 1 0 4321 0 1 -178
+box -400 -1902 400 1902
+use nfet_03v3_2FVN7E  XM8
+timestamp 0
+transform 1 0 781 0 1 966
+box -300 -2686 300 2686
+use nfet_03v3_BAGR8L  XM10
+timestamp 0
+transform 1 0 2941 0 1 8062
+box -300 -10022 300 10022
+use nfet_03v3_2FVN7E  XM11
+timestamp 0
+transform 1 0 1321 0 1 906
+box -300 -2686 300 2686
+<< labels >>
+flabel metal1 0 0 200 200 0 FreeSans 1600 0 0 0 VCTRL
+port 0 nsew
+flabel metal1 0 -400 200 -200 0 FreeSans 1600 0 0 0 AVDD
+port 1 nsew
+flabel metal1 0 -800 200 -600 0 FreeSans 1600 0 0 0 STARTUP
+port 2 nsew
+flabel metal1 0 -1200 200 -1000 0 FreeSans 1600 0 0 0 AVSS
+port 3 nsew
+flabel metal1 0 -1600 200 -1400 0 FreeSans 1600 0 0 0 VBN
+port 4 nsew
+<< end >>

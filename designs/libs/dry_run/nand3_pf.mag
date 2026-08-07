@@ -1,0 +1,60 @@
+magic
+tech gf180mcuD
+magscale 1 5
+timestamp 1786092636
+<< checkpaint >>
+rect -1030 250 1248 280
+rect -1030 240 1496 250
+rect -1030 210 1992 240
+rect -1030 180 2240 210
+rect -1030 -2030 2488 180
+rect -782 -2060 2488 -2030
+rect -534 -2090 2488 -2060
+rect -286 -2120 2488 -2090
+rect -38 -2150 2488 -2120
+rect 210 -2180 2488 -2150
+<< metal1 >>
+rect 0 0 100 100
+rect 0 -200 100 -100
+rect 0 -400 100 -300
+rect 0 -600 100 -500
+rect 0 -800 100 -700
+rect 0 -1000 100 -900
+use nfet_03v3_2B3CE7  XMn1
+timestamp 0
+transform 1 0 853 0 1 -940
+box -139 -180 139 180
+use nfet_03v3_2B3CE7  XMn2
+timestamp 0
+transform 1 0 1101 0 1 -970
+box -139 -180 139 180
+use nfet_03v3_2B3CE7  XMn3
+timestamp 0
+transform 1 0 1349 0 1 -1000
+box -139 -180 139 180
+use pfet_03v3_DDB73W  XMp1
+timestamp 0
+transform 1 0 109 0 1 -875
+box -139 -155 139 155
+use pfet_03v3_DDB73W  XMp2
+timestamp 0
+transform 1 0 357 0 1 -905
+box -139 -155 139 155
+use pfet_03v3_DDB73W  XMp3
+timestamp 0
+transform 1 0 605 0 1 -935
+box -139 -155 139 155
+<< labels >>
+flabel metal1 0 0 100 100 0 FreeSans 800 0 0 0 VDD
+port 0 nsew
+flabel metal1 0 -200 100 -100 0 FreeSans 800 0 0 0 Z
+port 1 nsew
+flabel metal1 0 -400 100 -300 0 FreeSans 800 0 0 0 A
+port 2 nsew
+flabel metal1 0 -600 100 -500 0 FreeSans 800 0 0 0 B
+port 3 nsew
+flabel metal1 0 -800 100 -700 0 FreeSans 800 0 0 0 C
+port 4 nsew
+flabel metal1 0 -1000 100 -900 0 FreeSans 800 0 0 0 VSS
+port 5 nsew
+<< end >>

@@ -1,0 +1,33 @@
+magic
+tech gf180mcuD
+timestamp 1786092637
+<< checkpaint >>
+rect -206 92 274 98
+rect -206 -366 348 92
+rect -132 -372 348 -366
+<< metal1 >>
+rect 0 0 20 20
+rect 0 -40 20 -20
+rect 0 -80 20 -60
+rect 0 -120 20 -100
+rect 0 -160 20 -140
+use pfet_03v3_CGLG86  XM1
+timestamp 0
+transform 1 0 34 0 1 -134
+box -40 -32 40 32
+use pfet_03v3_CGLG86  XM2
+timestamp 0
+transform 1 0 108 0 1 -140
+box -40 -32 40 32
+<< labels >>
+flabel metal1 0 0 20 20 0 FreeSans 160 0 0 0 G1
+port 0 nsew
+flabel metal1 0 -40 20 -20 0 FreeSans 160 0 0 0 G2
+port 1 nsew
+flabel metal1 0 -80 20 -60 0 FreeSans 160 0 0 0 S
+port 2 nsew
+flabel metal1 0 -120 20 -100 0 FreeSans 160 0 0 0 D
+port 3 nsew
+flabel metal1 0 -160 20 -140 0 FreeSans 160 0 0 0 VDD
+port 4 nsew
+<< end >>

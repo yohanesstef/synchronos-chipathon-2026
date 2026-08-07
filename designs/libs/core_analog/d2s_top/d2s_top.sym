@@ -1,0 +1,44 @@
+v {xschem version=3.4.8RC file_version=1.3}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+spectre_format="@name ( @pinlist ) @symname"
+template="name=x1"
+}
+V {}
+S {}
+F {}
+E {}
+L 4 -90 -30 -70 -30 {}
+L 4 -90 30 -70 30 {}
+L 4 -40 80 -40 100 {}
+L 4 60 50 80 50 {}
+L 4 60 -30 80 -30 {}
+L 4 60 -10 80 -10 {}
+L 4 60 10 80 10 {}
+L 4 60 30 80 30 {}
+L 7 0 -80 0 -60 {}
+L 7 0 80 0 100 {}
+B 5 -92.5 -32.5 -87.5 -27.5 {name=VOP[1..4] dir=in}
+B 5 -92.5 27.5 -87.5 32.5 {name=VON[1..4] dir=in}
+B 5 -42.5 97.5 -37.5 102.5 {name=VBN dir=in}
+B 5 77.5 47.5 82.5 52.5 {name=DUMMY[1..4] dir=out}
+B 5 77.5 -32.5 82.5 -27.5 {name=CK0 dir=out}
+B 5 77.5 -12.5 82.5 -7.5 {name=CK90 dir=out}
+B 5 77.5 7.5 82.5 12.5 {name=CK180 dir=out}
+B 5 77.5 27.5 82.5 32.5 {name=CK270 dir=out}
+B 5 -2.5 -82.5 2.5 -77.5 {name=AVDD dir=inout}
+B 5 -2.5 97.5 2.5 102.5 {name=AVSS dir=inout}
+P 4 5 60 -60 -70 -60 -70 80 60 80 60 -60 {}
+T {@symname} -59.5 -6 0 0 0.3 0.3 {}
+T {@name} 15 -72 0 0 0.2 0.2 {}
+T {VOP[1..4]} -65 -34 0 0 0.2 0.2 {}
+T {VON[1..4]} -65 26 0 0 0.2 0.2 {}
+T {VBN} -55 66 0 0 0.2 0.2 {}
+T {DUMMY[1..4]} 55 46 0 1 0.2 0.2 {}
+T {CK0} 55 -34 0 1 0.2 0.2 {}
+T {CK90} 55 -14 0 1 0.2 0.2 {}
+T {CK180} 55 6 0 1 0.2 0.2 {}
+T {CK270} 55 26 0 1 0.2 0.2 {}
+T {AVDD} 15 -54 0 1 0.2 0.2 {}
+T {AVSS} 15 66 0 1 0.2 0.2 {}

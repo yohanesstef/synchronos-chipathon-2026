@@ -84,8 +84,8 @@ C {lab_pin.sym} 270 -100 2 1 {name=p9 sig_type=std_logic lab=AVSS}
 C {lab_pin.sym} 230 -120 2 1 {name=p10 sig_type=std_logic lab=VBN}
 C {lab_pin.sym} 270 -340 2 1 {name=p11 sig_type=std_logic lab=AVDD}
 C {lab_pin.sym} 230 -320 2 1 {name=p12 sig_type=std_logic lab=VBP}
-C {opin.sym} 700 -420 0 0 {name=p13 lab=VOP[4..1]}
-C {opin.sym} 700 -400 0 0 {name=p14 lab=VON[4..1]}
+C {opin.sym} 700 -420 0 0 {name=p13 lab=VOP[1..4]}
+C {opin.sym} 700 -400 0 0 {name=p14 lab=VON[1..4]}
 C {ipin.sym} 660 -420 0 0 {name=p15 lab=VBP}
 C {ipin.sym} 660 -400 0 0 {name=p16 lab=VBN}
 C {iopin.sym} 700 -440 0 0 {name=p17 lab=AVDD}

@@ -1,0 +1,57 @@
+magic
+tech gf180mcuD
+magscale 1 5
+timestamp 1786092324
+<< checkpaint >>
+rect -1000 29800 2380 29890
+rect -1000 10902 2650 29800
+rect -1000 10872 3460 10902
+rect -1000 10842 3730 10872
+rect -1000 2692 4000 10842
+rect -1000 2662 4370 2692
+rect -1000 -1000 4740 2662
+rect 350 -1030 4740 -1000
+rect 620 -1060 4740 -1030
+rect 890 -1090 4740 -1060
+rect 1160 -1120 4740 -1090
+rect 1430 -1150 4740 -1120
+rect 1700 -1180 4740 -1150
+rect 1970 -1210 4740 -1180
+rect 2340 -1240 4740 -1210
+use ota_5t  x1
+timestamp 1786092324
+transform 1 0 30 0 1 1150
+box -30 -1150 1350 27740
+use pfet_03v3_Z8YCP4  XM1
+timestamp 0
+transform 1 0 1500 0 1 14385
+box -150 -14415 150 14415
+use pfet_03v3_LD2Y2U  XM2
+timestamp 0
+transform 1 0 3170 0 1 741
+box -200 -951 200 951
+use nfet_03v3_BAGR8L  XM3
+timestamp 0
+transform 1 0 2310 0 1 4891
+box -150 -5011 150 5011
+use nfet_03v3_BAGR8L  XM4
+timestamp 0
+transform 1 0 2580 0 1 4861
+box -150 -5011 150 5011
+use pfet_03v3_LD2Y2U  XM5
+timestamp 0
+transform 1 0 3540 0 1 711
+box -200 -951 200 951
+use nfet_03v3_2FVN7E  XM8
+timestamp 0
+transform 1 0 1770 0 1 1283
+box -150 -1343 150 1343
+use nfet_03v3_BAGR8L  XM10
+timestamp 0
+transform 1 0 2850 0 1 4831
+box -150 -5011 150 5011
+use nfet_03v3_2FVN7E  XM11
+timestamp 0
+transform 1 0 2040 0 1 1253
+box -150 -1343 150 1343
+<< end >>

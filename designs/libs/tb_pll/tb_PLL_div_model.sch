@@ -7,13 +7,13 @@ F {}
 E {}
 B 2 70 -1050 2020 -120 {flags=graph
 y1=0
-ypos1=-0.17197891
-ypos2=3.300896
+ypos1=0.0016648355
+ypos2=3.4745397
 divy=5
 subdivy=1
 unity=1
-x1=0.00028753434
-x2=0.00028984998
+x1=0.0001817015
+x2=0.00018804691
 divx=5
 subdivx=1
 xlabmag=0.5
@@ -34,20 +34,20 @@ dn
 blank
 space
 tune"
-rawfile=$netlist_dir/tb_PLL_model_phase_noise.raw
+rawfile=$netlist_dir/tb_PLL_div_model.raw
 hilight_wave=-1
 digital=1
 y2=3}
 B 2 2030 -1040 2830 -640 {flags=graph
-y1=-5.6673226e-09
-y2=3.0333264e-08
+y1=1.5327947e-09
+y2=3.7533381e-08
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.00028753434
-x2=0.00028984998
+x1=0.0001817015
+x2=0.00018804691
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -58,17 +58,18 @@ dataset=-1
 unitx=1
 logx=0
 logy=0
-hilight_wave=-1}
+hilight_wave=-1
+rawfile=$netlist_dir/tb_PLL_div_model.raw}
 B 2 2030 -640 2830 -240 {flags=graph
-y1=2.5
-y2=2.8
+y1=3.2
+y2=3.3
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.00028753434
-x2=0.00028984998
+x1=0.0001817015
+x2=0.00018804691
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -79,7 +80,8 @@ dataset=-1
 unitx=1
 logx=0
 logy=0
-hilight_wave=-1}
+hilight_wave=-1
+rawfile=$netlist_dir/tb_PLL_div_model.raw}
 P 4 1 850 -1460 {}
 T {Testbench to try out the various Xspice 'behavioral' models of PLL components
 
@@ -90,7 +92,6 @@ T {Testbench to try out the various Xspice 'behavioral' models of PLL components
 
   * The divide_factor of the divider is a parameter you can set for the symbol instance. 
 } -1030 -1440 0 0 0.4 0.4 {}
-N 280 -1490 280 -1470 {lab=reference}
 N 680 -1440 710 -1440 {lab=div_out}
 N 680 -1440 680 -1260 {lab=div_out}
 N 1190 -1500 1220 -1500 {lab=tune}
@@ -102,22 +103,34 @@ N 1240 -1730 1240 -1710 {lab=VDD}
 N 1240 -1730 1350 -1730 {lab=VDD}
 N 1350 -1730 1350 -1710 {lab=VDD}
 N 1240 -1650 1240 -1630 {lab=#net1}
-N 1300 -1760 1300 -1730 {lab=VDD}
+N 1290 -1760 1290 -1730 {lab=VDD}
 N 1350 -1650 1350 -1500 {lab=tune}
 N 1240 -1570 1240 -1560 {lab=#net2}
-N 280 -1500 280 -1490 {lab=reference}
-N 280 -1500 340 -1500 {lab=reference}
 N 1680 -1500 1740 -1500 {lab=vco_out}
 N 1670 -1260 1690 -1260 {lab=vco_out}
 N 1690 -1500 1690 -1260 {lab=vco_out}
-N 640 -1500 710 -1500 {lab=pre_div}
-N 680 -1260 1370 -1260 {lab=div_out}
+N 640 -1500 710 -1500 {lab=reference}
 N 1220 -1500 1380 -1500 {lab=tune}
+N 620 -1300 630 -1300 {lab=0}
+N 620 -1240 640 -1240 {lab=rst}
+N 640 -1360 640 -1240 {lab=rst}
+N 630 -1310 630 -1300 {lab=0}
+N 590 -1310 630 -1310 {lab=0}
+N 590 -1310 590 -1300 {lab=0}
+N 620 -1500 640 -1500 {lab=reference}
+N 1130 -1310 1150 -1310 {lab=rst}
+N 1270 -1330 1270 -1260 {lab=vco_out}
+N 1130 -1330 1270 -1330 {lab=vco_out}
+N 680 -1230 810 -1230 {lab=div_out}
+N 680 -1260 680 -1230 {lab=div_out}
+N 1270 -1260 1670 -1260 {lab=vco_out}
+N 1130 -1150 1130 -1130 {lab=VDD}
+N 1130 -1210 1130 -1170 {lab=GND}
+N 1130 -1270 1130 -1250 {lab=GND}
 C {lab_wire.sym} 1740 -1500 0 1 {name=p2 sig_type=std_logic lab=vco_out
 }
-C {lab_wire.sym} 1330 -1260 0 0 {name=p3 sig_type=std_logic lab=div_out
+C {lab_wire.sym} 750 -1230 0 0 {name=p3 sig_type=std_logic lab=div_out
 }
-C {lab_wire.sym} 280 -1490 0 0 {name=p4 sig_type=std_logic lab=reference}
 C {lab_wire.sym} 930 -1500 0 1 {name=p5 sig_type=std_logic lab=UP}
 C {lab_wire.sym} 930 -1460 0 1 {name=p6 sig_type=std_logic lab=DN}
 C {lab_wire.sym} 930 -1440 0 1 {name=p7 sig_type=std_logic lab=DNb}
@@ -132,7 +145,7 @@ value="R='1.4 / (2 * 60e-6 * (2.6 - max(0.0, min(2.59, v(tune)))))'"
 footprint=1206
 device=resistor
 m=1}
-C {lab_wire.sym} 1300 -1760 0 0 {name=p9 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 1290 -1760 0 0 {name=p9 sig_type=std_logic lab=VDD}
 C {noconn.sym} 960 -1440 0 1 {name=l6}
 C {noconn.sym} 960 -1480 0 1 {name=l7}
 C {capa-2.sym} 1350 -1680 0 0 {name=C2
@@ -142,38 +155,36 @@ footprint=1206
 device=polarized_capacitor}
 C {libs/model_pll/CP_model.sym} 1050 -1490 0 0 {name=x2}
 C {libs/model_pll/vco_model.sym} 1530 -1490 0 0 {name=x3}
-C {libs/model_pll/freq_divider.sym} 1520 -1260 0 1 {name=x4 divide_factor=\{N_div\}}
-C {devices/launcher.sym} 1010 -1140 0 0 {name=h2
+C {devices/launcher.sym} 1950 -1090 0 0 {name=h2
 descr="load tran" 
-tclcommand="xschem raw_read $netlist_dir/tb_PLL_PFD_model.raw tran"
+tclcommand="xschem raw_read $netlist_dir/tb_PLL_div_model.raw tran"
 }
 C {ammeter.sym} 1240 -1530 0 0 {name=Vmeas1 savecurrent=true spice_ignore=0}
 C {lab_wire.sym} 990 -1500 0 0 {name=p1 sig_type=std_logic lab=UP}
 C {lab_wire.sym} 990 -1450 0 0 {name=p10 sig_type=std_logic lab=DN}
 C {lab_wire.sym} 1330 -1500 0 0 {name=p11 sig_type=std_logic lab=tune}
-C {libs/model_pll/freq_divider.sym} 490 -1500 0 0 {name=x5 divide_factor=\{R_div\}}
-C {lab_wire.sym} 700 -1500 0 0 {name=p12 sig_type=std_logic lab=pre_div}
-C {libs/core_analog/pfd/pfd.sym} 820 -1470 0 0 {name=x6}
-C {lab_wire.sym} 820 -1530 0 0 {name=p13 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 820 -1410 0 0 {name=p14 sig_type=std_logic lab=gnd}
-C {code_shown.sym} -2000 -1680 0 0 {name=MODELS only_toplevel=true
+C {lab_wire.sym} 700 -1500 0 0 {name=p12 sig_type=std_logic lab=reference}
+C {code_shown.sym} -1010 -1590 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
-.include /foss/pdks/ciel/gf180mcu/versions/7b70722e33c03fcb5dabcf4d479fb0822d9251c9/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/spice/gf180mcu_fd_sc_mcu7t5v0.spice
-.include $::180MCU_MODELS/design.ngspice
-.lib $::180MCU_MODELS/sm141064.ngspice typical
+.include /foss/designs/synchronos-chipathon-2026/designs/libs/core_analog/pulse_swallow_div/src/pulse_swallow_div_clean.spice
+.include /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/spice/gf180mcu_fd_sc_mcu7t5v0.spice
+
+* 2. GF180 Base Transistor Models (TT Corner)
+.include /foss/pdks/gf180mcuD/libs.tech/ngspice/design.ngspice
+.lib /foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical
 "}
-C {devices/code_shown.sym} -1005 -1198.75 0 0 {name=Simulation only_toplevel=false value="
+C {devices/code_shown.sym} -1005 -1188.75 0 0 {name=Simulation only_toplevel=false value="
 .options method=gear
 VDD VDD 0 3.3
 * control is for tests when opening the loop
 * see the Vcontrol voltage source
 .ic v(tune)=3.2
 * reference frequency
-.param f_ref = 350MEG
+.param f_ref = 10MEG
 * divider
 .param R_div=2
-.param N_div=20
+.param N_div=70
 * loop filter parameters
 .param Ci_filter = 10p
 .param Cj_filter = 1p
@@ -185,13 +196,24 @@ set wr_singlescale
 set wr_vecnames
 
 *save all
-save v(vco_out) v(reference) v(up) v(dn) v(tune)
-TRAN 1n 500u 0 100p
+save v(vco_out) v(reference) v(up) v(dn) v(tune) v(pre_div) v(div_out)
+TRAN 10n 200u
 remzerovec
 
-write tb_PLL_model.raw
-wrdata /foss/designs/synchronos-chipathon-2026/designs/libs/scripts/sim_data/tb_PLL_model.txt tran.all
+write tb_PLL_div_model.raw
+wrdata /foss/designs/synchronos-chipathon-2026/designs/libs/scripts/sim_data/tb_PLL_div_model.txt tran.all
 .endc
 "}
-C {libs/core_analog/pulse_swallow_div/src/pulse_swallow_div.sym} 390 -1860 0 0 {name=x1}
-C {libs/core_analog/pulse_swallow_div/src/pulse_swallow_div.sym} 800 -1860 0 0 {name=x7}
+C {libs/core_analog/pulse_swallow_div/src/pulse_swallow_div.sym} 970 -1230 0 1 {name=x7}
+C {libs/model_pll/pfd_model.sym} 780 -1470 0 0 {name=x6}
+C {vsource.sym} 620 -1270 2 0 {name=V3 value="PWL(0 0 10n 0 10.1n 3.3)" savecurrent=false}
+C {gnd.sym} 590 -1300 0 0 {name=l4 lab=0}
+C {lab_wire.sym} 1150 -1310 0 1 {name=p15 sig_type=std_logic lab=rst
+}
+C {lab_wire.sym} 970 -1370 0 0 {name=p16 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 970 -1090 0 0 {name=p17 sig_type=std_logic lab=GND}
+C {lab_wire.sym} 640 -1360 0 1 {name=p19 sig_type=std_logic lab=rst}
+C {lab_pin.sym} 1130 -1130 0 1 {name=p4 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 1130 -1230 0 1 {name=p13 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 1130 -1170 0 1 {name=p14 sig_type=std_logic lab=GND}
+C {lab_pin.sym} 1130 -1270 0 1 {name=p18 sig_type=std_logic lab=GND}

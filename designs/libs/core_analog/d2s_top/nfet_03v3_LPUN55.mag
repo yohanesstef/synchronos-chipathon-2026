@@ -1,0 +1,75 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 1786091979
+<< error_p >>
+rect -34 1533 -23 1579
+rect 23 1533 34 1544
+rect -80 -1498 -59 -1487
+rect 59 -1498 80 -1487
+rect -34 -1579 -23 -1533
+<< pwell >>
+rect -280 -1710 280 1710
+<< nmos >>
+rect -30 -1500 30 1500
+<< ndiff >>
+rect -118 1487 -30 1500
+rect -118 -1487 -105 1487
+rect -59 -1487 -30 1487
+rect -118 -1500 -30 -1487
+rect 30 1487 118 1500
+rect 30 -1487 59 1487
+rect 105 -1487 118 1487
+rect 30 -1500 118 -1487
+<< ndiffc >>
+rect -105 -1487 -59 1487
+rect 59 -1487 105 1487
+<< psubdiff >>
+rect -256 1614 256 1686
+rect -256 1570 -184 1614
+rect -256 -1570 -243 1570
+rect -197 -1570 -184 1570
+rect 184 1570 256 1614
+rect -256 -1614 -184 -1570
+rect 184 -1570 197 1570
+rect 243 -1570 256 1570
+rect 184 -1614 256 -1570
+rect -256 -1686 256 -1614
+<< psubdiffcont >>
+rect -243 -1570 -197 1570
+rect 197 -1570 243 1570
+<< polysilicon >>
+rect -36 1579 36 1592
+rect -36 1533 -23 1579
+rect 23 1533 36 1579
+rect -36 1520 36 1533
+rect -30 1500 30 1520
+rect -30 -1520 30 -1500
+rect -36 -1533 36 -1520
+rect -36 -1579 -23 -1533
+rect 23 -1579 36 -1533
+rect -36 -1592 36 -1579
+<< polycontact >>
+rect -23 1533 23 1579
+rect -23 -1579 23 -1533
+<< metal1 >>
+rect -243 1627 243 1673
+rect -243 1570 -197 1627
+rect -34 1533 -23 1579
+rect 23 1533 34 1579
+rect 197 1570 243 1627
+rect -105 1487 -59 1498
+rect -105 -1498 -59 -1487
+rect 59 1487 105 1498
+rect 59 -1498 105 -1487
+rect -243 -1627 -197 -1570
+rect -34 -1579 -23 -1533
+rect 23 -1579 34 -1533
+rect 197 -1627 243 -1570
+rect -243 -1673 243 -1627
+<< properties >>
+string FIXED_BBOX -220 -1650 220 1650
+string gencell nfet_03v3
+string library gf180mcu
+string parameters w 15.0 l 0.3 m 1 nf 1 diffcov 100 polycov 100 guard 1 glc 1 grc 1 gtc 0 gbc 0 tbcov 100 rlcov 100 topc 1 botc 1 poverlap 0 doverlap 1 lmin 0.28 wmin 0.22 class mosfet full_metal 1 compatible {nfet_03v3 nfet_05v0 nfet_06v0 nfet_06v0_nvt} ad {int((nf+1)/2) * W/nf * 0.18u} as {int((nf+2)/2) * W/nf * 0.18u} pd {2*int((nf+1)/2) * (W/nf + 0.18u)} ps {2*int((nf+2)/2) * (W/nf + 0.18u)} nrd {0.18u / W} nrs {0.18u / W} sa 0 sb 0 sd 0
+<< end >>

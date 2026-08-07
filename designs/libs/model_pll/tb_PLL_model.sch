@@ -12,8 +12,8 @@ ypos2=3.75
 divy=5
 subdivy=1
 unity=1
-x1=0.0001346809
-x2=0.00013484316
+x1=0
+x2=0.0005
 divx=5
 subdivx=1
 xlabmag=0.5
@@ -46,8 +46,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.0001346809
-x2=0.00013484316
+x1=0
+x2=0.0005
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -67,8 +67,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.0001346809
-x2=0.00013484316
+x1=0
+x2=0.0005
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -137,11 +137,11 @@ set wr_vecnames
 
 *save all
 save v(vco_out) v(reference) v(up) v(dn) v(tune)
-TRAN 1n 500u 0 100p
+TRAN 1n 200u
 remzerovec
 
 write tb_PLL_model.raw
-wrdata /foss/designs/synchronos-chipathon-2026/designs/libs/scripts/sim_data/tb_PLL_model.txt tran.all
+*wrdata /foss/designs/synchronos-chipathon-2026/designs/libs/scripts/sim_data/tb_PLL_model.txt tran.all
 .endc
 "}
 C {lab_wire.sym} 1740 -1500 0 1 {name=p2 sig_type=std_logic lab=vco_out

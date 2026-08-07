@@ -1,0 +1,53 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 1786092637
+<< checkpaint >>
+rect 2643 22404 11424 61900
+rect -2000 13120 11424 22404
+rect -2000 8720 17954 13120
+rect -2000 7080 21133 8720
+rect -2000 6440 25167 7080
+rect -2000 3520 27271 6440
+rect -2000 -2000 29391 3520
+use vco  x1
+timestamp 1786092636
+transform 1 0 60 0 1 7620
+box -60 -7620 4583 12784
+use bias_generator  x2
+timestamp 1786092636
+transform 1 0 4703 0 1 3900
+box -60 -3900 4721 56000
+use d2s_top  x3
+timestamp 1786092636
+transform 1 0 60 0 1 10040
+box -60 -10040 7094 10064
+use programmable_charge_pump  x4
+timestamp 1786092637
+transform 1 0 7214 0 1 10920
+box -60 -10920 4340 200
+use programmable_charge_pump  x5
+timestamp 1786092637
+transform 1 0 11614 0 1 10920
+box -60 -10920 4340 200
+use programmable_ffz  x6
+timestamp 1786092636
+transform 1 0 16014 0 1 6520
+box -60 -6520 3119 200
+use pfd_11gate  x7
+timestamp 1786092636
+transform 1 0 19193 0 1 4880
+box -60 -4880 3974 200
+use pfd_s2d  x8
+timestamp 1786092635
+transform 1 0 23227 0 1 4240
+box -60 -4240 2044 200
+use inv  x11
+timestamp 1786092635
+transform 1 0 25331 0 1 1320
+box -60 -1320 1000 200
+use inv  x12
+timestamp 1786092635
+transform 1 0 26391 0 1 1320
+box -60 -1320 1000 200
+<< end >>

@@ -1,0 +1,23 @@
+magic
+tech gf180mcuD
+magscale 1 5
+timestamp 1786092137
+<< checkpaint >>
+rect -1000 -1000 10280 11202
+use delay_stage  x1
+timestamp 1786092137
+transform 1 0 30 0 1 1610
+box -30 -1610 2290 8592
+use delay_stage  x2
+timestamp 1786092137
+transform 1 0 2350 0 1 1610
+box -30 -1610 2290 8592
+use delay_stage  x3
+timestamp 1786092137
+transform 1 0 4670 0 1 1610
+box -30 -1610 2290 8592
+use delay_stage  x4
+timestamp 1786092137
+transform 1 0 6990 0 1 1610
+box -30 -1610 2290 8592
+<< end >>

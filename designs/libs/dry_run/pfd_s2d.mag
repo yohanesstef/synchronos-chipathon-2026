@@ -1,0 +1,230 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 1786092635
+<< checkpaint >>
+rect -2060 -360 2500 -240
+rect -2060 -520 3544 -360
+rect -2060 -4860 4044 -520
+rect -1560 -4920 4044 -4860
+rect -1016 -4980 4044 -4920
+rect -516 -5040 4044 -4980
+<< metal1 >>
+rect 0 0 200 200
+rect 0 -400 200 -200
+rect 0 -800 200 -600
+rect 0 -1200 200 -1000
+rect 0 -1600 200 -1400
+rect 0 -2000 200 -1800
+rect 0 -2400 200 -2200
+rect 0 -2800 200 -2600
+use inv  x10
+timestamp 0
+transform 1 0 1000 0 1 -2920
+box 0 0 1 1
+use inv  x11
+timestamp 0
+transform 1 0 1001 0 1 -2920
+box 0 0 1 1
+use inv  x20
+timestamp 0
+transform 1 0 1002 0 1 -2920
+box 0 0 1 1
+use inv  x21
+timestamp 0
+transform 1 0 1003 0 1 -2920
+box 0 0 1 1
+use inv  x30
+timestamp 0
+transform 1 0 1004 0 1 -2920
+box 0 0 1 1
+use inv  x31
+timestamp 0
+transform 1 0 1005 0 1 -2920
+box 0 0 1 1
+use inv  x32
+timestamp 0
+transform 1 0 1006 0 1 -2920
+box 0 0 1 1
+use inv  x33
+timestamp 0
+transform 1 0 1007 0 1 -2920
+box 0 0 1 1
+use inv  x34
+timestamp 0
+transform 1 0 1008 0 1 -2920
+box 0 0 1 1
+use inv  x35
+timestamp 0
+transform 1 0 1009 0 1 -2920
+box 0 0 1 1
+use inv  x36
+timestamp 0
+transform 1 0 1010 0 1 -2920
+box 0 0 1 1
+use inv  x37
+timestamp 0
+transform 1 0 1011 0 1 -2920
+box 0 0 1 1
+use inv  x38
+timestamp 0
+transform 1 0 1012 0 1 -2920
+box 0 0 1 1
+use inv  x40
+timestamp 0
+transform 1 0 1013 0 1 -2920
+box 0 0 1 1
+use inv  x41
+timestamp 0
+transform 1 0 1014 0 1 -2920
+box 0 0 1 1
+use inv  x42
+timestamp 0
+transform 1 0 1015 0 1 -2920
+box 0 0 1 1
+use inv  x43
+timestamp 0
+transform 1 0 1016 0 1 -2920
+box 0 0 1 1
+use inv  x44
+timestamp 0
+transform 1 0 1017 0 1 -2920
+box 0 0 1 1
+use inv  x45
+timestamp 0
+transform 1 0 1018 0 1 -2920
+box 0 0 1 1
+use inv  x46
+timestamp 0
+transform 1 0 1019 0 1 -2920
+box 0 0 1 1
+use inv  x47
+timestamp 0
+transform 1 0 1020 0 1 -2920
+box 0 0 1 1
+use inv  x48
+timestamp 0
+transform 1 0 1021 0 1 -2920
+box 0 0 1 1
+use inv  x50
+timestamp 0
+transform 1 0 1022 0 1 -2920
+box 0 0 1 1
+use inv  x51
+timestamp 0
+transform 1 0 1023 0 1 -2920
+box 0 0 1 1
+use inv  x60
+timestamp 0
+transform 1 0 1024 0 1 -2920
+box 0 0 1 1
+use inv  x61
+timestamp 0
+transform 1 0 1025 0 1 -2920
+box 0 0 1 1
+use inv  x70
+timestamp 0
+transform 1 0 1026 0 1 -2920
+box 0 0 1 1
+use inv  x71
+timestamp 0
+transform 1 0 1027 0 1 -2920
+box 0 0 1 1
+use inv  x72
+timestamp 0
+transform 1 0 1028 0 1 -2920
+box 0 0 1 1
+use inv  x73
+timestamp 0
+transform 1 0 1029 0 1 -2920
+box 0 0 1 1
+use inv  x74
+timestamp 0
+transform 1 0 1030 0 1 -2920
+box 0 0 1 1
+use inv  x75
+timestamp 0
+transform 1 0 1031 0 1 -2920
+box 0 0 1 1
+use inv  x76
+timestamp 0
+transform 1 0 1032 0 1 -2920
+box 0 0 1 1
+use inv  x77
+timestamp 0
+transform 1 0 1033 0 1 -2920
+box 0 0 1 1
+use inv  x78
+timestamp 0
+transform 1 0 1034 0 1 -2920
+box 0 0 1 1
+use inv  x80
+timestamp 0
+transform 1 0 1035 0 1 -2920
+box 0 0 1 1
+use inv  x81
+timestamp 0
+transform 1 0 1036 0 1 -2920
+box 0 0 1 1
+use inv  x82
+timestamp 0
+transform 1 0 1037 0 1 -2920
+box 0 0 1 1
+use inv  x83
+timestamp 0
+transform 1 0 1038 0 1 -2920
+box 0 0 1 1
+use inv  x84
+timestamp 0
+transform 1 0 1039 0 1 -2920
+box 0 0 1 1
+use inv  x85
+timestamp 0
+transform 1 0 1040 0 1 -2920
+box 0 0 1 1
+use inv  x86
+timestamp 0
+transform 1 0 1041 0 1 -2920
+box 0 0 1 1
+use inv  x87
+timestamp 0
+transform 1 0 1042 0 1 -2920
+box 0 0 1 1
+use inv  x88
+timestamp 0
+transform 1 0 1043 0 1 -2920
+box 0 0 1 1
+use pfet_03v3_FHFB7E  XM1
+timestamp 0
+transform 1 0 220 0 1 -2550
+box -280 -310 280 310
+use nfet_03v3_MNZCYD  XM2
+timestamp 0
+transform 1 0 720 0 1 -2660
+box -280 -260 280 260
+use pfet_03v3_FHFB7E  XM3
+timestamp 0
+transform 1 0 1264 0 1 -2670
+box -280 -310 280 310
+use nfet_03v3_MNZCYD  XM4
+timestamp 0
+transform 1 0 1764 0 1 -2780
+box -280 -260 280 260
+<< labels >>
+flabel metal1 0 0 200 200 0 FreeSans 1600 0 0 0 UPB
+port 0 nsew
+flabel metal1 0 -400 200 -200 0 FreeSans 1600 0 0 0 UB
+port 1 nsew
+flabel metal1 0 -800 200 -600 0 FreeSans 1600 0 0 0 UP
+port 2 nsew
+flabel metal1 0 -1200 200 -1000 0 FreeSans 1600 0 0 0 AVDD
+port 3 nsew
+flabel metal1 0 -1600 200 -1400 0 FreeSans 1600 0 0 0 AVSS
+port 4 nsew
+flabel metal1 0 -2000 200 -1800 0 FreeSans 1600 0 0 0 DNB
+port 5 nsew
+flabel metal1 0 -2400 200 -2200 0 FreeSans 1600 0 0 0 DB
+port 6 nsew
+flabel metal1 0 -2800 200 -2600 0 FreeSans 1600 0 0 0 DN
+port 7 nsew
+<< end >>

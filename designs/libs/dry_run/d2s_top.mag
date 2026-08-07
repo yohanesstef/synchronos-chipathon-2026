@@ -1,0 +1,130 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 1786092635
+<< checkpaint >>
+rect -2000 -9200 2016 -5199
+<< metal1 >>
+rect 0 0 200 200
+rect 0 -400 200 -200
+rect 0 -800 200 -600
+rect 0 -1200 200 -1000
+rect 0 -1600 200 -1400
+rect 0 -2000 200 -1800
+rect 0 -2400 200 -2200
+rect 0 -2800 200 -2600
+rect 0 -3200 200 -3000
+rect 0 -3600 200 -3400
+rect 0 -4000 200 -3800
+rect 0 -4400 200 -4200
+rect 0 -4800 200 -4600
+rect 0 -5200 200 -5000
+rect 0 -5600 200 -5400
+rect 0 -6000 200 -5800
+rect 0 -6400 200 -6200
+rect 0 -6800 200 -6600
+rect 0 -7200 200 -7000
+use d2s_converter  x1
+timestamp 0
+transform 1 0 0 0 1 -7200
+box 0 0 1 1
+use d2s_converter  x2
+timestamp 0
+transform 1 0 1 0 1 -7200
+box 0 0 1 1
+use d2s_converter  x3
+timestamp 0
+transform 1 0 4 0 1 -7200
+box 0 0 1 1
+use inv  x4
+timestamp 0
+transform 1 0 5 0 1 -7200
+box 0 0 1 1
+use d2s_converter  x5
+timestamp 0
+transform 1 0 6 0 1 -7200
+box 0 0 1 1
+use inv  x6
+timestamp 0
+transform 1 0 7 0 1 -7200
+box 0 0 1 1
+use d2s_converter  x7
+timestamp 0
+transform 1 0 8 0 1 -7200
+box 0 0 1 1
+use d2s_converter  x8
+timestamp 0
+transform 1 0 9 0 1 -7200
+box 0 0 1 1
+use inv  x9
+timestamp 0
+transform 1 0 2 0 1 -7200
+box 0 0 1 1
+use inv  x10
+timestamp 0
+transform 1 0 3 0 1 -7200
+box 0 0 1 1
+use inv  x11
+timestamp 0
+transform 1 0 10 0 1 -7200
+box 0 0 1 1
+use inv  x12
+timestamp 0
+transform 1 0 11 0 1 -7200
+box 0 0 1 1
+use d2s_converter  x13
+timestamp 0
+transform 1 0 12 0 1 -7200
+box 0 0 1 1
+use inv  x14
+timestamp 0
+transform 1 0 13 0 1 -7200
+box 0 0 1 1
+use d2s_converter  x15
+timestamp 0
+transform 1 0 14 0 1 -7200
+box 0 0 1 1
+use inv  x16
+timestamp 0
+transform 1 0 15 0 1 -7200
+box 0 0 1 1
+<< labels >>
+flabel metal1 0 0 200 200 0 FreeSans 1600 0 0 0 VOP1
+port 0 nsew
+flabel metal1 0 -400 200 -200 0 FreeSans 1600 0 0 0 VOP2
+port 1 nsew
+flabel metal1 0 -800 200 -600 0 FreeSans 1600 0 0 0 VOP3
+port 2 nsew
+flabel metal1 0 -1200 200 -1000 0 FreeSans 1600 0 0 0 VOP4
+port 3 nsew
+flabel metal1 0 -1600 200 -1400 0 FreeSans 1600 0 0 0 VON1
+port 4 nsew
+flabel metal1 0 -2000 200 -1800 0 FreeSans 1600 0 0 0 VON2
+port 5 nsew
+flabel metal1 0 -2400 200 -2200 0 FreeSans 1600 0 0 0 VON3
+port 6 nsew
+flabel metal1 0 -2800 200 -2600 0 FreeSans 1600 0 0 0 VON4
+port 7 nsew
+flabel metal1 0 -3200 200 -3000 0 FreeSans 1600 0 0 0 VBN
+port 8 nsew
+flabel metal1 0 -3600 200 -3400 0 FreeSans 1600 0 0 0 DUMMY1
+port 9 nsew
+flabel metal1 0 -4000 200 -3800 0 FreeSans 1600 0 0 0 DUMMY2
+port 10 nsew
+flabel metal1 0 -4400 200 -4200 0 FreeSans 1600 0 0 0 DUMMY3
+port 11 nsew
+flabel metal1 0 -4800 200 -4600 0 FreeSans 1600 0 0 0 DUMMY4
+port 12 nsew
+flabel metal1 0 -5200 200 -5000 0 FreeSans 1600 0 0 0 CK0
+port 13 nsew
+flabel metal1 0 -5600 200 -5400 0 FreeSans 1600 0 0 0 CK90
+port 14 nsew
+flabel metal1 0 -6000 200 -5800 0 FreeSans 1600 0 0 0 CK180
+port 15 nsew
+flabel metal1 0 -6400 200 -6200 0 FreeSans 1600 0 0 0 CK270
+port 16 nsew
+flabel metal1 0 -6800 200 -6600 0 FreeSans 1600 0 0 0 AVDD
+port 17 nsew
+flabel metal1 0 -7200 200 -7000 0 FreeSans 1600 0 0 0 AVSS
+port 18 nsew
+<< end >>

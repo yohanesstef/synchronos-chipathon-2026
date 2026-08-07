@@ -1,0 +1,86 @@
+** sch_path: /foss/designs/synchronos-chipathon-2026/designs/libs/core_analog/d2s_top/d2s_top.sch
+**.subckt d2s_top VOP1,VOP2,VOP3,VOP4 VON1,VON2,VON3,VON4 VBN DUMMY1,DUMMY2,DUMMY3,DUMMY4 CK0 CK90 CK180 CK270 AVDD AVSS
+*.ipin VOP1,VOP2,VOP3,VOP4
+*.ipin VON1,VON2,VON3,VON4
+*.ipin VBN
+*.opin DUMMY1,DUMMY2,DUMMY3,DUMMY4
+*.opin CK0
+*.opin CK90
+*.opin CK180
+*.opin CK270
+*.iopin AVDD
+*.iopin AVSS
+x1 AVDD AVSS VON1 VOP1 VBN net8 d2s_converter
+x2 AVDD AVSS VON3 VOP3 VBN net1 d2s_converter
+x9 AVDD net8 CK0 AVSS inv
+x10 AVDD net1 CK90 AVSS inv
+x3 AVDD AVSS VOP1 VON1 VBN net2 d2s_converter
+x4 AVDD net2 CK180 AVSS inv
+x5 AVDD AVSS VOP3 VON3 VBN net3 d2s_converter
+x6 AVDD net3 CK270 AVSS inv
+x7 AVDD AVSS VON2 VOP2 VBN net7 d2s_converter
+x8 AVDD AVSS VON4 VOP4 VBN net4 d2s_converter
+x11 AVDD net7 DUMMY1 AVSS inv
+x12 AVDD net4 DUMMY2 AVSS inv
+x13 AVDD AVSS VOP2 VON2 VBN net5 d2s_converter
+x14 AVDD net5 DUMMY3 AVSS inv
+x15 AVDD AVSS VOP4 VON4 VBN net6 d2s_converter
+x16 AVDD net6 DUMMY4 AVSS inv
+**.ends
+
+* expanding   symbol:  libs/core_analog/d2s_converter/d2s_converter.sym # of pins=6
+** sym_path: /foss/designs/synchronos-chipathon-2026/designs/libs/core_analog/d2s_converter/d2s_converter.sym
+** sch_path: /foss/designs/synchronos-chipathon-2026/designs/libs/core_analog/d2s_converter/d2s_converter.sch
+.subckt d2s_converter VDD VSS VIN VIP VBN VO
+*.iopin VDD
+*.iopin VSS
+*.ipin VIN
+*.ipin VIP
+*.opin VO
+*.ipin VBN
+XM2 net2 VIN net1 VSS nfet_03v3 L=0.3u W=15u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM3 VOP VIP net1 VSS nfet_03v3 L=0.3u W=15u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM4 net2 net2 VDD VDD pfet_03v3 L=0.3u W=11u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM5 VOP net2 VDD VDD pfet_03v3 L=0.3u W=11u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM7 net4 VIP net3 VSS nfet_03v3 L=0.3u W=15u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM8 VON VIN net3 VSS nfet_03v3 L=0.3u W=15u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM9 net4 net4 VDD VDD pfet_03v3 L=0.3u W=11u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM10 VON net4 VDD VDD pfet_03v3 L=0.3u W=11u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM11 net5 net5 VSS VSS nfet_03v3 L=0.3u W=12u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM12 VO net5 VSS VSS nfet_03v3 L=0.3u W=12u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM13 net5 VOP VDD VDD pfet_03v3 L=0.3u W=16u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM14 VO VON VDD VDD pfet_03v3 L=0.3u W=16u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM6 net3 VBN VSS VSS nfet_03v3 L=0.5u W=11.25u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=8
+XM1 net1 VBN VSS VSS nfet_03v3 L=0.5u W=11.25u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=8
+.ends
+
+
+* expanding   symbol:  libs/core_analog/inv/inv.sym # of pins=4
+** sym_path: /foss/designs/synchronos-chipathon-2026/designs/libs/core_analog/inv/inv.sym
+** sch_path: /foss/designs/synchronos-chipathon-2026/designs/libs/core_analog/inv/inv.sch
+.subckt inv AVDD IN OUT AVSS
+*.ipin IN
+*.iopin AVDD
+*.iopin AVSS
+*.opin OUT
+XM1 OUT IN AVDD AVDD pfet_03v3 L=0.28u W=0.9u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM2 OUT IN AVSS AVSS nfet_03v3 L=0.28u W=0.3u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+.ends
+
+.end

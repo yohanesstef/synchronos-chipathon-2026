@@ -1,0 +1,100 @@
+magic
+tech gf180mcuD
+magscale 1 5
+timestamp 1786092636
+<< checkpaint >>
+rect 1970 9602 4270 9632
+rect -1030 1650 1250 1680
+rect -1030 1560 1500 1650
+rect 1970 1560 4540 9602
+rect -1030 -2030 4540 1560
+rect -780 -2060 4540 -2030
+rect -530 -2090 4540 -2060
+rect -280 -2120 4540 -2090
+rect -30 -2150 4540 -2120
+rect 220 -2180 4540 -2150
+rect 470 -2210 4540 -2180
+rect 720 -2240 4540 -2210
+rect 970 -2270 4540 -2240
+rect 1220 -2300 4540 -2270
+rect 1470 -2330 4540 -2300
+rect 1720 -2360 4540 -2330
+rect 1970 -2390 4540 -2360
+rect 2240 -2420 4540 -2390
+<< metal1 >>
+rect 0 0 100 100
+rect 0 -200 100 -100
+rect 0 -400 100 -300
+rect 0 -600 100 -500
+rect 0 -800 100 -700
+rect 0 -1000 100 -900
+use nfet_03v3_BAGR8L  XM1
+timestamp 0
+transform 1 0 3390 0 1 3591
+box -150 -5011 150 5011
+use nfet_03v3_LPUN55  XM2
+timestamp 0
+transform 1 0 110 0 1 -175
+box -140 -855 140 855
+use nfet_03v3_LPUN55  XM3
+timestamp 0
+transform 1 0 360 0 1 -205
+box -140 -855 140 855
+use pfet_03v3_D2D6MZ  XM4
+timestamp 0
+transform 1 0 610 0 1 -435
+box -140 -655 140 655
+use pfet_03v3_D2D6MZ  XM5
+timestamp 0
+transform 1 0 860 0 1 -465
+box -140 -655 140 655
+use nfet_03v3_BAGR8L  XM6
+timestamp 0
+transform 1 0 3120 0 1 3621
+box -150 -5011 150 5011
+use nfet_03v3_LPUN55  XM7
+timestamp 0
+transform 1 0 1110 0 1 -295
+box -140 -855 140 855
+use nfet_03v3_LPUN55  XM8
+timestamp 0
+transform 1 0 1360 0 1 -325
+box -140 -855 140 855
+use pfet_03v3_D2D6MZ  XM9
+timestamp 0
+transform 1 0 1610 0 1 -555
+box -140 -655 140 655
+use pfet_03v3_D2D6MZ  XM10
+timestamp 0
+transform 1 0 1860 0 1 -585
+box -140 -655 140 655
+use nfet_03v3_RRVC3A  XM11
+timestamp 0
+transform 1 0 2110 0 1 -565
+box -140 -705 140 705
+use nfet_03v3_RRVC3A  XM12
+timestamp 0
+transform 1 0 2360 0 1 -595
+box -140 -705 140 705
+use pfet_03v3_5ST48N  XM13
+timestamp 0
+transform 1 0 2610 0 1 -425
+box -140 -905 140 905
+use pfet_03v3_5ST48N  XM14
+timestamp 0
+transform 1 0 2860 0 1 -455
+box -140 -905 140 905
+<< labels >>
+flabel metal1 0 0 100 100 0 FreeSans 800 0 0 0 VDD
+port 0 nsew
+flabel metal1 0 -200 100 -100 0 FreeSans 800 0 0 0 VSS
+port 1 nsew
+flabel metal1 0 -400 100 -300 0 FreeSans 800 0 0 0 VIN
+port 2 nsew
+flabel metal1 0 -600 100 -500 0 FreeSans 800 0 0 0 VIP
+port 3 nsew
+flabel metal1 0 -800 100 -700 0 FreeSans 800 0 0 0 VBN
+port 4 nsew
+flabel metal1 0 -1000 100 -900 0 FreeSans 800 0 0 0 VO
+port 5 nsew
+<< end >>

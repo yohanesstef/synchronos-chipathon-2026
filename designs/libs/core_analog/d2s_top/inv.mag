@@ -1,0 +1,43 @@
+magic
+tech gf180mcuD
+magscale 1 5
+timestamp 1786091979
+<< error_s >>
+rect 100 -395 115 -377
+rect 92 -418 97 -413
+rect 120 -418 126 -413
+rect 213 -414 229 -409
+rect 213 -432 248 -414
+rect 218 -460 252 -432
+rect 212 -484 252 -460
+rect 137 -524 149 -518
+rect 218 -560 253 -484
+rect 342 -502 347 -479
+rect 300 -548 305 -525
+rect 384 -548 389 -525
+rect 218 -611 252 -560
+rect 342 -594 347 -571
+rect 218 -630 248 -611
+<< metal1 >>
+rect 0 0 100 100
+rect 0 -200 100 -100
+rect 0 -400 100 -300
+rect 0 -600 100 -500
+use pfet_03v3_YCD4PU  XM1
+timestamp 1786091979
+transform 1 0 109 0 1 -480
+box -139 -150 139 150
+use nfet_03v3_T644KW  XM2
+timestamp 1786091979
+transform 1 0 359 0 1 -537
+box -141 -123 141 123
+<< labels >>
+flabel metal1 0 0 100 100 0 FreeSans 800 0 0 0 AVDD
+port 0 nsew
+flabel metal1 0 -200 100 -100 0 FreeSans 800 0 0 0 IN
+port 1 nsew
+flabel metal1 0 -400 100 -300 0 FreeSans 800 0 0 0 OUT
+port 2 nsew
+flabel metal1 0 -600 100 -500 0 FreeSans 800 0 0 0 AVSS
+port 3 nsew
+<< end >>
