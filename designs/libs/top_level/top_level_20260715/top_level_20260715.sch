@@ -5,7 +5,6 @@ V {}
 S {}
 F {}
 E {}
-N 1640 -770 1700 -770 {lab=VCTRL}
 N 1910 -710 1980 -710 {lab=VBN}
 N 1970 -710 1970 -690 {lab=VBN}
 N 2080 -660 2080 -620 {lab=AVSS}
@@ -15,10 +14,7 @@ N 2080 -840 2080 -820 {lab=AVDD}
 N 1770 -840 1770 -820 {lab=AVDD}
 N 1690 -710 1700 -710 {lab=STARTUP}
 N 1840 -840 2080 -840 {lab=AVDD}
-N 1630 -770 1640 -770 {lab=VCTRL}
-N 1620 -770 1630 -770 {lab=VCTRL}
 N 1960 -770 1980 -770 {lab=VBP}
-N 1640 -770 1640 -760 {lab=VCTRL}
 N 2150 -770 2270 -770 {lab=VOP[4..1]}
 N 2150 -710 2270 -710 {lab=VON[4..1]}
 N 2160 -720 2160 -710 {lab=VON[4..1]}
@@ -111,7 +107,6 @@ N 1590 -1240 1590 -1090 {lab=VBP}
 N 1840 -1220 1840 -1200 {lab=AVDD}
 N 1660 -1090 1670 -1090 {lab=VBN}
 N 2020 -1220 2020 -1160 {lab=VBP}
-N 1580 -770 1620 -770 {lab=VCTRL}
 N 910 -810 960 -810 {lab=Ub}
 N 910 -750 960 -750 {lab=Db}
 N 800 -840 1040 -840 {lab=AVDD}
@@ -144,6 +139,8 @@ N 2470 -770 2490 -770 {lab=CK0}
 N 2440 -730 2490 -730 {lab=CK180}
 N 2440 -710 2490 -710 {lab=CK270}
 N 2440 -690 2490 -690 {lab=DUMMY[1..4]}
+N 1580 -770 1700 -770 {lab=VCTRL}
+N 1630 -770 1630 -750 {lab=VCTRL}
 C {libs/core_analog/vco/vco.sym} 2080 -740 0 0 {name=x1}
 C {libs/core_analog/bias_generator/bias_generator.sym} 1770 -740 0 0 {name=x2}
 C {lab_pin.sym} 2080 -630 0 1 {name=p9 sig_type=std_logic lab=AVSS}
@@ -153,7 +150,7 @@ C {lab_pin.sym} 2160 -720 2 0 {name=p14 sig_type=std_logic lab=VON[4..1]}
 C {lab_pin.sym} 2080 -830 0 1 {name=p41 sig_type=std_logic lab=AVDD}
 C {lab_pin.sym} 1970 -700 0 0 {name=p38 sig_type=std_logic lab=VBN}
 C {lab_pin.sym} 1960 -770 0 0 {name=p39 sig_type=std_logic lab=VBP}
-C {lab_pin.sym} 1640 -760 0 1 {name=p42 sig_type=std_logic lab=VCTRL}
+C {lab_pin.sym} 1630 -750 0 1 {name=p42 sig_type=std_logic lab=VCTRL}
 C {symbols/cap_mim_2f0fF.sym} 1850 -660 2 1 {name=C1
 W=10e-6
 L=10e-6

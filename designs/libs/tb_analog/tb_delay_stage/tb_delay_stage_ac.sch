@@ -216,7 +216,7 @@ model=nfet_03v3
 spiceprefix=X
 }
 C {lab_pin.sym} 1420 -310 0 0 {name=p25 sig_type=std_logic lab=AVSS}
-C {isource.sym} 1420 -490 0 0 {name=I0 value=630u}
+C {isource.sym} 1420 -490 0 0 {name=I0 value=1m}
 C {lab_pin.sym} 1420 -540 0 0 {name=p26 sig_type=std_logic lab=AVDD}
 C {lab_pin.sym} 1260 -400 1 1 {name=p27 sig_type=std_logic lab=VOP2}
 C {lab_pin.sym} 1260 -460 3 1 {name=p28 sig_type=std_logic lab=VON2}
@@ -240,6 +240,18 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {lab_pin.sym} 1640 -530 0 0 {name=p12 sig_type=std_logic lab=AVDD}
-C {isource.sym} 1640 -390 0 0 {name=I1 value=157.5u}
+C {isource.sym} 1640 -390 0 0 {name=I1 value=250u}
 C {lab_pin.sym} 1640 -330 0 0 {name=p13 sig_type=std_logic lab=AVSS}
 C {lab_pin.sym} 1600 -450 0 0 {name=p14 sig_type=std_logic lab=VBP}
+C {libs/core_analog/d2s_converter/d2s_converter.sym} 1110 -230 0 0 {name=x3}
+C {lab_pin.sym} 960 -250 2 1 {name=p4 sig_type=std_logic lab=VOP}
+C {lab_pin.sym} 960 -230 0 0 {name=p15 sig_type=std_logic lab=VON}
+C {lab_pin.sym} 960 -210 0 0 {name=p16 sig_type=std_logic lab=VBN}
+C {lab_pin.sym} 1260 -250 0 1 {name=p17 sig_type=std_logic lab=AVDD}
+C {lab_pin.sym} 1260 -230 0 1 {name=p18 sig_type=std_logic lab=AVSS}
+C {libs/core_analog/d2s_converter/d2s_converter.sym} 1110 -160 0 0 {name=x4}
+C {lab_pin.sym} 960 -160 0 0 {name=p29 sig_type=std_logic lab=VOP}
+C {lab_pin.sym} 960 -180 2 1 {name=p30 sig_type=std_logic lab=VON}
+C {lab_pin.sym} 960 -140 0 0 {name=p31 sig_type=std_logic lab=VBN}
+C {lab_pin.sym} 1260 -180 0 1 {name=p32 sig_type=std_logic lab=AVDD}
+C {lab_pin.sym} 1260 -160 0 1 {name=p33 sig_type=std_logic lab=AVSS}

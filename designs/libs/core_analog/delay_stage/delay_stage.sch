@@ -57,7 +57,6 @@ N 200 -480 210 -480 {lab=AVDD}
 N 200 -280 270 -280 {lab=Vi+}
 N 900 -330 1010 -330 {lab=Vo+}
 N 940 -280 1010 -280 {lab=Vi-}
-N 610 -230 610 -170 {lab=#net1}
 C {symbols/nfet_03v3.sym} 590 -140 0 0 {name=M7
 L=0.5u
 W=11.25u
@@ -167,3 +166,4 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {devices/title.sym} 160 -30 0 0 {name=l5 author="Yohanes Stefanus"}
+C {ammeter.sym} 610 -200 0 0 {name=Vmeas savecurrent=true spice_ignore=0}

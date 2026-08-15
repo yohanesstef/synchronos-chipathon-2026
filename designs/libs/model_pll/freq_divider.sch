@@ -11,7 +11,7 @@ C {ipin.sym} 740 130 0 0 {name=p1 lab=ain}
 C {opin.sym} 880 130 0 0 {name=p2 lab=aout}
 C {noconn.sym} 760 130 0 1 {name=l2}
 C {noconn.sym} 860 130 0 0 {name=l1}
-C {netlist.sym} -50 -200 0 0 {name=s2 value="
+C {netlist.sym} -50 -290 0 0 {name=s2 value="
 * Behavioral Frequency Divider with robust Mixed-Signal Bridges
 
 * Top-level parameter (Defaults to 10 if not passed by symbol)
@@ -25,7 +25,7 @@ adiv din dout divider
 .model divider d_fdiv(div_factor = \{divide_factor\}
 + high_cycles = \{high_cycles\}
 + i_count = 0
-+ rise_delay = 10p fall_delay = 10p )
++ rise_delay = 100p fall_delay = 100p )
 
 * WINDOW FIX: Widened analog-to-digital thresholds to catch fast sine waves
 aADC [ ain ] [ din ] adc_buff

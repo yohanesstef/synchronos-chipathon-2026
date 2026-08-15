@@ -31,6 +31,7 @@ N 160 -260 180 -260 {lab=VI-}
 N 500 -260 520 -260 {lab=VI+}
 N 350 -450 350 -430 {lab=AVDD}
 N 340 -450 350 -450 {lab=AVDD}
+N 340 -450 340 -390 {lab=AVDD}
 C {symbols/pfet_03v3.sym} 200 -260 0 0 {name=M1
 L=0.5u
 W=6.55u
@@ -114,4 +115,3 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {ammeter.sym} 340 -420 0 0 {name=Vmeas savecurrent=true spice_ignore=0}

@@ -6,15 +6,15 @@ S {}
 F {}
 E {}
 B 2 820 -1035 1620 -635 {flags=graph
-y1=-0.0011
+y1=-0.0012
 y2=2.8
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-8.3622532e-06
-x2=5.4728039e-06
+x1=0
+x2=0.0015
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -36,8 +36,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-8.3622532e-06
-x2=5.4728039e-06
+x1=0
+x2=0.0015
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -62,8 +62,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-8.3622532e-06
-x2=5.4728039e-06
+x1=0
+x2=0.0015
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -87,8 +87,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-8.3622532e-06
-x2=5.4728039e-06
+x1=0
+x2=0.0015
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -103,13 +103,13 @@ node=startup}
 B 2 820 -1835 1620 -1435 {flags=graph
 y1=-0.0072
 y2=3.4
-ypos1=-0.0072
-ypos2=3.4
+ypos1=-0.45039997
+ypos2=1.9170927
 divy=5
 subdivy=1
 unity=1
-x1=-8.3622532e-06
-x2=5.4728039e-06
+x1=0
+x2=0.0015
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -120,10 +120,10 @@ logx=0
 logy=0
 hilight_wave=-1
 color="4 5 6 7"
-node="phase4
-phase3
-phase2
-phase1"
+node="CK0
+CK90
+CK180
+CK270"
 digital=1}
 B 2 1620 -1835 2420 -1435 {flags=graph
 y1=-0.0018
@@ -133,8 +133,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-8.3622532e-06
-x2=5.4728039e-06
+x1=0
+x2=0.0015
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -156,8 +156,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-8.3622532e-06
-x2=5.4728039e-06
+x1=0
+x2=0.0015
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -244,8 +244,9 @@ OP
 show all
 
 tran 1n 1.5m
-*tran 10p 10u 0 1p
-*DC V5 -1 1 0.01
+*tran 1p 5u 1u
+
+
 
 *let sum = v(VOP1) + v(VON1)
 *let diff = v(VOP1) - v(VON1)
@@ -257,14 +258,14 @@ tran 1n 1.5m
 *meas tran vmin MIN v(VOP1) FROM=10n TO=20n
 *let vswing = vmax-vmin
 
-*meas tran I_tail_avg1 AVG i(v.x1.x1.vmeas) FROM=1.01u TO=2u
-*meas tran I_tail_avg2 AVG i(v.x1.x1.vmeas) FROM=2.01u TO=3u
-*meas tran I_tail_avg3 AVG i(v.x1.x1.vmeas) FROM=3.01u TO=4u
-*meas tran I_tail_avg4 AVG i(v.x1.x1.vmeas) FROM=4.01u TO=5u
-*meas tran I_tail_avg5 AVG i(v.x1.x1.vmeas) FROM=5.01u TO=6u
-*meas tran I_tail_avg6 AVG i(v.x1.x1.vmeas) FROM=6.01u TO=10u
-*meas tran I_tail_avg7 AVG i(v.x1.x1.vmeas) FROM=10.01u TO=100u
-*meas tran I_tail_avg8 AVG i(v.x1.x1.vmeas) FROM=100.01u TO=1m
+meas tran I_tail_avg1 AVG i(v.x1.x1.vmeas) FROM=1.01u TO=2u
+meas tran I_tail_avg2 AVG i(v.x1.x1.vmeas) FROM=2.01u TO=3u
+meas tran I_tail_avg3 AVG i(v.x1.x1.vmeas) FROM=3.01u TO=4u
+meas tran I_tail_avg4 AVG i(v.x1.x1.vmeas) FROM=4.01u TO=5u
+meas tran I_tail_avg5 AVG i(v.x1.x1.vmeas) FROM=5.01u TO=6u
+meas tran I_tail_avg6 AVG i(v.x1.x1.vmeas) FROM=6.01u TO=10u
+meas tran I_tail_avg7 AVG i(v.x1.x1.vmeas) FROM=10.01u TO=100u
+meas tran I_tail_avg8 AVG i(v.x1.x1.vmeas) FROM=100.01u TO=1m
 
 *meas tran I_VCO1 AVG i(V2) FROM=1.01u TO=2u
 *meas tran I_VCO2 AVG i(V2) FROM=2.01u TO=3u
@@ -275,9 +276,10 @@ tran 1n 1.5m
 *meas tran I_VCO7 AVG i(V2) FROM=10.01u TO=100u
 *meas tran I_VCO8 AVG i(V2) FROM=100.01u TO=1m
 
-remzerovec
-
+*remzerovec
+*linearize v(CK0) v(CK90) v(CK180) v(CK270)
 write tb_quadrature_vco.raw
+*write tb_quadrature_vco_ss.raw
 *wrdata /foss/designs/synchronos-chipathon-2026/designs/libs/scripts/sim_data/tb_quadrature_vco.txt tran.all
 .endc
 "}
@@ -285,9 +287,9 @@ C {devices/code_shown.sym} 0 -940 0 0 {name=Models only_toplevel=false
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
-.lib $::180MCU_MODELS/sm141064.ngspice typical
+*.lib $::180MCU_MODELS/sm141064.ngspice typical
 *.lib $::180MCU_MODELS/sm141064.ngspice SS
-*.lib $::180MCU_MODELS/sm141064.ngspice FF
+.lib $::180MCU_MODELS/sm141064.ngspice FF
 *.lib $::180MCU_MODELS/sm141064.ngspice SF
 *.lib $::180MCU_MODELS/sm141064.ngspice FS
 "}
@@ -354,7 +356,7 @@ C {lab_pin.sym} 2140 -380 3 0 {name=p10 sig_type=std_logic lab=AVSS}
 C {lab_pin.sym} 2140 -560 0 1 {name=p11 sig_type=std_logic lab=AVDD}
 C {capa.sym} 1930 -280 0 0 {name=C1
 m=1
-value=10f
+value=30f
 footprint=1206
 device="ceramic capacitor"}
 C {lab_pin.sym} 1930 -230 0 1 {name=p15 sig_type=std_logic lab=AVSS}
