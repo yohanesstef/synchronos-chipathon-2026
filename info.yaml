@@ -18,3 +18,25 @@ project:
   description: "This project proposes a Low-Jitter Integer-N PLL for a Clock Generator with a wide lock range of 0.01 MHz to 350 MHz."  # Short one-line description
   lvs_config: "./lvs_config.json"
 
+pins: 
+  - name: CK0
+    io_type: output
+  - name: CK90
+    io_type: output
+  - name: CK180
+    io_type: output
+  - name: CK270
+    io_type: output
+  - name: Fref 
+    io_type: input_schmitt
+  - name: Vctrl
+    io_type: analog
+    secondary_esd: true
+  - name: SDA 
+    io_type: input_schmitt
+  - name: SCL
+    io_type: input_schmitt
+  - name: vdd
+    io_type: power
+  - name: vss
+    io_type: ground  # note: due to a common ground connection, ground pads are generally not needed.

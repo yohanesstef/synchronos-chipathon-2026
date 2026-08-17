@@ -33,5 +33,5 @@ aADC [ ain ] [ din ] adc_buff
 
 * Digital-to-analog bridge
 aDAC [ dout ] [ aout ] dac_buff
-.model dac_buff dac_bridge(out_low = 0 out_high = 3.3 t_rise = 10p t_fall = 10p)
+.model dac_buff dac_bridge(out_low = 0 out_high = 3.3 t_rise = 500p t_fall = 500p)
 "}

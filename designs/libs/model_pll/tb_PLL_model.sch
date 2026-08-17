@@ -7,13 +7,13 @@ F {}
 E {}
 B 2 70 -1050 2020 -120 {flags=graph
 y1=0
-ypos1=0
-ypos2=3
+ypos1=0.3
+ypos2=3.3
 divy=5
 subdivy=1
 unity=1
-x1=2.1196494e-06
-x2=7.1003857e-06
+x1=5e-08
+x2=1.905e-05
 divx=5
 subdivx=1
 xlabmag=0.5
@@ -38,7 +38,7 @@ rawfile=$netlist_dir/tb_PLL_model.raw
 hilight_wave=-1
 digital=1
 y2=3
-sim_type=dc}
+sim_type=ac}
 B 2 2030 -1040 2830 -640 {flags=graph
 y1=-4.5751143e-07
 y2=7.8121313e-07
@@ -47,8 +47,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1e-06
-x2=2e-05
+x1=3.0627316e-06
+x2=3.3814915e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -68,8 +68,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1e-06
-x2=2e-05
+x1=3.0627316e-06
+x2=3.3814915e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -89,8 +89,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-5.5414348e-07
-x2=7.228257e-06
+x1=5e-08
+x2=1.905e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -101,7 +101,7 @@ logx=0
 logy=0
 hilight_wave=-1
 rawfile=$netlist_dir/tb_PLL_model.raw
-sim_type=tran
+sim_type=ac
 color="4 4"
 node="\\"vco_out; vco_out db20() re(frequency) > *\\"
 vco_out"
@@ -161,7 +161,7 @@ set wr_vecnames
 *save all
 save v(vco_out) v(reference) v(up) v(dn) v(tune)
 
-TRAN 1p 20u 1u
+TRAN 1p 20u
 linearize v(vco_out) v(reference) v(up) v(dn) v(tune)
 *fft v(vco_out)
 
@@ -200,7 +200,7 @@ C {libs/model_pll/vco_model.sym} 1530 -1490 0 0 {name=x3}
 C {libs/model_pll/freq_divider.sym} 1220 -1260 0 1 {name=x4 divide_factor=\{N_div\}}
 C {devices/launcher.sym} 1010 -1140 0 0 {name=h2
 descr="load tran" 
-tclcommand="xschem raw_read $netlist_dir/tb_PLL_model.raw tran"
+tclcommand="xschem raw_read $netlist_dir/tb_PLL_model1.raw tran"
 }
 C {ammeter.sym} 1240 -1530 0 0 {name=Vmeas1 savecurrent=true spice_ignore=0}
 C {lab_wire.sym} 990 -1500 0 0 {name=p1 sig_type=std_logic lab=UP}

@@ -6,8 +6,8 @@ S {}
 F {}
 E {}
 B 2 820 -1035 1620 -635 {flags=graph
-y1=-0.0012
-y2=2.8
+y1=1.11961
+y2=3.92026
 ypos1=0
 ypos2=2
 divy=5
@@ -287,9 +287,9 @@ C {devices/code_shown.sym} 0 -940 0 0 {name=Models only_toplevel=false
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
-*.lib $::180MCU_MODELS/sm141064.ngspice typical
+.lib $::180MCU_MODELS/sm141064.ngspice typical
 *.lib $::180MCU_MODELS/sm141064.ngspice SS
-.lib $::180MCU_MODELS/sm141064.ngspice FF
+*.lib $::180MCU_MODELS/sm141064.ngspice FF
 *.lib $::180MCU_MODELS/sm141064.ngspice SF
 *.lib $::180MCU_MODELS/sm141064.ngspice FS
 "}

@@ -147,6 +147,6 @@ C {libs/core_analog/feed_forward_zero/feed_forward_zero.sym} 1710 -1840 0 0 {nam
 C {libs/core_analog/feed_forward_zero/feed_forward_zero.sym} 1710 -1640 0 0 {name=x1[1..4]}
 C {libs/core_analog/feed_forward_zero/feed_forward_zero.sym} 1710 -1440 0 0 {name=x2[1..8]}
 C {libs/core_analog/transmission_gate/transmission_gate.sym} 2030 -2060 0 0 {name=x7}
-C {libs/core_analog/transmission_gate/transmission_gate.sym} 2030 -1860 0 0 {name=x8}
-C {libs/core_analog/transmission_gate/transmission_gate.sym} 2030 -1660 0 0 {name=x9}
-C {libs/core_analog/transmission_gate/transmission_gate.sym} 2030 -1460 0 0 {name=x10}
+C {libs/core_analog/transmission_gate/transmission_gate.sym} 2030 -1860 0 0 {name=x8[1..2]}
+C {libs/core_analog/transmission_gate/transmission_gate.sym} 2030 -1660 0 0 {name=x9[1..4]}
+C {libs/core_analog/transmission_gate/transmission_gate.sym} 2030 -1460 0 0 {name=x10[1..8]}

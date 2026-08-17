@@ -5,42 +5,39 @@ V {}
 S {}
 F {}
 E {}
-B 2 300 -1020 1100 -620 {flags=graph
-y1=-0.029
-y2=3.4
-ypos1=0.14245
-ypos2=3.57145
+B 2 290 -1090 1090 -690 {flags=graph
+y1=2.721918
+y2=2.7566626
+ypos1=0
+ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.5922998e-05
-x2=3.6183891e-05
+x1=-0.015863121
+x2=0.052215743
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
-node="ck270
-ck180
-ck90
-ck0"
-color="4 5 6 7"
+node="VBP
+VCTRL"
+color="4 8"
 dataset=-1
 unitx=1
 logx=0
 logy=0
-hilight_wave=-1800844864
-digital=1
-legend=1}
-B 2 300 -620 1100 -220 {flags=graph
+hilight_wave=-1
+}
+B 2 280 -290 1080 110 {flags=graph
 y1=0
 y2=3.3
-ypos1=0.33
-ypos2=3.63
+ypos1=0.165
+ypos2=3.465
 divy=5
 subdivy=1
 unity=1
-x1=3.5922998e-05
-x2=3.6183891e-05
+x1=-0.015863121
+x2=0.052215743
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -58,52 +55,6 @@ space
 REFERENCE
 DIV_OUT"
 digital=1}
-B 2 300 -220 1100 180 {flags=graph
-y1=0
-y2=2.8
-ypos1=0
-ypos2=2
-divy=5
-subdivy=1
-unity=1
-x1=3.5922998e-05
-x2=3.6183891e-05
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-node="VBP
-VBN
-VCTRL"
-color="4 8 18"
-dataset=-1
-unitx=1
-logx=0
-logy=0
-hilight_wave=-1
-}
-B 2 1100 -220 1900 180 {flags=graph
-y1=0
-y2=0.01
-ypos1=0
-ypos2=2
-divy=5
-subdivy=1
-unity=1
-x1=3.5922998e-05
-x2=3.6183891e-05
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-dataset=-1
-unitx=1
-logx=0
-logy=0
-hilight_wave=-1
-hcursor2_y=1.101568
-color=4
-node="\\"i; i_vdd max()\\""}
 P 4 1 980 -1540 {}
 T {Testbench to try out the various Xspice 'behavioral' models of PLL components
 
@@ -205,8 +156,8 @@ N 1420 -1980 1850 -1980 {lab=VBP}
 N 1420 -1980 1420 -1820 {lab=VBP}
 N 1670 -1960 1670 -1940 {lab=AVDD}
 N 1490 -1830 1500 -1830 {lab=VBN}
-N 1930 -1510 2050 -1510 {lab=VOP[4..1]}
-N 1930 -1450 2050 -1450 {lab=VON[4..1]}
+N 1930 -1510 2050 -1510 {lab=VOP[1..4]}
+N 1930 -1450 2050 -1450 {lab=VON[1..4]}
 N 1750 -1380 2100 -1380 {lab=VBN}
 N 1750 -1450 1750 -1380 {lab=VBN}
 N 2250 -1510 2250 -1260 {lab=CK0}
@@ -230,7 +181,7 @@ C {lab_wire.sym} 690 -1550 0 0 {name=p4 sig_type=std_logic lab=reference}
 C {libs/model_pll/freq_divider.sym} 1520 -1260 0 1 {name=x4 divide_factor=\{N_div\}}
 C {devices/launcher.sym} 1230 -980 0 0 {name=h2
 descr="load tran 1" 
-tclcommand="xschem raw_read $netlist_dir/tb1.raw tran"
+tclcommand="xschem raw_read $netlist_dir/tb11.raw tran"
 }
 C {libs/core_analog/vco/vco.sym} 1860 -1480 0 0 {name=x3}
 C {libs/core_analog/bias_generator/bias_generator.sym} 1620 -1480 0 0 {name=x6}
@@ -238,13 +189,13 @@ C {lab_pin.sym} 1000 -1670 0 0 {name=p1 sig_type=std_logic lab=VBN}
 C {lab_pin.sym} 1620 -1360 0 0 {name=p9 sig_type=std_logic lab=AVSS}
 C {capa.sym} 1490 -1540 0 0 {name=C2
 m=1
-value=2.1n
+value=2.9n
 footprint=1206
 device="ceramic capacitor"}
 C {lab_pin.sym} 1490 -1580 0 1 {name=p10 sig_type=std_logic lab=AVDD}
 C {lab_pin.sym} 1540 -1450 0 0 {name=p11 sig_type=std_logic lab=STARTUP}
-C {lab_pin.sym} 1930 -1510 2 0 {name=p13 sig_type=std_logic lab=VOP[4..1]}
-C {lab_pin.sym} 1930 -1450 2 0 {name=p14 sig_type=std_logic lab=VON[4..1]}
+C {lab_pin.sym} 1930 -1510 2 0 {name=p13 sig_type=std_logic lab=VOP[1..4]}
+C {lab_pin.sym} 1930 -1450 2 0 {name=p14 sig_type=std_logic lab=VON[1..4]}
 C {devices/code_shown.sym} -860 -1050 0 0 {name=Models only_toplevel=false
 format="tcleval( @value )"
 value="
@@ -286,7 +237,7 @@ C {lab_pin.sym} 1100 -1650 2 1 {name=p61 sig_type=std_logic lab=S3}
 C {lab_pin.sym} 1100 -1630 2 1 {name=p62 sig_type=std_logic lab=S4}
 C {devices/launcher.sym} 1230 -950 0 0 {name=h1
 descr="load tran 2" 
-tclcommand="xschem raw_read $netlist_dir/tb2.raw tran"
+tclcommand="xschem raw_read $netlist_dir/tb2_71.raw tran"
 }
 C {capa.sym} 1720 -1400 0 0 {name=C1
 m=1
@@ -351,11 +302,11 @@ C {lab_pin.sym} 2640 -1260 0 1 {name=p24 sig_type=std_logic lab=CK270}
 C {lab_pin.sym} 1860 -1580 0 1 {name=p12 sig_type=std_logic lab=AVDD}
 C {devices/launcher.sym} 1230 -920 0 0 {name=h3
 descr="load tran 3" 
-tclcommand="xschem raw_read $netlist_dir/tb3.raw tran"
+tclcommand="xschem raw_read $netlist_dir/tb3_21.raw tran"
 }
 C {devices/launcher.sym} 1230 -890 0 0 {name=h4
 descr="load tran 4" 
-tclcommand="xschem raw_read $netlist_dir/tb4.raw tran"
+tclcommand="xschem raw_read $netlist_dir/tb4_2.raw tran"
 }
 C {devices/launcher.sym} 1230 -860 0 0 {name=h5
 descr="load tran 5" 
@@ -371,21 +322,21 @@ C {lab_wire.sym} 690 -1490 0 0 {name=p5 sig_type=std_logic lab=div_out
 C {lab_wire.sym} 1330 -1260 0 0 {name=p3 sig_type=std_logic lab=div_out
 }
 C {ammeter.sym} 690 -1810 2 0 {name=Vmeas savecurrent=true spice_ignore=0}
-C {devices/code_shown.sym} -825 -870 0 0 {name=tb2 only_toplevel=false value="
+C {devices/code_shown.sym} -855 -900 0 0 {name=tb3 only_toplevel=false value="
 ==============Fref, N======================
-.param f_ref=1MEG R_div=2 N_div=35
+.param f_ref=1MEG N_div=128
 
-.ic v(VCTRL)=1.5 v(vbp)=1.5
+.param d1=0 d2=0 d3=0 d4=3.3
+.param d1b=3.3 d2b=3.3 d3b=3.3 d4b=0
+
+.ic v(VCTRL)=1 v(vbp)=1
 ==============Frequency Calculation========
 .param tp_ref='td_ref/2' td_ref='1/f_ref'
-Vref reference gnd pulse(0 3.3 0 10p 10p tp_ref td_ref)
+Vref reference gnd pulse(0 3.3 0 500p 500p tp_ref td_ref)
 
 .ic v(vop1)=3.3 v(von1)=0 v(startup)=0
 .options reltol=1e-5 cshunt=1e-15 itl4=50 gmin=1e-12
 .options method=gear
-
-.param d1=0 d2=3.3 d3=3.3 d4=0
-.param d1b=3.3 d2b=0 d3b=0 d4b=3.3
 
 VS1 S1 0 d1
 VS2 S2 0 d2
@@ -401,21 +352,21 @@ VS4b S4b 0 d4b
 set wr_singlescale
 set wr_vecnames
 
-save v(VCTRL) v(vbp) v(vbn)
-+v(reference) v(div_out) v(pre_div)
+save v(VCTRL) v(vbp)
++v(reference) v(div_out)
 +v(CK0) v(CK90) v(CK180) v(CK270) v(up) v(dn)
 
-tran 100p 15u
+tran 10p 150u
 
-linearize v(CK0) v(CK90) v(CK180) v(CK270) v(VCTRL) v(vbp) v(vbn)
-+v(reference) v(div_out) v(pre_div) v(up) v(dn) i(vmeas)
+linearize v(CK0) v(CK90) v(CK180) v(CK270) v(VCTRL) v(vbp)
++v(reference) v(div_out) v(up) v(dn) i(vmeas)
 
-meas tran I_vdd AVG i(vmeas) FROM=1u TO=15u
+meas tran I_vdd AVG i(vmeas) FROM=5u TO=150u
 
 remzerovec
 
-write tb2.raw
-wrdata /foss/designs/synchronos-chipathon-2026/designs/libs/scripts/sim_data/tb2.txt tran.all
+write tb3_4.raw
+wrdata /foss/designs/synchronos-chipathon-2026/designs/libs/scripts/sim_data/tb3_4.txt tran.all
 
 .endc
 "}

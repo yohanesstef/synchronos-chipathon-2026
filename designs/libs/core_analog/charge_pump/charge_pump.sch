@@ -126,6 +126,38 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
+C {symbols/nfet_03v3.sym} 340 -130 0 0 {name=M7
+L=0.5u
+W=1u
+nf=1
+m=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=nfet_03v3
+spiceprefix=X
+}
+C {lab_pin.sym} 750 -190 0 0 {name=p2 sig_type=std_logic lab=VBN}
+C {symbols/nfet_03v3.sym} 730 -130 0 0 {name=M8
+L=0.5u
+W=1u
+nf=1
+m=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=nfet_03v3
+spiceprefix=X
+}
+C {lab_pin.sym} 300 -130 0 0 {name=p24 sig_type=std_logic lab=S}
+C {lab_pin.sym} 690 -130 0 0 {name=p25 sig_type=std_logic lab=S}
+C {ipin.sym} 170 -250 0 0 {name=p26 lab=S}
 C {symbols/nfet_03v3.sym} 560 -280 0 0 {name=M4
 L=0.5u
 W=2.08u
@@ -182,35 +214,3 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {symbols/nfet_03v3.sym} 340 -130 0 0 {name=M7
-L=0.5u
-W=1u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
-C {lab_pin.sym} 750 -190 0 0 {name=p2 sig_type=std_logic lab=VBN}
-C {symbols/nfet_03v3.sym} 730 -130 0 0 {name=M8
-L=0.5u
-W=1u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
-C {lab_pin.sym} 300 -130 0 0 {name=p24 sig_type=std_logic lab=S}
-C {lab_pin.sym} 690 -130 0 0 {name=p25 sig_type=std_logic lab=S}
-C {ipin.sym} 170 -250 0 0 {name=p26 lab=S}
