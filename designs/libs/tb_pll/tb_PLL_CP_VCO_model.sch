@@ -5,16 +5,16 @@ V {}
 S {}
 F {}
 E {}
-B 2 290 -1090 1090 -690 {flags=graph
-y1=2.721918
-y2=2.7566626
+B 2 20 -660 820 -260 {flags=graph
+y1=0.70285345
+y2=0.75868804
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-0.015863121
-x2=0.052215743
+x1=5.7067481e-05
+x2=6.0576239e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -28,33 +28,6 @@ logx=0
 logy=0
 hilight_wave=-1
 }
-B 2 280 -290 1080 110 {flags=graph
-y1=0
-y2=3.3
-ypos1=0.165
-ypos2=3.465
-divy=5
-subdivy=1
-unity=1
-x1=-0.015863121
-x2=0.052215743
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-dataset=-1
-unitx=1
-logx=0
-logy=0
-hilight_wave=-1
-color="4 5 6 7 18 4"
-node="UP
-DN
-\\"UP-DN; UP DN -\\"
-space
-REFERENCE
-DIV_OUT"
-digital=1}
 P 4 1 980 -1540 {}
 T {Testbench to try out the various Xspice 'behavioral' models of PLL components
 
@@ -181,7 +154,7 @@ C {lab_wire.sym} 690 -1550 0 0 {name=p4 sig_type=std_logic lab=reference}
 C {libs/model_pll/freq_divider.sym} 1520 -1260 0 1 {name=x4 divide_factor=\{N_div\}}
 C {devices/launcher.sym} 1230 -980 0 0 {name=h2
 descr="load tran 1" 
-tclcommand="xschem raw_read $netlist_dir/tb11.raw tran"
+tclcommand="xschem raw_read $netlist_dir/tb1_31.raw tran"
 }
 C {libs/core_analog/vco/vco.sym} 1860 -1480 0 0 {name=x3}
 C {libs/core_analog/bias_generator/bias_generator.sym} 1620 -1480 0 0 {name=x6}
@@ -196,7 +169,7 @@ C {lab_pin.sym} 1490 -1580 0 1 {name=p10 sig_type=std_logic lab=AVDD}
 C {lab_pin.sym} 1540 -1450 0 0 {name=p11 sig_type=std_logic lab=STARTUP}
 C {lab_pin.sym} 1930 -1510 2 0 {name=p13 sig_type=std_logic lab=VOP[1..4]}
 C {lab_pin.sym} 1930 -1450 2 0 {name=p14 sig_type=std_logic lab=VON[1..4]}
-C {devices/code_shown.sym} -860 -1050 0 0 {name=Models only_toplevel=false
+C {devices/code_shown.sym} -1090 -1030 0 0 {name=Models only_toplevel=false
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
@@ -237,7 +210,7 @@ C {lab_pin.sym} 1100 -1650 2 1 {name=p61 sig_type=std_logic lab=S3}
 C {lab_pin.sym} 1100 -1630 2 1 {name=p62 sig_type=std_logic lab=S4}
 C {devices/launcher.sym} 1230 -950 0 0 {name=h1
 descr="load tran 2" 
-tclcommand="xschem raw_read $netlist_dir/tb2_71.raw tran"
+tclcommand="xschem raw_read $netlist_dir/tb2_7.raw tran"
 }
 C {capa.sym} 1720 -1400 0 0 {name=C1
 m=1
@@ -302,15 +275,15 @@ C {lab_pin.sym} 2640 -1260 0 1 {name=p24 sig_type=std_logic lab=CK270}
 C {lab_pin.sym} 1860 -1580 0 1 {name=p12 sig_type=std_logic lab=AVDD}
 C {devices/launcher.sym} 1230 -920 0 0 {name=h3
 descr="load tran 3" 
-tclcommand="xschem raw_read $netlist_dir/tb3_21.raw tran"
+tclcommand="xschem raw_read $netlist_dir/tb3_7.raw tran"
 }
 C {devices/launcher.sym} 1230 -890 0 0 {name=h4
 descr="load tran 4" 
 tclcommand="xschem raw_read $netlist_dir/tb4_2.raw tran"
 }
-C {devices/launcher.sym} 1230 -860 0 0 {name=h5
+C {devices/launcher.sym} 1230 -860 0 0 {name=q
 descr="load tran 5" 
-tclcommand="xschem raw_read $netlist_dir/tb5.raw tran"
+tclcommand="xschem raw_read $netlist_dir/tb5_31.raw tran"
 }
 C {lab_wire.sym} 950 -1550 0 1 {name=p28 sig_type=std_logic lab=UP}
 C {lab_wire.sym} 950 -1510 0 1 {name=p29 sig_type=std_logic lab=DN}
@@ -322,12 +295,12 @@ C {lab_wire.sym} 690 -1490 0 0 {name=p5 sig_type=std_logic lab=div_out
 C {lab_wire.sym} 1330 -1260 0 0 {name=p3 sig_type=std_logic lab=div_out
 }
 C {ammeter.sym} 690 -1810 2 0 {name=Vmeas savecurrent=true spice_ignore=0}
-C {devices/code_shown.sym} -855 -900 0 0 {name=tb3 only_toplevel=false value="
+C {devices/code_shown.sym} -1105 -860 0 0 {name=tb5 only_toplevel=false value="
 ==============Fref, N======================
-.param f_ref=1MEG N_div=128
+.param f_ref=10MEG N_div=30
 
-.param d1=0 d2=0 d3=0 d4=3.3
-.param d1b=3.3 d2b=3.3 d3b=3.3 d4b=0
+.param d1=0 d2=3.3 d3=3.3 d4=3.3
+.param d1b=3.3 d2b=0 d3b=0 d4b=0
 
 .ic v(VCTRL)=1 v(vbp)=1
 ==============Frequency Calculation========
@@ -335,7 +308,7 @@ C {devices/code_shown.sym} -855 -900 0 0 {name=tb3 only_toplevel=false value="
 Vref reference gnd pulse(0 3.3 0 500p 500p tp_ref td_ref)
 
 .ic v(vop1)=3.3 v(von1)=0 v(startup)=0
-.options reltol=1e-5 cshunt=1e-15 itl4=50 gmin=1e-12
+.options reltol=1e-5 cshunt=1e-15
 .options method=gear
 
 VS1 S1 0 d1
@@ -352,21 +325,21 @@ VS4b S4b 0 d4b
 set wr_singlescale
 set wr_vecnames
 
-save v(VCTRL) v(vbp)
-+v(reference) v(div_out)
+save v(VCTRL) v(vbp) v(vbn)
++v(reference) v(div_out) v(pre_div)
 +v(CK0) v(CK90) v(CK180) v(CK270) v(up) v(dn)
 
-tran 10p 150u
+tran 10p 180u
 
-linearize v(CK0) v(CK90) v(CK180) v(CK270) v(VCTRL) v(vbp)
-+v(reference) v(div_out) v(up) v(dn) i(vmeas)
-
-meas tran I_vdd AVG i(vmeas) FROM=5u TO=150u
+linearize v(CK0) v(CK90) v(CK180) v(CK270) v(VCTRL)
++v(up) v(dn)
++v(vbp) v(vbn)
++v(reference) v(div_out) v(pre_div) i(vmeas)
 
 remzerovec
 
-write tb3_4.raw
-wrdata /foss/designs/synchronos-chipathon-2026/designs/libs/scripts/sim_data/tb3_4.txt tran.all
-
+write tb5_3.raw
+wrdata /foss/designs/synchronos-chipathon-2026/designs/libs/scripts/sim_data/tb5_3.txt tran.all
+destroy all
 .endc
 "}

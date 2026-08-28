@@ -1,0 +1,2 @@
+index,frequency_hz,mean_period_s,period_samples,rms_period_jitter_s,pkpk_period_jitter_s,min_period_error_s,max_period_error_s,rms_tie_s,pkpk_tie_s,max_phase_error_deg,phase_noise_offset_hz,phase_noise_dbc_hz
+4,255004589.5953543,3.921498046708953e-09,7649,4.992861346374395e-13,7.468965685731091e-12,-9.318122549579537e-13,6.537153430773137e-12,3.121337141336372e-11,1.210329174259001e-10,0.00020975615514373658,1000000.0,-92.31550943767729

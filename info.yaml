@@ -20,13 +20,13 @@ project:
 
 pins: 
   - name: CK0
-    io_type: output
+    io_type: bidirectional
   - name: CK90
-    io_type: output
+    io_type: bidirectional
   - name: CK180
-    io_type: output
+    io_type: bidirectional
   - name: CK270
-    io_type: output
+    io_type: bidirectional
   - name: Fref 
     io_type: input_schmitt
   - name: Vctrl

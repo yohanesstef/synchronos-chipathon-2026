@@ -1,0 +1,32 @@
+** sch_path: /foss/designs/synchronos-chipathon-2026/designs/libs/core_analog/d2s_converter/d2s_converter.sch
+.subckt d2s_top AVDD AVSS VIN VIP VBN VO
+*.PININFO AVDD:B AVSS:B VIN:I VIP:I VO:O VBN:I
+M2 VOPB VIN i1 AVSS nfet_03v3 L=0.3u W=1.9u nf=1 m=4
+M4 VOPB VOPB AVDD AVDD pfet_03v3 L=0.3u W=1.4u nf=1 m=4
+M11 VOB VOB AVSS AVSS nfet_03v3 L=0.3u W=1.5u nf=1 m=4
+M13 VOB VOP AVDD AVDD pfet_03v3 L=0.3u W=2u nf=1 m=4
+M1 i1 VBN AVSS AVSS nfet_03v3 L=0.5u W=2.82u nf=1 m=16
+M3 VOP VIP i1 AVSS nfet_03v3 L=0.3u W=1.9u nf=1 m=4
+M5 VOP VOPB AVDD AVDD pfet_03v3 L=0.3u W=1.4u nf=1 m=4
+M7 VONB VIP i2 AVSS nfet_03v3 L=0.3u W=1.9u nf=1 m=4
+M8 VONB VONB AVDD AVDD pfet_03v3 L=0.3u W=1.4u nf=1 m=4
+M9 VON VIN i2 AVSS nfet_03v3 L=0.3u W=1.9u nf=1 m=4
+M10 VON VONB AVDD AVDD pfet_03v3 L=0.3u W=1.4u nf=1 m=4
+M14 VO VON AVDD AVDD pfet_03v3 L=0.3u W=2u nf=1 m=4
+M12 VO VOB AVSS AVSS nfet_03v3 L=0.3u W=1.5u nf=1 m=4
+M27 VO VO VO AVSS nfet_03v3 L=0.3u W=1.5u nf=1 m=2
+M28 VOB VOB VOB AVSS nfet_03v3 L=0.3u W=1.5u nf=1 m=2
+M6 i2 VBN AVSS AVSS nfet_03v3 L=0.5u W=2.82u nf=1 m=16
+M15 VO VO VO AVDD pfet_03v3 L=0.3u W=2u nf=1 m=2
+M16 VOB VOB VOB AVDD pfet_03v3 L=0.3u W=2u nf=1 m=2
+M17 i2 i2 i2 AVSS nfet_03v3 L=0.5u W=2.82u nf=1 m=2
+M18 i1 i1 i1 AVSS nfet_03v3 L=0.5u W=2.82u nf=1 m=2
+M19 VON VON VON AVSS nfet_03v3 L=0.3u W=1.9u nf=1 m=2
+M20 VONB VONB VONB AVSS nfet_03v3 L=0.3u W=1.9u nf=1 m=2
+M21 VON VON VON AVDD pfet_03v3 L=0.3u W=1.4u nf=1 m=2
+M22 VONB VONB VONB AVDD pfet_03v3 L=0.3u W=1.4u nf=1 m=2
+M23 VOP VOP VOP AVSS nfet_03v3 L=0.3u W=1.9u nf=1 m=2
+M24 VOPB VOPB VOPB AVSS nfet_03v3 L=0.3u W=1.9u nf=1 m=2
+M25 VOP VOP VOP AVDD pfet_03v3 L=0.3u W=1.4u nf=1 m=2
+M26 VOPB VOPB VOPB AVDD pfet_03v3 L=0.3u W=1.4u nf=1 m=2
+.ends

@@ -1,0 +1,39 @@
+PLL Simulation Summary - Index 4
+============================================================
+
+Input File:
+../sim_data/tb4.txt
+
+Analysis Window:
+1.200000000e-04 s to 1.500000000e-04 s
+
+Operating Frequency : 255.004590 MHz
+Mean Period         : 3.921498047e-09 s
+Detected Edges      : 7650
+Period Samples      : 7649
+
+PERIOD JITTER
+------------------------------------------------------------
+Display Unit          : fs
+Histogram Bins        : 323
+RMS Period Jitter     : 499.286135 fs
+Pk-Pk Period Jitter   : 7468.965686 fs
+Minimum Period Error  : -931.812255 fs
+Maximum Period Error  : 6537.153431 fs
+
+TIME INTERVAL ERROR
+------------------------------------------------------------
+RMS TIE              : 31.213371 ps
+Pk-Pk TIE            : 121.032917 ps
+
+QUADRATURE PHASE ALIGNMENT
+------------------------------------------------------------
+CK0 -> CK90          : 90.000017 deg
+CK90 -> CK180        : 89.999790 deg
+CK180 -> CK270       : 90.000188 deg
+CK270 -> CK0         : 90.000057 deg
+Maximum Phase Error  : 0.000210 deg
+
+PHASE NOISE
+------------------------------------------------------------
+Phase Noise @ 1 MHz    : -92.316 dBc/Hz

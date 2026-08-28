@@ -6,15 +6,15 @@ S {}
 F {}
 E {}
 B 2 820 -1035 1620 -635 {flags=graph
-y1=1.11961
-y2=3.92026
+y1=0
+y2=2.8
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.0015
+x1=0.00036623677
+x2=0.00036693671
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -28,42 +28,16 @@ color="4 5 6"
 node="VBP
 VBN
 VCTRL"}
-B 2 820 -1435 1620 -1035 {flags=graph
-y1=0
-y2=3.4
-ypos1=0
-ypos2=2
-divy=5
-subdivy=1
-unity=1
-x1=0
-x2=0.0015
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-dataset=-1
-unitx=1
-logx=0
-logy=0
-hilight_wave=-1
-color="4 5 6 7"
-node="vop1
-vop3
-von1
-von3"
-hcursor2_y=0.8872773
-hcursor1_y=2.6893334}
 B 2 1620 -1435 2420 -1035 {flags=graph
-y1=-8.9427696e-06
-y2=4.9649421e-05
+y1=-6.9e-09
+y2=0.00078
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.0015
+x1=0.00036623677
+x2=0.00036693671
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -81,14 +55,14 @@ node="\\"Branch 1; i(v.x2.vmeas)\\"
 }
 B 2 1620 -1035 2420 -635 {flags=graph
 y1=0
-y2=1
+y2=0.01
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.0015
+x1=0.00036623677
+x2=0.00036693671
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -100,31 +74,6 @@ logy=0
 hilight_wave=0
 color=4
 node=startup}
-B 2 820 -1835 1620 -1435 {flags=graph
-y1=-0.0072
-y2=3.4
-ypos1=-0.45039997
-ypos2=1.9170927
-divy=5
-subdivy=1
-unity=1
-x1=0
-x2=0.0015
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-dataset=-1
-unitx=1
-logx=0
-logy=0
-hilight_wave=-1
-color="4 5 6 7"
-node="CK0
-CK90
-CK180
-CK270"
-digital=1}
 B 2 1620 -1835 2420 -1435 {flags=graph
 y1=-0.0018
 y2=0.0074
@@ -133,8 +82,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.0015
+x1=0.00036623677
+x2=0.00036693671
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -156,8 +105,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.0015
+x1=0.00036623677
+x2=0.00036693671
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -174,6 +123,32 @@ node="von4
 von3
 von2
 von1"}
+B 2 820 -1435 1620 -1035 {flags=graph
+y1=0
+y2=2.8
+ypos1=0
+ypos2=2.8
+divy=5
+subdivy=1
+unity=1
+x1=0.00036623677
+x2=0.00036693671
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+dataset=-1
+unitx=1
+logx=0
+logy=0
+hilight_wave=0
+color="4 5 6 7"
+node="ck270
+ck180
+ck90
+ck0"
+digital=1
+linewidth_mult=1}
 N 860 -410 860 -400 {lab=AVSS}
 N 860 -340 860 -330 {lab=0}
 N 860 -510 860 -470 {lab=AVDD}
@@ -212,24 +187,24 @@ C {libs/core_analog/vco/vco.sym} 1920 -480 0 0 {name=x1}
 C {devices/code_shown.sym} 5 -750 0 0 {name=Simulation only_toplevel=false value="
 .param Vin=0 Vcm=2.5
 .ic v(vop1)=3.3 v(von1)=0 v(startup)=0 v(vbp)=0
-.param t1=1u t2=2u t3=3u t4=4u t5=5u t6=6u t7=10u t8=100u t9=1m tr=10n
+.param t1=1u t2=2u t3=3u t4=4u t5=5u t6=6u t7=10u t8=50u t9=500u tr=10n
 
 .param d0=0 d1=0.35 d2=0.825 d3=1.2375
 +d4=1.65 d5=2.0625 d6=2.475 d7=2.6 d8=2.75
 
-vs startup 0 pulse(0 1 100n 10n 10n 100n 100m)
-vctrl vctrl 0 pwl(0 d0 
-+t1 d0 't1+tr' d1
-+t2 d1 't2+tr' d2
-+t3 d2 't3+tr' d3
-+t4 d3 't4+tr' d4
-+t5 d4 't5+tr' d5
-+t6 d5 't6+tr' d6
-+t7 d6 't7+tr' d7
-+t8 d7 't8+tr' d8
-+t9 d8 't9+tr' d0 R 0)
+*vs startup 0 pulse(0 1 100n 10n 10n 100n 100m)
+*vctrl vctrl 0 pwl(0 d0 
+*+t1 d0 't1+tr' d1
+*+t2 d1 't2+tr' d2
+*+t3 d2 't3+tr' d3
+*+t4 d3 't4+tr' d4
+*+t5 d4 't5+tr' d5
+*+t6 d5 't6+tr' d6
+*+t7 d6 't7+tr' d7
+*+t8 d7 't8+tr' d8
+*+t9 d8 't9+tr' d0 R 0)
 
-*vctrl vctrl 0 1
+vctrl vctrl 0 d8
 
 .control
 set wr_singlescale
@@ -243,8 +218,9 @@ save v(CK0) v(CK90) v(CK180) v(CK270) v(vctrl) v(vbp)
 OP
 show all
 
-tran 1n 1.5m
-*tran 1p 5u 1u
+*tran 1n 1.5m
+tran 10n 500u
+*tran 10p 50n
 
 
 
@@ -264,8 +240,17 @@ meas tran I_tail_avg3 AVG i(v.x1.x1.vmeas) FROM=3.01u TO=4u
 meas tran I_tail_avg4 AVG i(v.x1.x1.vmeas) FROM=4.01u TO=5u
 meas tran I_tail_avg5 AVG i(v.x1.x1.vmeas) FROM=5.01u TO=6u
 meas tran I_tail_avg6 AVG i(v.x1.x1.vmeas) FROM=6.01u TO=10u
-meas tran I_tail_avg7 AVG i(v.x1.x1.vmeas) FROM=10.01u TO=100u
-meas tran I_tail_avg8 AVG i(v.x1.x1.vmeas) FROM=100.01u TO=1m
+meas tran I_tail_avg7 AVG i(v.x1.x1.vmeas) FROM=10.01u TO=50u
+meas tran I_tail_avg8 AVG i(v.x1.x1.vmeas) FROM=50.01u TO=500u
+
+*meas tran I_d2s1 AVG i(v.x3.x1.vmeas) FROM=1.01u TO=2u
+*meas tran I_d2s2 AVG i(v.x3.x1.vmeas) FROM=2.01u TO=3u
+*meas tran I_d2s3 AVG i(v.x3.x1.vmeas) FROM=3.01u TO=4u
+*meas tran I_d2s4 AVG i(v.x3.x1.vmeas) FROM=4.01u TO=5u
+*meas tran I_d2s5 AVG i(v.x3.x1.vmeas) FROM=5.01u TO=6u
+*meas tran I_d2s6 AVG i(v.x3.x1.vmeas) FROM=6.01u TO=10u
+*meas tran I_d2s7 AVG i(v.x3.x1.vmeas) FROM=10.01u TO=50u
+*meas tran I_d2s8 AVG i(v.x3.x1.vmeas) FROM=50.01u TO=500u
 
 *meas tran I_VCO1 AVG i(V2) FROM=1.01u TO=2u
 *meas tran I_VCO2 AVG i(V2) FROM=2.01u TO=3u
@@ -276,11 +261,12 @@ meas tran I_tail_avg8 AVG i(v.x1.x1.vmeas) FROM=100.01u TO=1m
 *meas tran I_VCO7 AVG i(V2) FROM=10.01u TO=100u
 *meas tran I_VCO8 AVG i(V2) FROM=100.01u TO=1m
 
-*remzerovec
+remzerovec
 *linearize v(CK0) v(CK90) v(CK180) v(CK270)
 write tb_quadrature_vco.raw
-*write tb_quadrature_vco_ss.raw
-*wrdata /foss/designs/synchronos-chipathon-2026/designs/libs/scripts/sim_data/tb_quadrature_vco.txt tran.all
+destroy all
+exit
+*wrdata /foss/designs/synchronos-chipathon-2026/designs/libs/scripts/sim_data/tb_quadrature_vco_free_running_test.txt tran.all
 .endc
 "}
 C {devices/code_shown.sym} 0 -940 0 0 {name=Models only_toplevel=false
@@ -311,7 +297,7 @@ C {lab_pin.sym} 1810 -510 1 0 {name=p12 sig_type=std_logic lab=VBP}
 C {lab_pin.sym} 1770 -450 3 0 {name=p13 sig_type=std_logic lab=VBN}
 C {devices/launcher.sym} 880 -610 0 0 {name=h2
 descr="load tran" 
-tclcommand="xschem raw_read $netlist_dir/tb_quadrature_vco.raw tran"
+tclcommand="xschem raw_read $netlist_dir/tb_quadrature_vco1.raw tran"
 }
 C {devices/launcher.sym} 1065 -610 0 0 {name=h1
 descr="load dc" 
@@ -356,7 +342,7 @@ C {lab_pin.sym} 2140 -380 3 0 {name=p10 sig_type=std_logic lab=AVSS}
 C {lab_pin.sym} 2140 -560 0 1 {name=p11 sig_type=std_logic lab=AVDD}
 C {capa.sym} 1930 -280 0 0 {name=C1
 m=1
-value=30f
+value=10f
 footprint=1206
 device="ceramic capacitor"}
 C {lab_pin.sym} 1930 -230 0 1 {name=p15 sig_type=std_logic lab=AVSS}

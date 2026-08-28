@@ -26,6 +26,7 @@ adiv din dout divider
 + high_cycles = \{high_cycles\}
 + i_count = 0
 + rise_delay = 100p fall_delay = 100p )
+*+ rise_delay = 500p fall_delay = 500p )
 
 * WINDOW FIX: Widened analog-to-digital thresholds to catch fast sine waves
 aADC [ ain ] [ din ] adc_buff

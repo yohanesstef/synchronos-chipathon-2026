@@ -46,13 +46,10 @@ N 1150 -1750 1180 -1750 {lab=S3b}
 N 1150 -1570 1180 -1570 {lab=S3}
 N 1150 -1550 1180 -1550 {lab=S4b}
 N 1150 -1370 1180 -1370 {lab=S4}
-N 1250 -2310 1250 -2140 {lab=AVDD}
-N 1240 -2330 1240 -1980 {lab=AVSS}
-N 1150 -2370 1240 -2370 {lab=AVSS}
-N 1150 -2350 1250 -2350 {lab=AVDD}
+N 1150 -2280 1240 -2280 {lab=AVSS}
+N 1150 -2260 1250 -2260 {lab=AVDD}
 N 1260 -2220 1260 -2180 {lab=VBN}
-N 1250 -2350 1250 -2310 {lab=AVDD}
-N 1240 -2370 1240 -2330 {lab=AVSS}
+N 1240 -2280 1240 -2240 {lab=AVSS}
 N 1260 -2220 1560 -2220 {lab=VBN}
 N 1420 -2060 1560 -2060 {lab=VBN1}
 N 1420 -1860 1560 -1860 {lab=VBN2}
@@ -106,16 +103,18 @@ N 2110 -2060 2180 -2060 {lab=VBP}
 N 2110 -1860 2180 -1860 {lab=VBP}
 N 2110 -1660 2180 -1660 {lab=VBP}
 N 2180 -2220 2230 -2220 {lab=VBP}
-N 1890 -2370 1890 -2180 {lab=AVSS}
-N 1900 -2350 1900 -2200 {lab=AVDD}
-N 1250 -2350 1900 -2350 {lab=AVDD}
+N 1250 -2260 1900 -2260 {lab=AVDD}
 N 1550 -1460 1560 -1460 {lab=VBN4}
 N 1520 -1420 1560 -1420 {lab=S4b}
 N 1520 -1620 1560 -1620 {lab=S3b}
 N 1520 -1820 1560 -1820 {lab=S2b}
 N 1520 -2020 1560 -2020 {lab=S1b}
 N 1520 -2180 1560 -2180 {lab=AVSS}
-N 1240 -2370 1890 -2370 {lab=AVSS}
+N 1240 -2280 1890 -2280 {lab=AVSS}
+N 1240 -2240 1240 -1980 {lab=AVSS}
+N 1250 -2260 1250 -2140 {lab=AVDD}
+N 1900 -2260 1900 -2200 {lab=AVDD}
+N 1890 -2280 1890 -2180 {lab=AVSS}
 C {libs/core_analog/transmission_gate/transmission_gate.sym} 1340 -2060 0 0 {name=x2}
 C {libs/core_analog/transmission_gate/transmission_gate.sym} 1340 -1860 0 0 {name=x3}
 C {libs/core_analog/transmission_gate/transmission_gate.sym} 1340 -1660 0 0 {name=x4}
@@ -129,8 +128,8 @@ C {ipin.sym} 1150 -1750 0 0 {name=p6 lab=S3b}
 C {ipin.sym} 1150 -1570 0 0 {name=p7 lab=S3}
 C {ipin.sym} 1150 -1550 0 0 {name=p8 lab=S4b}
 C {ipin.sym} 1150 -1370 0 0 {name=p9 lab=S4}
-C {iopin.sym} 1150 -2370 0 1 {name=p10 lab=AVSS}
-C {iopin.sym} 1150 -2350 0 1 {name=p11 lab=AVDD}
+C {iopin.sym} 1150 -2280 0 1 {name=p10 lab=AVSS}
+C {iopin.sym} 1150 -2260 0 1 {name=p11 lab=AVDD}
 C {opin.sym} 2230 -2220 0 0 {name=p16 lab=VBP}
 C {lab_pin.sym} 1520 -2180 0 0 {name=p17 sig_type=std_logic lab=AVSS}
 C {lab_pin.sym} 1520 -2020 0 0 {name=p18 sig_type=std_logic lab=S1b}

@@ -29,7 +29,8 @@ C {netlist.sym} -30 -90 0 0 {name=s1 value="
 * pfd_delay local parameter sets the duration of the overlap (dead-band elimination)
 * Reduced from 10ns to 200ps to prevent massive Vctrl ripple
 *.param pfd_delay = 200p
-.param pfd_delay = 1.5n
+.param pfd_delay = 2n
+*.param pfd_delay = 10n
 
 ** Digital 1 and 0 to drive Flip-Flops
 aone 0 d_d1 d_inv
@@ -55,4 +56,5 @@ aADC [ a_ref a_div ] [ d_R d_V ] adc_buff
 * DAC FIX: Explicitly defined analog rise/fall times to prevent solver crashes
 aDAC [ d_U d_U_ d_D d_D_ d_rset d_R d_V d_d1 d_d0 ] [ a_UP a_UPb a_DN a_DNb a_rset a_R a_V a_d1 a_d0] dac_buff
 .model dac_buff dac_bridge(out_low = 0 out_high = 3.3 t_rise = 500p t_fall = 500p)
+*.model dac_buff dac_bridge(out_low = 0 out_high = 3.3 t_rise = 1u t_fall = 1u)
 "}
