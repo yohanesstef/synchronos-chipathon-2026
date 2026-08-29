@@ -37,3 +37,10 @@ Maximum Phase Error  : 0.004619 deg
 PHASE NOISE
 ------------------------------------------------------------
 Phase Noise @ 1 MHz    : -124.119 dBc/Hz
+
+POWER CONSUMPTION
+------------------------------------------------------------
+VDD Voltage           : 3.300000000e+00 V
+Current Column        : vmeas#branch
+Average Current       : 1.531587550e-02 A
+Average Power         : 5.054238915e-02 W
