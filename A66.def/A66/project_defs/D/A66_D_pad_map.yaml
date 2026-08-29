@@ -1,0 +1,77 @@
+spec_blob_sha: 7398a4da36e4d6ad9f9b76c06813b073c9c0ed2f
+source_info: info/A66_info.yaml
+source_template: /Users/kanobailey/chipathon/2026/padring/chipathon2026-system/padring_template.cfg
+block: D
+team_code: A66_D
+design_name: A66_D_padring
+pin_count: 10
+user_slot_count: 10
+pads:
+- pin_index: 0
+  pin_name: CK0
+  slot: W18
+  instance: W18
+  io_type: bidirectional
+  cell: gf180mcu_fd_io__bi_t
+- pin_index: 1
+  pin_name: CK90
+  slot: W19
+  instance: W19
+  io_type: bidirectional
+  cell: gf180mcu_fd_io__bi_t
+- pin_index: 2
+  pin_name: CK180
+  slot: W20
+  instance: W20
+  io_type: bidirectional
+  cell: gf180mcu_fd_io__bi_t
+- pin_index: 3
+  pin_name: CK270
+  slot: W21
+  instance: W21
+  io_type: bidirectional
+  cell: gf180mcu_fd_io__bi_t
+- pin_index: 4
+  pin_name: Fref
+  slot: W22
+  instance: W22
+  io_type: input_schmitt
+  cell: gf180mcu_fd_io__in_s
+- pin_index: 5
+  pin_name: Vctrl
+  slot: N01
+  instance: N01
+  io_type: analog
+  cell: gf180mcu_fd_io__asig_5p0
+  secondary_esd: true
+- pin_index: 6
+  pin_name: SDA
+  slot: N02
+  instance: N02
+  io_type: input_schmitt
+  cell: gf180mcu_fd_io__in_s
+- pin_index: 7
+  pin_name: SCL
+  slot: N03
+  instance: N03
+  io_type: input_schmitt
+  cell: gf180mcu_fd_io__in_s
+- pin_index: 8
+  pin_name: vdd
+  slot: N04
+  instance: N04
+  io_type: power
+  cell: gf180mcu_fd_io__dvdd
+- pin_index: 9
+  pin_name: vss
+  slot: N05
+  instance: N05
+  io_type: ground
+  cell: gf180mcu_fd_io__dvss
+breaks:
+- instance: BRK_BEFORE_D
+  reason: project_boundary
+  before_slot: W18
+- instance: BRK_AFTER_D
+  reason: project_boundary
+  after_slot: N05

@@ -1,0 +1,22 @@
+{
+  "project_size": {
+    "source_gds": "/Users/kanobailey/chipathon/2026/gds/A66/PLL_top.gds",
+    "top_cell": "PLL_top",
+    "layer": 0,
+    "datatype": 0,
+    "layout_dbu_microns": 0.005,
+    "rectangle_dbu": [
+      0,
+      0,
+      100000,
+      100000
+    ],
+    "width_microns": "500",
+    "height_microns": "500",
+    "top_cell_text": []
+  },
+  "participant_pin_count": 10,
+  "selected_variants": [
+    "D"
+  ]
+}
