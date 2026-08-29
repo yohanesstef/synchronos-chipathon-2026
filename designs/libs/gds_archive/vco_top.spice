@@ -1,0 +1,23 @@
+** sch_path: /foss/designs/synchronos-chipathon-2026/designs/libs/core_analog/vco/vco.sch
+.subckt vco_top VOP1 VOP2 VOP3 VOP4 VON1 VON2 VON3 VON4 AVDD AVSS VBP VBN
+*.PININFO VOP[1..4]:O VON[1..4]:O VBP:I VBN:I AVDD:B AVSS:B
+x1 VOP1 AVDD VOP4 VON4 VON1 AVSS VBP VBN delay_stage
+x2 VOP2 AVDD VON1 VOP1 VON2 AVSS VBP VBN delay_stage
+x3 VOP3 AVDD VON2 VOP2 VON3 AVSS VBP VBN delay_stage
+x4 VOP4 AVDD VON3 VOP3 VON4 AVSS VBP VBN delay_stage
+.ends
+
+* expanding   symbol:  libs/core_analog/delay_stage/delay_stage.sym # of pins=8
+** sym_path: /foss/designs/synchronos-chipathon-2026/designs/libs/core_analog/delay_stage/delay_stage.sym
+** sch_path: /foss/designs/synchronos-chipathon-2026/designs/libs/core_analog/delay_stage/delay_stage.sch
+.subckt delay_stage VOP AVDD VIP VIN VON AVSS VBP VBN
+*.PININFO VIP:I VIN:I VOP:O VON:O AVDD:B AVSS:B VBP:I VBN:I
+M5 VON VIP net1 AVSS nfet_03v3 L=0.5u W=2.08u nf=1 m=8
+M2 VON VON AVDD AVDD pfet_03v3 L=1.5u W=1.1u nf=1 m=8
+M6 VOP VIN net1 AVSS nfet_03v3 L=0.5u W=2.08u nf=1 m=8
+M1 VON VBP AVDD AVDD pfet_03v3 L=1.5u W=1.1u nf=1 m=8
+M3 VOP VBP AVDD AVDD pfet_03v3 L=1.5u W=1.1u nf=1 m=8
+M4 VOP VOP AVDD AVDD pfet_03v3 L=1.5u W=1.1u nf=1 m=8
+M8 net1 VBN AVSS AVSS nfet_03v3 L=0.5u W=11.25u nf=1 m=8
+.ends
+
