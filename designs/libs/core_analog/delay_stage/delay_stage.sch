@@ -16,15 +16,10 @@ N 900 -340 900 -310 {lab=VOP}
 N 310 -350 520 -350 {lab=VON}
 N 520 -390 520 -350 {lab=VON}
 N 310 -340 310 -310 {lab=VON}
-N 900 -250 900 -230 {lab=#net1}
-N 310 -250 310 -230 {lab=#net1}
-N 610 -140 620 -140 {lab=AVSS}
-N 620 -140 620 -110 {lab=AVSS}
-N 610 -110 620 -110 {lab=AVSS}
+N 900 -250 900 -230 {lab=Id}
+N 310 -250 310 -230 {lab=Id}
 N 310 -280 380 -280 {lab=AVSS}
 N 830 -280 900 -280 {lab=AVSS}
-N 610 -110 610 -80 {lab=AVSS}
-N 510 -140 570 -140 {lab=VBN}
 N 310 -480 310 -450 {lab=AVDD}
 N 310 -480 900 -480 {lab=AVDD}
 N 900 -480 900 -450 {lab=AVDD}
@@ -45,19 +40,19 @@ N 690 -420 900 -420 {lab=AVDD}
 N 420 -480 420 -420 {lab=AVDD}
 N 800 -480 800 -420 {lab=AVDD}
 N 310 -390 310 -340 {lab=VON}
-N 530 -230 680 -230 {lab=#net1}
-N 740 -230 900 -230 {lab=#net1}
-N 470 -230 530 -230 {lab=#net1}
-N 310 -230 410 -230 {lab=#net1}
-N 410 -230 470 -230 {lab=#net1}
-N 680 -230 740 -230 {lab=#net1}
+N 530 -230 680 -230 {lab=Id}
+N 740 -230 900 -230 {lab=Id}
+N 470 -230 530 -230 {lab=Id}
+N 310 -230 410 -230 {lab=Id}
+N 410 -230 470 -230 {lab=Id}
+N 680 -230 740 -230 {lab=Id}
 N 210 -480 270 -480 {lab=AVDD}
 N 200 -330 310 -330 {lab=VON}
 N 200 -480 210 -480 {lab=AVDD}
 N 200 -280 270 -280 {lab=VIP}
 N 900 -330 1010 -330 {lab=VOP}
 N 940 -280 1010 -280 {lab=VIN}
-N 610 -230 610 -170 {lab=#net1}
+N 610 -230 610 -160 {lab=Id}
 C {lab_pin.sym} 380 -280 2 0 {name=p1 sig_type=std_logic lab=AVSS}
 C {lab_pin.sym} 830 -280 2 1 {name=p2 sig_type=std_logic lab=AVSS}
 C {ipin.sym} 200 -280 0 0 {name=p11 lab=VIP}
@@ -65,9 +60,8 @@ C {ipin.sym} 1010 -280 0 1 {name=p16 lab=VIN}
 C {opin.sym} 1010 -330 0 0 {name=p17 lab=VOP}
 C {opin.sym} 200 -330 0 1 {name=p18 lab=VON}
 C {iopin.sym} 200 -480 0 1 {name=p19 lab=AVDD}
-C {iopin.sym} 610 -80 0 1 {name=p20 lab=AVSS}
+C {iopin.sym} 400 -200 0 1 {name=p20 lab=AVSS}
 C {ipin.sym} 610 -280 0 0 {name=p21 lab=VBP}
-C {ipin.sym} 510 -140 0 0 {name=p22 lab=VBN}
 C {symbols/nfet_03v3.sym} 290 -280 0 0 {name=M5
 L=0.5u
 W=2.08u
@@ -153,17 +147,4 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {devices/title.sym} 160 -30 0 0 {name=l5 author="Yohanes Stefanus"}
-C {symbols/nfet_03v3.sym} 590 -140 0 0 {name=M8
-L=0.5u
-W=11.25u
-nf=1
-m=8
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
+C {ipin.sym} 610 -160 0 0 {name=p3 lab=Id}
