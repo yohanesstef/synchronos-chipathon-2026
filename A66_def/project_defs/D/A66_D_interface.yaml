@@ -18,6 +18,15 @@ diearea_dbu:
 - 110000
 usable_area: 302500
 blockages: []
+metal2_blockages:
+- - 105800
+  - 109600
+  - 110000
+  - 110000
+- - 0
+  - 0
+  - 400
+  - 4200
 routing_blockage_layers:
 - Metal1
 - Metal2
@@ -1658,9 +1667,165 @@ project_gds_size:
   rectangle_dbu:
   - 0
   - 0
-  - 100000
-  - 100000
-  width_microns: '500'
-  height_microns: '500'
-  top_cell_text: []
+  - 110000
+  - 110000
+  width_microns: '550'
+  height_microns: '550'
+  top_cell_text:
+  - text: CK0_CS
+    layer: 36
+    datatype: 10
+  - text: CK0_SL
+    layer: 36
+    datatype: 10
+  - text: CK0_IE
+    layer: 36
+    datatype: 10
+  - text: CK0_OE
+    layer: 36
+    datatype: 10
+  - text: CK0_PU
+    layer: 36
+    datatype: 10
+  - text: CK0_PD
+    layer: 36
+    datatype: 10
+  - text: CK0_OUT
+    layer: 36
+    datatype: 10
+  - text: CK0_PDRV0
+    layer: 36
+    datatype: 10
+  - text: CK0_PDRV1
+    layer: 36
+    datatype: 10
+  - text: CK0_IN
+    layer: 36
+    datatype: 10
+  - text: CK90_CS
+    layer: 36
+    datatype: 10
+  - text: CK90_SL
+    layer: 36
+    datatype: 10
+  - text: CK90_IE
+    layer: 36
+    datatype: 10
+  - text: CK90_OE
+    layer: 36
+    datatype: 10
+  - text: CK90_PU
+    layer: 36
+    datatype: 10
+  - text: CK90_PD
+    layer: 36
+    datatype: 10
+  - text: CK90_OUT
+    layer: 36
+    datatype: 10
+  - text: CK90_PDRV0
+    layer: 36
+    datatype: 10
+  - text: CK90_PDRV1
+    layer: 36
+    datatype: 10
+  - text: CK90_IN
+    layer: 36
+    datatype: 10
+  - text: CK180_CS
+    layer: 36
+    datatype: 10
+  - text: CK180_SL
+    layer: 36
+    datatype: 10
+  - text: CK180_IE
+    layer: 36
+    datatype: 10
+  - text: CK180_OE
+    layer: 36
+    datatype: 10
+  - text: CK180_PU
+    layer: 36
+    datatype: 10
+  - text: CK180_PD
+    layer: 36
+    datatype: 10
+  - text: CK180_OUT
+    layer: 36
+    datatype: 10
+  - text: CK180_PDRV0
+    layer: 36
+    datatype: 10
+  - text: CK180_PDRV1
+    layer: 36
+    datatype: 10
+  - text: CK180_IN
+    layer: 36
+    datatype: 10
+  - text: CK270_CS
+    layer: 36
+    datatype: 10
+  - text: CK270_SL
+    layer: 36
+    datatype: 10
+  - text: CK270_IE
+    layer: 36
+    datatype: 10
+  - text: CK270_OE
+    layer: 36
+    datatype: 10
+  - text: CK270_PU
+    layer: 36
+    datatype: 10
+  - text: CK270_PD
+    layer: 36
+    datatype: 10
+  - text: CK270_OUT
+    layer: 36
+    datatype: 10
+  - text: CK270_PDRV0
+    layer: 36
+    datatype: 10
+  - text: CK270_PDRV1
+    layer: 36
+    datatype: 10
+  - text: CK270_IN
+    layer: 36
+    datatype: 10
+  - text: Fref_PU
+    layer: 36
+    datatype: 10
+  - text: Fref_PD
+    layer: 36
+    datatype: 10
+  - text: Fref
+    layer: 36
+    datatype: 10
+  - text: Vctrl
+    layer: 36
+    datatype: 10
+  - text: SDA_PU
+    layer: 36
+    datatype: 10
+  - text: SDA_PD
+    layer: 36
+    datatype: 10
+  - text: SDA
+    layer: 36
+    datatype: 10
+  - text: SCL_PU
+    layer: 36
+    datatype: 10
+  - text: SCL_PD
+    layer: 36
+    datatype: 10
+  - text: SCL
+    layer: 36
+    datatype: 10
+  - text: vdd
+    layer: 36
+    datatype: 10
+  - text: vss
+    layer: 36
+    datatype: 10
 participant_pin_count: 10
