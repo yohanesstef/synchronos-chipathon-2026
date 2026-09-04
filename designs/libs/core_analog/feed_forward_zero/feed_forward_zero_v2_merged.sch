@@ -10,6 +10,7 @@ T {B} 670 -580 0 0 1 1 {}
 T {C} 1130 -1170 0 0 1 1 {}
 T {D} 1130 -580 0 0 1 1 {}
 T {E} 1600 -1170 0 0 1 1 {}
+T {Dummies} 1510 -560 0 0 1 1 {}
 N 820 -1100 820 -1070 {lab=AVDD}
 N 630 -1100 630 -1070 {lab=AVDD}
 N 630 -1040 750 -1040 {lab=AVDD}
@@ -245,6 +246,18 @@ N 1490 -730 1590 -730 {lab=VBN_E}
 N 1490 -680 1530 -680 {lab=S_E}
 N 590 -680 610 -680 {lab=S_A}
 N 550 -680 590 -680 {lab=S_A}
+N 1520 -410 1560 -410 {lab=AVDD}
+N 1520 -440 1520 -410 {lab=AVDD}
+N 1520 -470 1520 -440 {lab=AVDD}
+N 1520 -470 1560 -470 {lab=AVDD}
+N 1560 -470 1560 -440 {lab=AVDD}
+N 1560 -440 1560 -410 {lab=AVDD}
+N 1710 -470 1710 -440 {lab=AVSS}
+N 1710 -440 1710 -410 {lab=AVSS}
+N 1670 -410 1710 -410 {lab=AVSS}
+N 1670 -440 1670 -410 {lab=AVSS}
+N 1670 -470 1670 -440 {lab=AVSS}
+N 1670 -470 1710 -470 {lab=AVSS}
 C {opin.sym} 1840 -980 0 0 {name=p13 lab=VBP_E}
 C {iopin.sym} 110 -580 0 1 {name=p11 lab=AVDD}
 C {ipin.sym} 550 -730 0 0 {name=p1 lab=VBN_A}
@@ -622,3 +635,33 @@ C {lab_pin.sym} 1060 -630 0 0 {name=p18 sig_type=std_logic lab=AVSS}
 C {lab_pin.sym} 590 -40 0 0 {name=p22 sig_type=std_logic lab=AVSS}
 C {lab_pin.sym} 590 -630 0 0 {name=p23 sig_type=std_logic lab=AVSS}
 C {iopin.sym} 110 -550 0 1 {name=p26 lab=AVSS}
+C {symbols/pfet_03v3.sym} 1540 -440 0 0 {name=M26
+L=1.5u
+W=1.1u
+nf=1
+m=8
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=pfet_03v3
+spiceprefix=X
+}
+C {lab_pin.sym} 1520 -470 0 0 {name=p27 sig_type=std_logic lab=AVDD}
+C {symbols/nfet_03v3.sym} 1690 -440 0 0 {name=M27
+L=0.5u
+W=2.82u
+nf=1
+m=8
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=nfet_03v3
+spiceprefix=X
+}
+C {lab_pin.sym} 1670 -470 0 0 {name=p28 sig_type=std_logic lab=AVSS}
